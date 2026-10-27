@@ -47,3 +47,15 @@ python3 tools/seedfit.py                   # every seed row fits the schema
 `validate.py` stands in for the CICS and Db2 precompilers (EXEC blocks → CONTINUE, EXEC SQL INCLUDE → COPY) and runs `cobc -fsyntax-only -std=ibm`. It proves syntax and data-name resolution, not runtime behaviour: nothing has been executed against a Db2 subsystem or CICS region. `docs/xref.json` is the machine-readable program/table/rule graph for lineage and knowledge-graph tooling.
 
 Author: Ajay Walgude · 2026
+
+## Analysis and Guidewire lineage
+
+`docs/analysis/` holds a Cap Infinity-style static analysis of the suite and a field-level lineage to Guidewire, regenerated from source:
+
+```bash
+python3 tools/infinity_analyze.py docs/analysis/infinity_analysis.json   # programs, CRUD, data flow, rules, JCL, SHA-256 evidence
+```
+
+* `pnc-infinity-analysis.html` — inventory, call graph, CRUD matrix, rules, complexity, batch, integration, Guidewire roadmap, evidence
+* `guidewire-lineage.html` — screen → interface → programs → Db2 → Guidewire for GenApp, BillingCore and ClaimsCore
+* `guidewire_column_map.csv` — every BillingCore / ClaimsCore column with its BillingCenter / ClaimCenter target, class and confidence (`tools/gw_map.py`)
