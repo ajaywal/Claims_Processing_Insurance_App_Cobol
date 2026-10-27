@@ -58,4 +58,5 @@ python3 tools/infinity_analyze.py docs/analysis/infinity_analysis.json   # progr
 
 * `pnc-infinity-analysis.html` — inventory, call graph, CRUD matrix, rules, complexity, batch, integration, Guidewire roadmap, evidence
 * `guidewire-lineage.html` — screen → interface → programs → Db2 → Guidewire for GenApp, BillingCore and ClaimsCore
+* `pnc-suite-infographic.html` — one-page overview with all nine 3270 screens rendered from the BMS mapsets
 * `guidewire_column_map.csv` — every BillingCore / ClaimsCore column with its BillingCenter / ClaimCenter target, class and confidence (`tools/gw_map.py`)

@@ -178,7 +178,7 @@
            03 ACMPLNF                  PIC X.
            03 FILLER REDEFINES ACMPLNF.
               04 ACMPLNA               PIC X.
-           03 ACMPLNI                  PIC X(70).
+           03 ACMPLNI                  PIC X(79).
            02 ACMMSGL                  PIC S9(4) COMP.
            02 ACMMSGF                  PIC X.
            02 FILLER REDEFINES ACMMSGF.
@@ -243,7 +243,7 @@
            02 ACMPAGEO                 PIC X(20).
            02 ACMPLNE OCCURS 4 TIMES.
               03 FILLER               PIC X(3).
-              03 ACMPLNO               PIC X(70).
+              03 ACMPLNO               PIC X(79).
            02 FILLER                  PIC X(3).
            02 ACMMSGO                  PIC X(79).
            02 FILLER                  PIC X(3).
@@ -325,7 +325,7 @@
            03 PYMDLNF                  PIC X.
            03 FILLER REDEFINES PYMDLNF.
               04 PYMDLNA               PIC X.
-           03 PYMDLNI                  PIC X(60).
+           03 PYMDLNI                  PIC X(79).
            02 PYMMSGL                  PIC S9(4) COMP.
            02 PYMMSGF                  PIC X.
            02 FILLER REDEFINES PYMMSGF.
@@ -368,7 +368,7 @@
            02 PYMUNAPO                 PIC X(15).
            02 PYMDLNE OCCURS 6 TIMES.
               03 FILLER               PIC X(3).
-              03 PYMDLNO               PIC X(60).
+              03 PYMDLNO               PIC X(79).
            02 FILLER                  PIC X(3).
            02 PYMMSGO                  PIC X(79).
            02 FILLER                  PIC X(3).
