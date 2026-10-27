@@ -1,0 +1,5 @@
+*.o
+*.so
+*.lst
+val*/
+__pycache__/

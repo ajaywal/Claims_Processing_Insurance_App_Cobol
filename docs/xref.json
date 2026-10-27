@@ -4604,7 +4604,7 @@
    "program": "CLMSEALR",
    "path": "claims/src/batch/CLMSEALR.cbl",
    "style": "C",
-   "code_lines": 519,
+   "code_lines": 540,
    "calls": [
     "CLMAUDCH",
     "CLMERRLG"

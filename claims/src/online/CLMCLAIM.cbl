@@ -541,7 +541,7 @@
        2030-SETUP-REPORTER.
            IF CA-CL-RPT-LAST-NAME NOT = SPACES
               INITIALIZE WS-CON-CA
-              IF CA-CL-RPT-RELATION = 'SELF' AND WS-INSURED-ID > 0
+              IF CA-CL-RPT-RELATION = 'INSURED ' AND WS-INSURED-ID > 0
                  MOVE WS-INSURED-ID    TO COC-CO-CONTACT-ID
               ELSE
                  MOVE 'CONNEW  '       TO COC-REQUEST-ID
@@ -984,7 +984,7 @@
                                        TO CA-MESSAGE
                  PERFORM 9000-RETURN
               END-IF
-              IF CA-CL-RPT-RELATION NOT = 'SELF'
+              IF CA-CL-RPT-RELATION NOT = 'INSURED '
                  AND CA-CL-RPT-PHONE = SPACES
                  SET CA-RC-VALIDATION  TO TRUE
                  MOVE 'RPTPHNRQ'       TO CA-REASON-CODE

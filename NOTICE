@@ -1,0 +1,15 @@
+PnC Core Suite (BillingCoreAJ2026, ClaimsCoreAJ2026) is a SYNTHETIC
+demonstration corpus: original BillingCenter- and ClaimCenter-parity
+applications written in COBOL / CICS TS / Db2 for z/OS, designed to run
+beside the public IBM GenApp sample.
+
+All code, schema and seed data are fabricated for demonstration and
+analysis-tooling purposes. The suite is not affiliated with, endorsed by,
+or derived from any insurance carrier, Guidewire Software or IBM, and it
+contains no confidential or proprietary third-party material. People,
+producers, vendors, policies and sanctions entries are invented.
+
+shared/ddl/GENDDL01.sql restates table layouts from IBM's GenApp sample
+(cicsdev/cics-genapp, Apache License 2.0) so the suite can read them.
+Guidewire, BillingCenter and ClaimCenter are trademarks of Guidewire
+Software, Inc.
