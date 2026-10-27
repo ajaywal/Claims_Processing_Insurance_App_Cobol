@@ -15,15 +15,15 @@
            , RESPONSE_TS          TIMESTAMP     
            ) END-EXEC.
        01  DCLCLM-ISO-REQUEST.
-           10 ISO-ISO-REQ-ID                 PIC S9(9) USAGE COMP.
-           10 ISO-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 ISO-ISO-REQ-ID                 PIC S9(9) COMP.
+           10 ISO-CLAIM-ID                   PIC S9(9) COMP.
            10 ISO-REQUEST-TYPE               PIC X(4).
            10 ISO-ISO-STATUS                 PIC X(4).
-           10 ISO-MATCH-COUNT                PIC S9(4) USAGE COMP.
+           10 ISO-MATCH-COUNT                PIC S9(4) COMP.
            10 ISO-ISO-REF                    PIC X(16).
            10 ISO-SENT-TS                    PIC X(26).
            10 ISO-RESPONSE-TS                PIC X(26).
        01  INDCLM-ISO-REQUEST.
-           10 ISO-SENT-TS-IND                PIC S9(4) USAGE COMP.
-           10 ISO-RESPONSE-TS-IND            PIC S9(4) USAGE COMP.
+           10 ISO-SENT-TS-IND                PIC S9(4) COMP.
+           10 ISO-RESPONSE-TS-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 8

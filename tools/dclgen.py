@@ -14,12 +14,12 @@ import re, sys, os
 TYPE_RE = re.compile(r'^\s*\(?\s*([A-Z0-9_]+)\s+([A-Z]+)(\((\d+)(,(\d+))?\))?(.*?)(,)?\s*$')
 
 def cobol_pic(typ, a, b):
-    if typ == 'INTEGER':  return 'PIC S9(9) USAGE COMP'
-    if typ == 'SMALLINT': return 'PIC S9(4) USAGE COMP'
-    if typ == 'BIGINT':   return 'PIC S9(18) USAGE COMP'
+    if typ == 'INTEGER':  return 'PIC S9(9) COMP'
+    if typ == 'SMALLINT': return 'PIC S9(4) COMP'
+    if typ == 'BIGINT':   return 'PIC S9(18) COMP'
     if typ == 'DECIMAL':
         p, s = int(a), int(b or 0)
-        return f'PIC S9({p-s})V9({s}) USAGE COMP-3' if s else f'PIC S9({p}) USAGE COMP-3'
+        return f'PIC S9({p-s})V9({s}) COMP-3' if s else f'PIC S9({p}) COMP-3'
     if typ == 'CHAR':     return f'PIC X({a or 1})'
     if typ == 'DATE':     return 'PIC X(10)'
     if typ == 'TIME':     return 'PIC X(8)'
@@ -72,7 +72,7 @@ def gen(t):
         if c['type'] == 'VARCHAR':
             out.append(f"           10 {fld}.")
             ln = f"{fld[:26]}-LEN"; tx = f"{fld[:25]}-TEXT"
-            out.append(f"              49 {ln:<28} PIC S9(4) USAGE COMP.")
+            out.append(f"              49 {ln:<28} PIC S9(4) COMP.")
             out.append(f"              49 {tx:<28} PIC X({c['a']}).")
         else:
             out.append(f"           10 {fld:<30} {cobol_pic(c['type'], c['a'], c['b'])}.")
@@ -82,7 +82,7 @@ def gen(t):
         out.append(f"       01  IND{short[:26]}.")
         for c in nullable:
             ind = f"{pfx}-{c['name'].replace('_','-')}"[:26] + "-IND"
-            out.append(f"           10 {ind:<30} PIC S9(4) USAGE COMP.")
+            out.append(f"           10 {ind:<30} PIC S9(4) COMP.")
     out.append(f"      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS {len(t['cols'])}")
     return '\n'.join(out) + '\n'
 

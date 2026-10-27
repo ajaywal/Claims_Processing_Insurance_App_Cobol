@@ -19,18 +19,18 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-SERVICE-REQUEST.
-           10 SRQ-SR-ID                      PIC S9(9) USAGE COMP.
-           10 SRQ-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 SRQ-EXPOSURE-ID                PIC S9(9) USAGE COMP.
-           10 SRQ-VENDOR-CONTACT-ID          PIC S9(9) USAGE COMP.
+           10 SRQ-SR-ID                      PIC S9(9) COMP.
+           10 SRQ-CLAIM-ID                   PIC S9(9) COMP.
+           10 SRQ-EXPOSURE-ID                PIC S9(9) COMP.
+           10 SRQ-VENDOR-CONTACT-ID          PIC S9(9) COMP.
            10 SRQ-SERVICE-TYPE               PIC X(8).
            10 SRQ-SR-STATUS                  PIC X(4).
            10 SRQ-REQUEST-DATE               PIC X(10).
-           10 SRQ-QUOTE-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
-           10 SRQ-INVOICE-AMOUNT             PIC S9(11)V9(2) USAGE COMP-3.
+           10 SRQ-QUOTE-AMOUNT               PIC S9(11)V9(2) COMP-3.
+           10 SRQ-INVOICE-AMOUNT             PIC S9(11)V9(2) COMP-3.
            10 SRQ-COMPLETED-DATE             PIC X(10).
-           10 SRQ-PAYMENT-TXN-ID             PIC S9(9) USAGE COMP.
+           10 SRQ-PAYMENT-TXN-ID             PIC S9(9) COMP.
            10 SRQ-UPDATE-TS                  PIC X(26).
        01  INDCLM-SERVICE-REQUEST.
-           10 SRQ-COMPLETED-DATE-IND         PIC S9(4) USAGE COMP.
+           10 SRQ-COMPLETED-DATE-IND         PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 12

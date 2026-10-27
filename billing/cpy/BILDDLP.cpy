@@ -18,17 +18,17 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-DELINQ-PROCESS.
-           10 DLP-DP-ID                      PIC S9(9) USAGE COMP.
-           10 DLP-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 DLP-PP-ID                      PIC S9(9) USAGE COMP.
+           10 DLP-DP-ID                      PIC S9(9) COMP.
+           10 DLP-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 DLP-PP-ID                      PIC S9(9) COMP.
            10 DLP-PLAN-CODE                  PIC X(8).
            10 DLP-START-DATE                 PIC X(10).
-           10 DLP-PASTDUE-AMOUNT             PIC S9(11)V9(2) USAGE COMP-3.
-           10 DLP-CURRENT-STEP               PIC S9(4) USAGE COMP.
+           10 DLP-PASTDUE-AMOUNT             PIC S9(11)V9(2) COMP-3.
+           10 DLP-CURRENT-STEP               PIC S9(4) COMP.
            10 DLP-DP-STATUS                  PIC X(4).
            10 DLP-EXIT-REASON                PIC X(8).
            10 DLP-EXIT-DATE                  PIC X(10).
            10 DLP-UPDATE-TS                  PIC X(26).
        01  INDBIL-DELINQ-PROCESS.
-           10 DLP-EXIT-DATE-IND              PIC S9(4) USAGE COMP.
+           10 DLP-EXIT-DATE-IND              PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

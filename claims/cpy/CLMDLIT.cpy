@@ -21,24 +21,24 @@
            , CLOSED_DATE          DATE          
            ) END-EXEC.
        01  DCLCLM-LITIGATION.
-           10 LIT-MATTER-ID                  PIC S9(9) USAGE COMP.
-           10 LIT-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 LIT-MATTER-ID                  PIC S9(9) COMP.
+           10 LIT-CLAIM-ID                   PIC S9(9) COMP.
            10 LIT-MATTER-TYPE                PIC X(8).
            10 LIT-COURT-NAME.
-              49 LIT-COURT-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 LIT-COURT-NAME-LEN           PIC S9(4) COMP.
               49 LIT-COURT-NAME-TEXT          PIC X(60).
            10 LIT-CASE-NUMBER                PIC X(20).
-           10 LIT-PLAINTIFF-ATTY-ID          PIC S9(9) USAGE COMP.
-           10 LIT-DEFENSE-ATTY-ID            PIC S9(9) USAGE COMP.
+           10 LIT-PLAINTIFF-ATTY-ID          PIC S9(9) COMP.
+           10 LIT-DEFENSE-ATTY-ID            PIC S9(9) COMP.
            10 LIT-FILE-DATE                  PIC X(10).
            10 LIT-TRIAL-DATE                 PIC X(10).
            10 LIT-MATTER-STATUS              PIC X(4).
            10 LIT-RESOLUTION                 PIC X(8).
-           10 LIT-SETTLEMENT-AMOUNT          PIC S9(11)V9(2) USAGE COMP-3.
-           10 LIT-LEGAL-SPEND                PIC S9(11)V9(2) USAGE COMP-3.
+           10 LIT-SETTLEMENT-AMOUNT          PIC S9(11)V9(2) COMP-3.
+           10 LIT-LEGAL-SPEND                PIC S9(11)V9(2) COMP-3.
            10 LIT-CLOSED-DATE                PIC X(10).
        01  INDCLM-LITIGATION.
-           10 LIT-COURT-NAME-IND             PIC S9(4) USAGE COMP.
-           10 LIT-TRIAL-DATE-IND             PIC S9(4) USAGE COMP.
-           10 LIT-CLOSED-DATE-IND            PIC S9(4) USAGE COMP.
+           10 LIT-COURT-NAME-IND             PIC S9(4) COMP.
+           10 LIT-TRIAL-DATE-IND             PIC S9(4) COMP.
+           10 LIT-CLOSED-DATE-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 14

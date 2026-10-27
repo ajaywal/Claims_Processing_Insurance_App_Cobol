@@ -17,12 +17,12 @@
        01  DCLBIL-DELINQ-PLAN.
            10 DPL-PLAN-CODE                  PIC X(8).
            10 DPL-PLAN-NAME.
-              49 DPL-PLAN-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 DPL-PLAN-NAME-LEN            PIC S9(4) COMP.
               49 DPL-PLAN-NAME-TEXT           PIC X(40).
-           10 DPL-GRACE-DAYS                 PIC S9(4) USAGE COMP.
-           10 DPL-LATE-FEE                   PIC S9(7)V9(2) USAGE COMP-3.
-           10 DPL-REINSTATE-FEE              PIC S9(7)V9(2) USAGE COMP-3.
-           10 DPL-PASTDUE-THRESHOLD          PIC S9(7)V9(2) USAGE COMP-3.
-           10 DPL-WRITEOFF-THRESHOLD         PIC S9(7)V9(2) USAGE COMP-3.
+           10 DPL-GRACE-DAYS                 PIC S9(4) COMP.
+           10 DPL-LATE-FEE                   PIC S9(7)V9(2) COMP-3.
+           10 DPL-REINSTATE-FEE              PIC S9(7)V9(2) COMP-3.
+           10 DPL-PASTDUE-THRESHOLD          PIC S9(7)V9(2) COMP-3.
+           10 DPL-WRITEOFF-THRESHOLD         PIC S9(7)V9(2) COMP-3.
            10 DPL-ACTIVE-FLAG                PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 8

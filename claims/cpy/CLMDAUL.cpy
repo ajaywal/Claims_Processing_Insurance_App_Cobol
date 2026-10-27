@@ -14,5 +14,5 @@
            10 AUL-AUTH-PROFILE               PIC X(8).
            10 AUL-LIMIT-TYPE                 PIC X(8).
            10 AUL-COVERAGE-TYPE              PIC X(8).
-           10 AUL-LIMIT-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
+           10 AUL-LIMIT-AMOUNT               PIC S9(11)V9(2) COMP-3.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4

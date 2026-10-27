@@ -27,7 +27,7 @@
            , REJECTIONREASON      CHAR(255)     
            ) END-EXEC.
        01  DCLCOMMERCIAL.
-           10 GCO-POLICYNUMBER               PIC S9(9) USAGE COMP.
+           10 GCO-POLICYNUMBER               PIC S9(9) COMP.
            10 GCO-REQUESTDATE                PIC X(26).
            10 GCO-STARTDATE                  PIC X(10).
            10 GCO-RENEWALDATE                PIC X(10).
@@ -37,34 +37,34 @@
            10 GCO-LONGITUDEW                 PIC X(11).
            10 GCO-CUSTOMER                   PIC X(255).
            10 GCO-PROPERTYTYPE               PIC X(255).
-           10 GCO-FIREPERIL                  PIC S9(4) USAGE COMP.
-           10 GCO-FIREPREMIUM                PIC S9(9) USAGE COMP.
-           10 GCO-CRIMEPERIL                 PIC S9(4) USAGE COMP.
-           10 GCO-CRIMEPREMIUM               PIC S9(9) USAGE COMP.
-           10 GCO-FLOODPERIL                 PIC S9(4) USAGE COMP.
-           10 GCO-FLOODPREMIUM               PIC S9(9) USAGE COMP.
-           10 GCO-WEATHERPERIL               PIC S9(4) USAGE COMP.
-           10 GCO-WEATHERPREMIUM             PIC S9(9) USAGE COMP.
-           10 GCO-STATUS                     PIC S9(4) USAGE COMP.
+           10 GCO-FIREPERIL                  PIC S9(4) COMP.
+           10 GCO-FIREPREMIUM                PIC S9(9) COMP.
+           10 GCO-CRIMEPERIL                 PIC S9(4) COMP.
+           10 GCO-CRIMEPREMIUM               PIC S9(9) COMP.
+           10 GCO-FLOODPERIL                 PIC S9(4) COMP.
+           10 GCO-FLOODPREMIUM               PIC S9(9) COMP.
+           10 GCO-WEATHERPERIL               PIC S9(4) COMP.
+           10 GCO-WEATHERPREMIUM             PIC S9(9) COMP.
+           10 GCO-STATUS                     PIC S9(4) COMP.
            10 GCO-REJECTIONREASON            PIC X(255).
        01  INDCOMMERCIAL.
-           10 GCO-REQUESTDATE-IND            PIC S9(4) USAGE COMP.
-           10 GCO-STARTDATE-IND              PIC S9(4) USAGE COMP.
-           10 GCO-RENEWALDATE-IND            PIC S9(4) USAGE COMP.
-           10 GCO-ADDRESS-IND                PIC S9(4) USAGE COMP.
-           10 GCO-ZIPCODE-IND                PIC S9(4) USAGE COMP.
-           10 GCO-LATITUDEN-IND              PIC S9(4) USAGE COMP.
-           10 GCO-LONGITUDEW-IND             PIC S9(4) USAGE COMP.
-           10 GCO-CUSTOMER-IND               PIC S9(4) USAGE COMP.
-           10 GCO-PROPERTYTYPE-IND           PIC S9(4) USAGE COMP.
-           10 GCO-FIREPERIL-IND              PIC S9(4) USAGE COMP.
-           10 GCO-FIREPREMIUM-IND            PIC S9(4) USAGE COMP.
-           10 GCO-CRIMEPERIL-IND             PIC S9(4) USAGE COMP.
-           10 GCO-CRIMEPREMIUM-IND           PIC S9(4) USAGE COMP.
-           10 GCO-FLOODPERIL-IND             PIC S9(4) USAGE COMP.
-           10 GCO-FLOODPREMIUM-IND           PIC S9(4) USAGE COMP.
-           10 GCO-WEATHERPERIL-IND           PIC S9(4) USAGE COMP.
-           10 GCO-WEATHERPREMIUM-IND         PIC S9(4) USAGE COMP.
-           10 GCO-STATUS-IND                 PIC S9(4) USAGE COMP.
-           10 GCO-REJECTIONREASON-IND        PIC S9(4) USAGE COMP.
+           10 GCO-REQUESTDATE-IND            PIC S9(4) COMP.
+           10 GCO-STARTDATE-IND              PIC S9(4) COMP.
+           10 GCO-RENEWALDATE-IND            PIC S9(4) COMP.
+           10 GCO-ADDRESS-IND                PIC S9(4) COMP.
+           10 GCO-ZIPCODE-IND                PIC S9(4) COMP.
+           10 GCO-LATITUDEN-IND              PIC S9(4) COMP.
+           10 GCO-LONGITUDEW-IND             PIC S9(4) COMP.
+           10 GCO-CUSTOMER-IND               PIC S9(4) COMP.
+           10 GCO-PROPERTYTYPE-IND           PIC S9(4) COMP.
+           10 GCO-FIREPERIL-IND              PIC S9(4) COMP.
+           10 GCO-FIREPREMIUM-IND            PIC S9(4) COMP.
+           10 GCO-CRIMEPERIL-IND             PIC S9(4) COMP.
+           10 GCO-CRIMEPREMIUM-IND           PIC S9(4) COMP.
+           10 GCO-FLOODPERIL-IND             PIC S9(4) COMP.
+           10 GCO-FLOODPREMIUM-IND           PIC S9(4) COMP.
+           10 GCO-WEATHERPERIL-IND           PIC S9(4) COMP.
+           10 GCO-WEATHERPREMIUM-IND         PIC S9(4) COMP.
+           10 GCO-STATUS-IND                 PIC S9(4) COMP.
+           10 GCO-REJECTIONREASON-IND        PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 20

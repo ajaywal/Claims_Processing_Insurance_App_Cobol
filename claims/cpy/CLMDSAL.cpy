@@ -15,14 +15,14 @@
            , SALE_AMOUNT          DECIMAL(13,2)  NOT NULL
            ) END-EXEC.
        01  DCLCLM-SALVAGE.
-           10 SAL-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 SAL-INCIDENT-ID                PIC S9(9) USAGE COMP.
-           10 SAL-VENDOR-CONTACT-ID          PIC S9(9) USAGE COMP.
+           10 SAL-CLAIM-ID                   PIC S9(9) COMP.
+           10 SAL-INCIDENT-ID                PIC S9(9) COMP.
+           10 SAL-VENDOR-CONTACT-ID          PIC S9(9) COMP.
            10 SAL-SALVAGE-STATUS             PIC X(4).
            10 SAL-ASSIGNED-DATE              PIC X(10).
-           10 SAL-EST-VALUE                  PIC S9(11)V9(2) USAGE COMP-3.
+           10 SAL-EST-VALUE                  PIC S9(11)V9(2) COMP-3.
            10 SAL-SALE-DATE                  PIC X(10).
-           10 SAL-SALE-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
+           10 SAL-SALE-AMOUNT                PIC S9(11)V9(2) COMP-3.
        01  INDCLM-SALVAGE.
-           10 SAL-SALE-DATE-IND              PIC S9(4) USAGE COMP.
+           10 SAL-SALE-DATE-IND              PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 8

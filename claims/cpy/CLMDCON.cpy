@@ -26,45 +26,45 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-CONTACT.
-           10 CON-CONTACT-ID                 PIC S9(9) USAGE COMP.
+           10 CON-CONTACT-ID                 PIC S9(9) COMP.
            10 CON-CONTACT-TYPE               PIC X(4).
            10 CON-FIRST-NAME.
-              49 CON-FIRST-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 CON-FIRST-NAME-LEN           PIC S9(4) COMP.
               49 CON-FIRST-NAME-TEXT          PIC X(30).
            10 CON-LAST-NAME.
-              49 CON-LAST-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 CON-LAST-NAME-LEN            PIC S9(4) COMP.
               49 CON-LAST-NAME-TEXT           PIC X(40).
            10 CON-COMPANY-NAME.
-              49 CON-COMPANY-NAME-LEN         PIC S9(4) USAGE COMP.
+              49 CON-COMPANY-NAME-LEN         PIC S9(4) COMP.
               49 CON-COMPANY-NAME-TEXT        PIC X(60).
            10 CON-DATE-OF-BIRTH              PIC X(10).
            10 CON-ADDRESS-LINE1.
-              49 CON-ADDRESS-LINE1-LEN        PIC S9(4) USAGE COMP.
+              49 CON-ADDRESS-LINE1-LEN        PIC S9(4) COMP.
               49 CON-ADDRESS-LINE1-TEXT       PIC X(60).
            10 CON-CITY.
-              49 CON-CITY-LEN                 PIC S9(4) USAGE COMP.
+              49 CON-CITY-LEN                 PIC S9(4) COMP.
               49 CON-CITY-TEXT                PIC X(40).
            10 CON-POSTCODE                   PIC X(8).
            10 CON-PHONE-NUMBER               PIC X(20).
            10 CON-EMAIL-ADDRESS.
-              49 CON-EMAIL-ADDRESS-LEN        PIC S9(4) USAGE COMP.
+              49 CON-EMAIL-ADDRESS-LEN        PIC S9(4) COMP.
               49 CON-EMAIL-ADDRESS-TEXT       PIC X(100).
            10 CON-TAX-ID-TOKEN               PIC X(32).
-           10 CON-GENAPP-CUST-NUM            PIC S9(9) USAGE COMP.
+           10 CON-GENAPP-CUST-NUM            PIC S9(9) COMP.
            10 CON-VENDOR-TYPE                PIC X(8).
            10 CON-PREFERRED-FLAG             PIC X(1).
-           10 CON-VENDOR-RATING              PIC S9(4) USAGE COMP.
+           10 CON-VENDOR-RATING              PIC S9(4) COMP.
            10 CON-SANCTION-STATUS            PIC X(4).
            10 CON-CREATE-TS                  PIC X(26).
            10 CON-UPDATE-TS                  PIC X(26).
        01  INDCLM-CONTACT.
-           10 CON-FIRST-NAME-IND             PIC S9(4) USAGE COMP.
-           10 CON-LAST-NAME-IND              PIC S9(4) USAGE COMP.
-           10 CON-COMPANY-NAME-IND           PIC S9(4) USAGE COMP.
-           10 CON-DATE-OF-BIRTH-IND          PIC S9(4) USAGE COMP.
-           10 CON-ADDRESS-LINE1-IND          PIC S9(4) USAGE COMP.
-           10 CON-CITY-IND                   PIC S9(4) USAGE COMP.
-           10 CON-POSTCODE-IND               PIC S9(4) USAGE COMP.
-           10 CON-PHONE-NUMBER-IND           PIC S9(4) USAGE COMP.
-           10 CON-EMAIL-ADDRESS-IND          PIC S9(4) USAGE COMP.
+           10 CON-FIRST-NAME-IND             PIC S9(4) COMP.
+           10 CON-LAST-NAME-IND              PIC S9(4) COMP.
+           10 CON-COMPANY-NAME-IND           PIC S9(4) COMP.
+           10 CON-DATE-OF-BIRTH-IND          PIC S9(4) COMP.
+           10 CON-ADDRESS-LINE1-IND          PIC S9(4) COMP.
+           10 CON-CITY-IND                   PIC S9(4) COMP.
+           10 CON-POSTCODE-IND               PIC S9(4) COMP.
+           10 CON-PHONE-NUMBER-IND           PIC S9(4) COMP.
+           10 CON-EMAIL-ADDRESS-IND          PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 19

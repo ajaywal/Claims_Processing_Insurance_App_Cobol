@@ -15,12 +15,12 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-PRODUCER-PAYMENT.
-           10 PPY-PRODUCER-PAY-ID            PIC S9(9) USAGE COMP.
-           10 PPY-PRODUCER-ID                PIC S9(9) USAGE COMP.
+           10 PPY-PRODUCER-PAY-ID            PIC S9(9) COMP.
+           10 PPY-PRODUCER-ID                PIC S9(9) COMP.
            10 PPY-PERIOD-END                 PIC X(10).
-           10 PPY-PAY-AMOUNT                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 PPY-ITEM-COUNT                 PIC S9(9) USAGE COMP.
+           10 PPY-PAY-AMOUNT                 PIC S9(11)V9(2) COMP-3.
+           10 PPY-ITEM-COUNT                 PIC S9(9) COMP.
            10 PPY-PAY-STATUS                 PIC X(4).
-           10 PPY-DISB-ID                    PIC S9(9) USAGE COMP.
+           10 PPY-DISB-ID                    PIC S9(9) COMP.
            10 PPY-CREATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 8

@@ -19,16 +19,16 @@
        01  DCLCLM-USER.
            10 USR-USER-ID                    PIC X(8).
            10 USR-USER-NAME.
-              49 USR-USER-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 USR-USER-NAME-LEN            PIC S9(4) COMP.
               49 USR-USER-NAME-TEXT           PIC X(40).
            10 USR-GROUP-CODE                 PIC X(8).
            10 USR-AUTH-PROFILE               PIC X(8).
            10 USR-SUPERVISOR-ID              PIC X(8).
            10 USR-LOB-SKILLS                 PIC X(8).
-           10 USR-OPEN-CLAIMS                PIC S9(4) USAGE COMP.
-           10 USR-MAX-CLAIMS                 PIC S9(4) USAGE COMP.
+           10 USR-OPEN-CLAIMS                PIC S9(4) COMP.
+           10 USR-MAX-CLAIMS                 PIC S9(4) COMP.
            10 USR-LAST-ASSIGN-TS             PIC X(26).
            10 USR-ACTIVE-FLAG                PIC X(1).
        01  INDCLM-USER.
-           10 USR-LAST-ASSIGN-TS-IND         PIC S9(4) USAGE COMP.
+           10 USR-LAST-ASSIGN-TS-IND         PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

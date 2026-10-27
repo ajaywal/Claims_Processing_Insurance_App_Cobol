@@ -17,7 +17,7 @@
            , EMAILADDRESS         CHAR(100)     
            ) END-EXEC.
        01  DCLCUSTOMER.
-           10 GCU-CUSTOMERNUMBER             PIC S9(9) USAGE COMP.
+           10 GCU-CUSTOMERNUMBER             PIC S9(9) COMP.
            10 GCU-FIRSTNAME                  PIC X(10).
            10 GCU-LASTNAME                   PIC X(20).
            10 GCU-DATEOFBIRTH                PIC X(10).
@@ -28,13 +28,13 @@
            10 GCU-PHONEMOBILE                PIC X(20).
            10 GCU-EMAILADDRESS               PIC X(100).
        01  INDCUSTOMER.
-           10 GCU-FIRSTNAME-IND              PIC S9(4) USAGE COMP.
-           10 GCU-LASTNAME-IND               PIC S9(4) USAGE COMP.
-           10 GCU-DATEOFBIRTH-IND            PIC S9(4) USAGE COMP.
-           10 GCU-HOUSENAME-IND              PIC S9(4) USAGE COMP.
-           10 GCU-HOUSENUMBER-IND            PIC S9(4) USAGE COMP.
-           10 GCU-POSTCODE-IND               PIC S9(4) USAGE COMP.
-           10 GCU-PHONEHOME-IND              PIC S9(4) USAGE COMP.
-           10 GCU-PHONEMOBILE-IND            PIC S9(4) USAGE COMP.
-           10 GCU-EMAILADDRESS-IND           PIC S9(4) USAGE COMP.
+           10 GCU-FIRSTNAME-IND              PIC S9(4) COMP.
+           10 GCU-LASTNAME-IND               PIC S9(4) COMP.
+           10 GCU-DATEOFBIRTH-IND            PIC S9(4) COMP.
+           10 GCU-HOUSENAME-IND              PIC S9(4) COMP.
+           10 GCU-HOUSENUMBER-IND            PIC S9(4) COMP.
+           10 GCU-POSTCODE-IND               PIC S9(4) COMP.
+           10 GCU-PHONEHOME-IND              PIC S9(4) COMP.
+           10 GCU-PHONEMOBILE-IND            PIC S9(4) COMP.
+           10 GCU-EMAILADDRESS-IND           PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

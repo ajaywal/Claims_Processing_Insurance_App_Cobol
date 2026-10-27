@@ -16,15 +16,15 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-NOTE.
-           10 NTE-NOTE-ID                    PIC S9(9) USAGE COMP.
-           10 NTE-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 NTE-EXPOSURE-ID                PIC S9(9) USAGE COMP.
+           10 NTE-NOTE-ID                    PIC S9(9) COMP.
+           10 NTE-CLAIM-ID                   PIC S9(9) COMP.
+           10 NTE-EXPOSURE-ID                PIC S9(9) COMP.
            10 NTE-NOTE-TOPIC                 PIC X(8).
            10 NTE-SUBJECT.
-              49 NTE-SUBJECT-LEN              PIC S9(4) USAGE COMP.
+              49 NTE-SUBJECT-LEN              PIC S9(4) COMP.
               49 NTE-SUBJECT-TEXT             PIC X(60).
            10 NTE-BODY-TEXT.
-              49 NTE-BODY-TEXT-LEN            PIC S9(4) USAGE COMP.
+              49 NTE-BODY-TEXT-LEN            PIC S9(4) COMP.
               49 NTE-BODY-TEXT-TEXT           PIC X(2000).
            10 NTE-CONFIDENTIAL-FLAG          PIC X(1).
            10 NTE-AUTHOR-USER                PIC X(8).

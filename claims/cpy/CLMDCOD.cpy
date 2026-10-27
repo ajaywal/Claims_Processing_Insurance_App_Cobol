@@ -16,9 +16,9 @@
            10 COD-TABLE-NAME                 PIC X(8).
            10 COD-CODE-VALUE                 PIC X(10).
            10 COD-DESCRIPTION.
-              49 COD-DESCRIPTION-LEN          PIC S9(4) USAGE COMP.
+              49 COD-DESCRIPTION-LEN          PIC S9(4) COMP.
               49 COD-DESCRIPTION-TEXT         PIC X(60).
            10 COD-PARENT-CODE                PIC X(10).
-           10 COD-SORT-ORDER                 PIC S9(4) USAGE COMP.
+           10 COD-SORT-ORDER                 PIC S9(4) COMP.
            10 COD-ACTIVE-FLAG                PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 6

@@ -15,9 +15,9 @@
            ) END-EXEC.
        01  DCLBIL-SEQUENCE.
            10 SEQ-SEQ-NAME                   PIC X(8).
-           10 SEQ-NEXT-VALUE                 PIC S9(9) USAGE COMP.
-           10 SEQ-INCREMENT-BY               PIC S9(4) USAGE COMP.
-           10 SEQ-MAX-VALUE                  PIC S9(9) USAGE COMP.
+           10 SEQ-NEXT-VALUE                 PIC S9(9) COMP.
+           10 SEQ-INCREMENT-BY               PIC S9(4) COMP.
+           10 SEQ-MAX-VALUE                  PIC S9(9) COMP.
            10 SEQ-CYCLE-FLAG                 PIC X(1).
            10 SEQ-PREFIX-TEXT                PIC X(4).
            10 SEQ-UPDATE-TS                  PIC X(26).

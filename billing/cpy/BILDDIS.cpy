@@ -16,13 +16,13 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-DISTRIBUTION.
-           10 DIS-DIST-ID                    PIC S9(9) USAGE COMP.
-           10 DIS-MONEY-ID                   PIC S9(9) USAGE COMP.
-           10 DIS-ITEM-ID                    PIC S9(9) USAGE COMP.
-           10 DIS-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 DIS-DIST-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
+           10 DIS-DIST-ID                    PIC S9(9) COMP.
+           10 DIS-MONEY-ID                   PIC S9(9) COMP.
+           10 DIS-ITEM-ID                    PIC S9(9) COMP.
+           10 DIS-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 DIS-DIST-AMOUNT                PIC S9(11)V9(2) COMP-3.
            10 DIS-DIST-DATE                  PIC X(10).
            10 DIS-REVERSED-FLAG              PIC X(1).
-           10 DIS-REVERSED-DIST-ID           PIC S9(9) USAGE COMP.
+           10 DIS-REVERSED-DIST-ID           PIC S9(9) COMP.
            10 DIS-CREATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

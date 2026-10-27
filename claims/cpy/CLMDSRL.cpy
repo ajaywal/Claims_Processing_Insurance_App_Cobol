@@ -13,8 +13,8 @@
        01  DCLCLM-SIU-RULE.
            10 SRL-RULE-CODE                  PIC X(8).
            10 SRL-DESCRIPTION.
-              49 SRL-DESCRIPTION-LEN          PIC S9(4) USAGE COMP.
+              49 SRL-DESCRIPTION-LEN          PIC S9(4) COMP.
               49 SRL-DESCRIPTION-TEXT         PIC X(60).
-           10 SRL-POINTS                     PIC S9(4) USAGE COMP.
+           10 SRL-POINTS                     PIC S9(4) COMP.
            10 SRL-ACTIVE-FLAG                PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4

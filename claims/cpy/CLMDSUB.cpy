@@ -16,18 +16,18 @@
            , CLOSE_OUTCOME        CHAR(8)        NOT NULL
            ) END-EXEC.
        01  DCLCLM-SUBROGATION.
-           10 SUB-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 SUB-CLAIM-ID                   PIC S9(9) COMP.
            10 SUB-SUBRO-STATUS               PIC X(4).
-           10 SUB-ADVERSE-PARTY-ID           PIC S9(9) USAGE COMP.
+           10 SUB-ADVERSE-PARTY-ID           PIC S9(9) COMP.
            10 SUB-ADVERSE-CARRIER.
-              49 SUB-ADVERSE-CARRIER-LEN      PIC S9(4) USAGE COMP.
+              49 SUB-ADVERSE-CARRIER-LEN      PIC S9(4) COMP.
               49 SUB-ADVERSE-CARRIER-TEXT     PIC X(60).
-           10 SUB-LIABILITY-PCT              PIC S9(3)V9(2) USAGE COMP-3.
-           10 SUB-EST-RECOVERY               PIC S9(11)V9(2) USAGE COMP-3.
+           10 SUB-LIABILITY-PCT              PIC S9(3)V9(2) COMP-3.
+           10 SUB-EST-RECOVERY               PIC S9(11)V9(2) COMP-3.
            10 SUB-OPENED-DATE                PIC X(10).
            10 SUB-CLOSED-DATE                PIC X(10).
            10 SUB-CLOSE-OUTCOME              PIC X(8).
        01  INDCLM-SUBROGATION.
-           10 SUB-ADVERSE-CARRIER-IND        PIC S9(4) USAGE COMP.
-           10 SUB-CLOSED-DATE-IND            PIC S9(4) USAGE COMP.
+           10 SUB-ADVERSE-CARRIER-IND        PIC S9(4) COMP.
+           10 SUB-CLOSED-DATE-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

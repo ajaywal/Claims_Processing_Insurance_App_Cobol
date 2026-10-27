@@ -46,10 +46,10 @@
            , VERSION_NO           INTEGER        NOT NULL
            ) END-EXEC.
        01  DCLCLM-CLAIM.
-           10 CLM-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 CLM-CLAIM-ID                   PIC S9(9) COMP.
            10 CLM-CLAIM-NUMBER               PIC X(12).
-           10 CLM-GENAPP-POL-NUM             PIC S9(9) USAGE COMP.
-           10 CLM-GENAPP-CUST-NUM            PIC S9(9) USAGE COMP.
+           10 CLM-GENAPP-POL-NUM             PIC S9(9) COMP.
+           10 CLM-GENAPP-CUST-NUM            PIC S9(9) COMP.
            10 CLM-POLICY-TYPE                PIC X(1).
            10 CLM-LOSS-TYPE                  PIC X(4).
            10 CLM-LOSS-DATE                  PIC X(10).
@@ -58,19 +58,19 @@
            10 CLM-HOW-REPORTED               PIC X(4).
            10 CLM-LOSS-CAUSE                 PIC X(10).
            10 CLM-LOSS-DESC.
-              49 CLM-LOSS-DESC-LEN            PIC S9(4) USAGE COMP.
+              49 CLM-LOSS-DESC-LEN            PIC S9(4) COMP.
               49 CLM-LOSS-DESC-TEXT           PIC X(250).
            10 CLM-LOSS-ADDR-LINE1.
-              49 CLM-LOSS-ADDR-LINE1-LEN      PIC S9(4) USAGE COMP.
+              49 CLM-LOSS-ADDR-LINE1-LEN      PIC S9(4) COMP.
               49 CLM-LOSS-ADDR-LINE1-TEXT     PIC X(60).
            10 CLM-LOSS-POSTCODE              PIC X(8).
            10 CLM-CLAIM-STATE                PIC X(4).
            10 CLM-CLOSE-REASON               PIC X(8).
            10 CLM-SEGMENT-CODE               PIC X(8).
-           10 CLM-SEVERITY                   PIC S9(4) USAGE COMP.
+           10 CLM-SEVERITY                   PIC S9(4) COMP.
            10 CLM-FAULT-RATING               PIC X(4).
            10 CLM-COVERAGE-IN-QSTN           PIC X(1).
-           10 CLM-SIU-SCORE                  PIC S9(4) USAGE COMP.
+           10 CLM-SIU-SCORE                  PIC S9(4) COMP.
            10 CLM-SIU-STATUS                 PIC X(4).
            10 CLM-LITIGATION-FLAG            PIC X(1).
            10 CLM-CAT-CODE                   PIC X(8).
@@ -78,21 +78,21 @@
            10 CLM-DUP-SUSPECT-FLAG           PIC X(1).
            10 CLM-ASSIGNED-USER              PIC X(8).
            10 CLM-ASSIGNED-GROUP             PIC X(8).
-           10 CLM-TOTAL-RESERVES             PIC S9(11)V9(2) USAGE COMP-3.
-           10 CLM-TOTAL-PAID                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 CLM-TOTAL-RECOVERED            PIC S9(11)V9(2) USAGE COMP-3.
-           10 CLM-TOTAL-INCURRED             PIC S9(11)V9(2) USAGE COMP-3.
+           10 CLM-TOTAL-RESERVES             PIC S9(11)V9(2) COMP-3.
+           10 CLM-TOTAL-PAID                 PIC S9(11)V9(2) COMP-3.
+           10 CLM-TOTAL-RECOVERED            PIC S9(11)V9(2) COMP-3.
+           10 CLM-TOTAL-INCURRED             PIC S9(11)V9(2) COMP-3.
            10 CLM-OPEN-DATE                  PIC X(10).
            10 CLM-CLOSE-DATE                 PIC X(10).
-           10 CLM-REOPEN-COUNT               PIC S9(4) USAGE COMP.
+           10 CLM-REOPEN-COUNT               PIC S9(4) COMP.
            10 CLM-CREATE-USER                PIC X(8).
            10 CLM-CREATE-TS                  PIC X(26).
            10 CLM-UPDATE-TS                  PIC X(26).
-           10 CLM-VERSION-NO                 PIC S9(9) USAGE COMP.
+           10 CLM-VERSION-NO                 PIC S9(9) COMP.
        01  INDCLM-CLAIM.
-           10 CLM-LOSS-TIME-IND              PIC S9(4) USAGE COMP.
-           10 CLM-LOSS-ADDR-LINE1-IND        PIC S9(4) USAGE COMP.
-           10 CLM-LOSS-POSTCODE-IND          PIC S9(4) USAGE COMP.
-           10 CLM-OPEN-DATE-IND              PIC S9(4) USAGE COMP.
-           10 CLM-CLOSE-DATE-IND             PIC S9(4) USAGE COMP.
+           10 CLM-LOSS-TIME-IND              PIC S9(4) COMP.
+           10 CLM-LOSS-ADDR-LINE1-IND        PIC S9(4) COMP.
+           10 CLM-LOSS-POSTCODE-IND          PIC S9(4) COMP.
+           10 CLM-OPEN-DATE-IND              PIC S9(4) COMP.
+           10 CLM-CLOSE-DATE-IND             PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 39

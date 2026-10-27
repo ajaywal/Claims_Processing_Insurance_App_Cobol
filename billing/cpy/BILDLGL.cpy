@@ -14,11 +14,11 @@
            , BUSINESS_DATE        DATE           NOT NULL
            ) END-EXEC.
        01  DCLBIL-LEDGER-LINE.
-           10 LGL-TXN-ID                     PIC S9(9) USAGE COMP.
-           10 LGL-LINE-SEQ                   PIC S9(4) USAGE COMP.
+           10 LGL-TXN-ID                     PIC S9(9) COMP.
+           10 LGL-LINE-SEQ                   PIC S9(4) COMP.
            10 LGL-T-ACCOUNT                  PIC X(8).
            10 LGL-DR-CR                      PIC X(1).
-           10 LGL-LINE-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
-           10 LGL-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 LGL-LINE-AMOUNT                PIC S9(11)V9(2) COMP-3.
+           10 LGL-ACCOUNT-ID                 PIC S9(9) COMP.
            10 LGL-BUSINESS-DATE              PIC X(10).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7

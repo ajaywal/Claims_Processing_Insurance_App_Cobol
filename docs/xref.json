@@ -1,0 +1,4687 @@
+{
+ "programs": [
+  {
+   "program": "BILAUDIT",
+   "path": "billing/src/common/BILAUDIT.cbl",
+   "style": "A",
+   "code_lines": 231,
+   "calls": [
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "AUDADD"
+   ],
+   "tables": {
+    "BILDB.BIL_AUDIT": "C"
+   },
+   "rules": [
+    "BR-BIL-AUD-001",
+    "BR-BIL-AUD-002",
+    "BR-BIL-AUD-003",
+    "BR-BIL-AUD-004",
+    "BR-BIL-AUD-005",
+    "BR-BIL-AUD-006",
+    "BR-BIL-AUD-007",
+    "BR-BIL-AUD-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILERRLG",
+   "path": "billing/src/common/BILERRLG.cbl",
+   "style": "A",
+   "code_lines": 166,
+   "calls": [
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN"
+   },
+   "serves": [
+    "ERRLOG"
+   ],
+   "tables": {
+    "BILDB.BIL_ERROR_LOG": "C"
+   },
+   "rules": [
+    "BR-BIL-ERR-001",
+    "BR-BIL-ERR-002",
+    "BR-BIL-ERR-003",
+    "BR-BIL-ERR-004",
+    "BR-BIL-ERR-005"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILCODVL",
+   "path": "billing/src/common/BILCODVL.cbl",
+   "style": "A",
+   "code_lines": 173,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "CODVAL"
+   ],
+   "tables": {
+    "BILDB.BIL_CODE_TABLE": "R"
+   },
+   "rules": [
+    "BR-BIL-COD-001",
+    "BR-BIL-COD-002",
+    "BR-BIL-COD-003",
+    "BR-BIL-COD-004",
+    "BR-BIL-COD-005"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILEVTQ",
+   "path": "billing/src/common/BILEVTQ.cbl",
+   "style": "A",
+   "code_lines": 523,
+   "calls": [
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "EVDONE",
+    "EVFAIL",
+    "EVGET",
+    "EVPUT"
+   ],
+   "tables": {
+    "BILDB.BIL_EVENT_QUEUE": "CRU"
+   },
+   "rules": [
+    "BR-BIL-EVQ-001",
+    "BR-BIL-EVQ-002",
+    "BR-BIL-EVQ-003",
+    "BR-BIL-EVQ-004",
+    "BR-BIL-EVQ-005",
+    "BR-BIL-EVQ-006",
+    "BR-BIL-EVQ-007",
+    "BR-BIL-EVQ-008",
+    "BR-BIL-EVQ-009",
+    "BR-BIL-EVQ-010",
+    "BR-BIL-EVQ-011"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILSEQGN",
+   "path": "billing/src/common/BILSEQGN.cbl",
+   "style": "A",
+   "code_lines": 171,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "SEQNEXT"
+   ],
+   "tables": {
+    "BILDB.BIL_SEQUENCE": "RU"
+   },
+   "rules": [
+    "BR-BIL-SEQ-001",
+    "BR-BIL-SEQ-002",
+    "BR-BIL-SEQ-003",
+    "BR-BIL-SEQ-004"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILGLPST",
+   "path": "billing/src/common/BILGLPST.cbl",
+   "style": "A",
+   "code_lines": 501,
+   "calls": [
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "GLPOST",
+    "GLREVS"
+   ],
+   "tables": {
+    "BILDB.BIL_LEDGER_LINE": "CR",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_TRANSACTION": "CR"
+   },
+   "rules": [
+    "BR-BIL-GLP-001",
+    "BR-BIL-GLP-002",
+    "BR-BIL-GLP-003",
+    "BR-BIL-GLP-004",
+    "BR-BIL-GLP-005",
+    "BR-BIL-GLP-006",
+    "BR-BIL-GLP-007",
+    "BR-BIL-GLP-008",
+    "BR-BIL-GLP-009",
+    "BR-BIL-GLP-010",
+    "BR-BIL-GLP-011",
+    "BR-BIL-GLP-012",
+    "BR-BIL-GLP-013"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILMONEY",
+   "path": "billing/src/common/BILMONEY.cbl",
+   "style": "A",
+   "code_lines": 168,
+   "calls": [],
+   "sends": {},
+   "tag_target": {},
+   "serves": [
+    "MNPRORA",
+    "MNRATE",
+    "MNSPLIT"
+   ],
+   "tables": {},
+   "rules": [
+    "BR-BIL-MNY-001",
+    "BR-BIL-MNY-002",
+    "BR-BIL-MNY-003",
+    "BR-BIL-MNY-004",
+    "BR-BIL-MNY-005",
+    "BR-BIL-MNY-006",
+    "BR-BIL-MNY-007",
+    "BR-BIL-MNY-008",
+    "BR-BIL-MNY-009"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDATES",
+   "path": "billing/src/common/BILDATES.cbl",
+   "style": "A",
+   "code_lines": 471,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "DTADDD",
+    "DTADDM",
+    "DTBUSD",
+    "DTDIFF",
+    "DTDOW",
+    "DTEOM",
+    "DTVALD"
+   ],
+   "tables": {
+    "BILDB.BIL_CALENDAR": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-DTE-001",
+    "BR-BIL-DTE-002",
+    "BR-BIL-DTE-003",
+    "BR-BIL-DTE-004",
+    "BR-BIL-DTE-005",
+    "BR-BIL-DTE-006",
+    "BR-BIL-DTE-007",
+    "BR-BIL-DTE-008",
+    "BR-BIL-DTE-009"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILAUTHZ",
+   "path": "billing/src/common/BILAUTHZ.cbl",
+   "style": "A",
+   "code_lines": 263,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "AUTCHK"
+   ],
+   "tables": {
+    "BILDB.BIL_USER": "R",
+    "BILDB.BIL_AUTHORITY_LIMIT": "R"
+   },
+   "rules": [
+    "BR-BIL-AUT-001",
+    "BR-BIL-AUT-002",
+    "BR-BIL-AUT-003",
+    "BR-BIL-AUT-004",
+    "BR-BIL-AUT-005",
+    "BR-BIL-AUT-006",
+    "BR-BIL-AUT-007",
+    "BR-BIL-AUT-008",
+    "BR-BIL-AUT-009",
+    "BR-BIL-AUT-010"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILPAYRC",
+   "path": "billing/src/online/BILPAYRC.cbl",
+   "style": "A",
+   "code_lines": 1431,
+   "calls": [
+    "BILACCT0",
+    "BILAUDIT",
+    "BILAUTHZ",
+    "BILCODVL",
+    "BILDATES",
+    "BILDLQSV",
+    "BILERRLG",
+    "BILGLPST",
+    "BILHOLD0",
+    "BILINSTR",
+    "BILISCHD",
+    "BILPAYDS",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "GLA": [
+     "GLPOST",
+     "GLREVS"
+    ],
+    "SCA": [
+     "SCHCHG"
+    ],
+    "ACA": [
+     "ACCTBAL"
+    ],
+    "DTA": [
+     "DTVALD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HLA": [
+     "HLDCHK"
+    ],
+    "DSA": [
+     "DSTAPLY",
+     "DSTUNDO"
+    ],
+    "DQA": [
+     "DLQEXIT"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "PIA": [
+     "INSFAIL"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "CDA": "BILCODVL",
+    "HLA": "BILHOLD0",
+    "DSA": "BILPAYDS",
+    "DQA": "BILDLQSV",
+    "ATA": "BILAUTHZ",
+    "PIA": "BILINSTR",
+    "SCA": "BILISCHD",
+    "ACA": "BILACCT0",
+    "SQA": "BILSEQGN",
+    "GLA": "BILGLPST",
+    "AUA": "BILAUDIT",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "PAYINQ",
+    "PAYMAT",
+    "PAYRCV",
+    "PAYREV"
+   ],
+   "tables": {
+    "BILDB.BIL_DISTRIBUTION": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_INVOICE": "R",
+    "BILDB.BIL_TRANSACTION": "R",
+    "BILDB.BIL_ACCOUNT": "RU",
+    "BILDB.BIL_PAYMENT_RECEIPT": "CRU",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "R",
+    "BILDB.BIL_SUSPENSE": "CRU",
+    "BILDB.BIL_CODE_TABLE": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_CHARGE": "C",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-PAY-001",
+    "BR-BIL-PAY-002",
+    "BR-BIL-PAY-003",
+    "BR-BIL-PAY-004",
+    "BR-BIL-PAY-005",
+    "BR-BIL-PAY-006",
+    "BR-BIL-PAY-007",
+    "BR-BIL-PAY-008",
+    "BR-BIL-PAY-009",
+    "BR-BIL-PAY-010",
+    "BR-BIL-PAY-011",
+    "BR-BIL-PAY-012",
+    "BR-BIL-PAY-013",
+    "BR-BIL-PAY-014",
+    "BR-BIL-PAY-015",
+    "BR-BIL-PAY-016",
+    "BR-BIL-PAY-017",
+    "BR-BIL-PAY-018",
+    "BR-BIL-PAY-019"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDLQSV",
+   "path": "billing/src/online/BILDLQSV.cbl",
+   "style": "A",
+   "code_lines": 909,
+   "calls": [
+    "BILAUDIT",
+    "BILDATES",
+    "BILERRLG",
+    "BILEVTQ",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTC": [
+     "DTADDD",
+     "DTBUSD"
+    ],
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "HLC": [
+     "HLDCHK"
+    ],
+    "EVC": [
+     "EVPUT"
+    ],
+    "AUC": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "DTC": "BILDATES",
+    "HLC": "BILHOLD0",
+    "EVC": "BILEVTQ",
+    "AUC": "BILAUDIT",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "DLQEXIT",
+    "DLQINQ",
+    "DLQSTRT"
+   ],
+   "tables": {
+    "BILDB.BIL_DELINQ_STEP": "R",
+    "BILDB.BIL_DELINQ_PROCESS": "CRU",
+    "BILDB.BIL_DELINQ_EVENT": "CRU",
+    "BILDB.BIL_ACCOUNT": "RU",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-DLQ-001",
+    "BR-BIL-DLQ-002",
+    "BR-BIL-DLQ-003",
+    "BR-BIL-DLQ-004",
+    "BR-BIL-DLQ-005",
+    "BR-BIL-DLQ-006",
+    "BR-BIL-DLQ-007",
+    "BR-BIL-DLQ-008",
+    "BR-BIL-DLQ-009",
+    "BR-BIL-DLQ-010",
+    "BR-BIL-DLQ-011",
+    "BR-BIL-DLQ-012",
+    "BR-BIL-DLQ-013",
+    "BR-BIL-DLQ-014",
+    "BR-BIL-DLQ-015"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILPAYDS",
+   "path": "billing/src/online/BILPAYDS.cbl",
+   "style": "A",
+   "code_lines": 914,
+   "calls": [
+    "BILCOMSV",
+    "BILERRLG",
+    "BILGLPST",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "GLA": [
+     "GLPOST"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "GLA": "BILGLPST",
+    "CMA": "BILCOMSV",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "DSTAPLY",
+    "DSTUNDO"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_CHARGE": "R",
+    "BILDB.BIL_DISTRIBUTION": "CRU",
+    "BILDB.BIL_PAYMENT_RECEIPT": "RU",
+    "BILDB.BIL_ACCOUNT": "RU",
+    "BILDB.BIL_INVOICE": "RU",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-DST-001",
+    "BR-BIL-DST-002",
+    "BR-BIL-DST-003",
+    "BR-BIL-DST-004",
+    "BR-BIL-DST-005",
+    "BR-BIL-DST-006",
+    "BR-BIL-DST-007",
+    "BR-BIL-DST-008",
+    "BR-BIL-DST-009",
+    "BR-BIL-DST-010",
+    "BR-BIL-DST-011",
+    "BR-BIL-DST-012",
+    "BR-BIL-DST-013",
+    "BR-BIL-DST-014",
+    "BR-BIL-DST-015",
+    "BR-BIL-DST-016"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILPROD0",
+   "path": "billing/src/online/BILPROD0.cbl",
+   "style": "A",
+   "code_lines": 593,
+   "calls": [
+    "BILAUDIT",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "AUA": "BILAUDIT",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "PRDADD",
+    "PRDFND",
+    "PRDINQ",
+    "PRDUPD"
+   ],
+   "tables": {
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_PRODUCER": "CRU",
+    "BILDB.BIL_COMMISSION_PLAN": "R",
+    "BILDB.BIL_AGENCY_STATEMENT": "R"
+   },
+   "rules": [
+    "BR-BIL-PRD-001",
+    "BR-BIL-PRD-002",
+    "BR-BIL-PRD-003",
+    "BR-BIL-PRD-004",
+    "BR-BIL-PRD-005",
+    "BR-BIL-PRD-006",
+    "BR-BIL-PRD-007",
+    "BR-BIL-PRD-008",
+    "BR-BIL-PRD-009",
+    "BR-BIL-PRD-010",
+    "BR-BIL-PRD-011",
+    "BR-BIL-PRD-012"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILPAYP",
+   "path": "billing/src/online/BILPAYP.cbl",
+   "style": "B",
+   "code_lines": 637,
+   "calls": [
+    "BILACCT0",
+    "BILCODVL",
+    "BILDATES",
+    "BILERRLG",
+    "BILINVSV",
+    "BILPAYRC"
+   ],
+   "sends": {
+    "PYA": [
+     "PAYRCV"
+    ],
+    "ACA": [
+     "ACCTINQ"
+    ],
+    "IVA": [
+     "INVINQ"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "DTA": [
+     "DTVALD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "PYA": "BILPAYRC",
+    "ACA": "BILACCT0",
+    "IVA": "BILINVSV",
+    "CDA": "BILCODVL",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-BIL-PYE-001",
+    "BR-BIL-PYE-002",
+    "BR-BIL-PYE-003",
+    "BR-BIL-PYE-004",
+    "BR-BIL-PYE-005",
+    "BR-BIL-PYE-006",
+    "BR-BIL-PYE-007",
+    "BR-BIL-PYE-008",
+    "BR-BIL-PYE-009",
+    "BR-BIL-PYE-010"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILPPER0",
+   "path": "billing/src/online/BILPPER0.cbl",
+   "style": "A",
+   "code_lines": 1675,
+   "calls": [
+    "BILACCT0",
+    "BILAUDIT",
+    "BILAUTHZ",
+    "BILCODVL",
+    "BILCOMSV",
+    "BILDATES",
+    "BILERRLG",
+    "BILGLPST",
+    "BILISCHD",
+    "BILMONEY",
+    "BILPROD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SCA": [
+     "SCHCHG",
+     "SCHRSC"
+    ],
+    "PRA": [
+     "PRDFND"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "DTA": [
+     "DTADDD",
+     "DTADDM",
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "MNA": [
+     "MNPRORA",
+     "MNRATE"
+    ],
+    "GLA": [
+     "GLPOST"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "CMA": [
+     "CMSRSV",
+     "CMSRVS"
+    ],
+    "ACA": [
+     "ACCTBAL"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "DTA": "BILDATES",
+    "MNA": "BILMONEY",
+    "SCA": "BILISCHD",
+    "CMA": "BILCOMSV",
+    "GLA": "BILGLPST",
+    "AUA": "BILAUDIT",
+    "ATA": "BILAUTHZ",
+    "PRA": "BILPROD0",
+    "CDA": "BILCODVL",
+    "ACA": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "PPCAN",
+    "PPCHG",
+    "PPINQ",
+    "PPNEW",
+    "PPPLN",
+    "PPRIN"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_CHARGE": "CRU",
+    "BILDB.BIL_COMMISSION_ITEM": "R",
+    "BILDB.BIL_POLICY_PERIOD": "CRU",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE_STREAM": "R",
+    "BILDB.BIL_PAYMENT_PLAN": "R",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-PPR-001",
+    "BR-BIL-PPR-002",
+    "BR-BIL-PPR-003",
+    "BR-BIL-PPR-004",
+    "BR-BIL-PPR-005",
+    "BR-BIL-PPR-006",
+    "BR-BIL-PPR-007",
+    "BR-BIL-PPR-008",
+    "BR-BIL-PPR-009",
+    "BR-BIL-PPR-010",
+    "BR-BIL-PPR-011",
+    "BR-BIL-PPR-012",
+    "BR-BIL-PPR-013",
+    "BR-BIL-PPR-014",
+    "BR-BIL-PPR-015",
+    "BR-BIL-PPR-016",
+    "BR-BIL-PPR-017",
+    "BR-BIL-PPR-018",
+    "BR-BIL-PPR-019",
+    "BR-BIL-PPR-020"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILMNUP",
+   "path": "billing/src/online/BILMNUP.cbl",
+   "style": "B",
+   "code_lines": 232,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-BIL-MNU-001",
+    "BR-BIL-MNU-002",
+    "BR-BIL-MNU-003",
+    "BR-BIL-MNU-004",
+    "BR-BIL-MNU-005"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILHOLD0",
+   "path": "billing/src/online/BILHOLD0.cbl",
+   "style": "A",
+   "code_lines": 558,
+   "calls": [
+    "BILAUDIT",
+    "BILAUTHZ",
+    "BILDATES",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "DTA": [
+     "DTVALD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "AUA": "BILAUDIT",
+    "DTA": "BILDATES",
+    "ATA": "BILAUTHZ",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "HLDADD",
+    "HLDCHK",
+    "HLDREL"
+   ],
+   "tables": {
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_HOLD": "CRU",
+    "BILDB.BIL_ACCOUNT": "R"
+   },
+   "rules": [
+    "BR-BIL-HLD-001",
+    "BR-BIL-HLD-002",
+    "BR-BIL-HLD-003",
+    "BR-BIL-HLD-004",
+    "BR-BIL-HLD-005",
+    "BR-BIL-HLD-006",
+    "BR-BIL-HLD-007",
+    "BR-BIL-HLD-008",
+    "BR-BIL-HLD-009",
+    "BR-BIL-HLD-010",
+    "BR-BIL-HLD-011"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILACIP",
+   "path": "billing/src/online/BILACIP.cbl",
+   "style": "B",
+   "code_lines": 467,
+   "calls": [
+    "BILACCT0",
+    "BILERRLG"
+   ],
+   "sends": {
+    "ACA": [
+     "ACCTINQ"
+    ],
+    "ABA": [
+     "ACCTBAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ACA": "BILACCT0",
+    "ABA": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-BIL-ACI-001",
+    "BR-BIL-ACI-002",
+    "BR-BIL-ACI-003",
+    "BR-BIL-ACI-004",
+    "BR-BIL-ACI-005",
+    "BR-BIL-ACI-006",
+    "BR-BIL-ACI-007",
+    "BR-BIL-ACI-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILIVMP",
+   "path": "billing/src/online/BILIVMP.cbl",
+   "style": "B",
+   "code_lines": 416,
+   "calls": [
+    "BILACCT0",
+    "BILERRLG",
+    "BILINVSV"
+   ],
+   "sends": {
+    "ACA": [
+     "ACCTINQ"
+    ],
+    "IVA": [
+     "INVLST"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ACA": "BILACCT0",
+    "IVA": "BILINVSV",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-BIL-IVL-001",
+    "BR-BIL-IVL-002",
+    "BR-BIL-IVL-003",
+    "BR-BIL-IVL-004",
+    "BR-BIL-IVL-005",
+    "BR-BIL-IVL-006"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILINSTR",
+   "path": "billing/src/online/BILINSTR.cbl",
+   "style": "A",
+   "code_lines": 668,
+   "calls": [
+    "BILACCT0",
+    "BILAUDIT",
+    "BILDATES",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTBUSD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "AUA": "BILAUDIT",
+    "DTA": "BILDATES",
+    "ACA": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "INSADD",
+    "INSDEA",
+    "INSFAIL",
+    "INSINQ"
+   ],
+   "tables": {
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "CRU",
+    "BILDB.BIL_TROUBLE_TICKET": "C"
+   },
+   "rules": [
+    "BR-BIL-PIN-001",
+    "BR-BIL-PIN-002",
+    "BR-BIL-PIN-003",
+    "BR-BIL-PIN-004",
+    "BR-BIL-PIN-005",
+    "BR-BIL-PIN-006",
+    "BR-BIL-PIN-007",
+    "BR-BIL-PIN-008",
+    "BR-BIL-PIN-009",
+    "BR-BIL-PIN-010",
+    "BR-BIL-PIN-011",
+    "BR-BIL-PIN-012",
+    "BR-BIL-PIN-013"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILISCHD",
+   "path": "billing/src/online/BILISCHD.cbl",
+   "style": "A",
+   "code_lines": 1027,
+   "calls": [
+    "BILDATES",
+    "BILERRLG",
+    "BILMONEY",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "DTC": [
+     "DTADDD",
+     "DTADDM",
+     "DTEOM"
+    ],
+    "MNC": [
+     "MNSPLIT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "DTC": "BILDATES",
+    "MNC": "BILMONEY",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "SCHCHG",
+    "SCHRSC"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "CRU",
+    "BILDB.BIL_CHARGE": "RU",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_PAYMENT_PLAN": "R",
+    "BILDB.BIL_INVOICE_STREAM": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-SCH-001",
+    "BR-BIL-SCH-002",
+    "BR-BIL-SCH-003",
+    "BR-BIL-SCH-004",
+    "BR-BIL-SCH-005",
+    "BR-BIL-SCH-006",
+    "BR-BIL-SCH-007",
+    "BR-BIL-SCH-008",
+    "BR-BIL-SCH-009",
+    "BR-BIL-SCH-010",
+    "BR-BIL-SCH-011",
+    "BR-BIL-SCH-012",
+    "BR-BIL-SCH-013",
+    "BR-BIL-SCH-014",
+    "BR-BIL-SCH-015",
+    "BR-BIL-SCH-016",
+    "BR-BIL-SCH-017"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILACCT0",
+   "path": "billing/src/online/BILACCT0.cbl",
+   "style": "A",
+   "code_lines": 1597,
+   "calls": [
+    "BILAUDIT",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "AUA": "BILAUDIT",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "ACCTADD",
+    "ACCTBAL",
+    "ACCTCLS",
+    "ACCTFND",
+    "ACCTINQ",
+    "ACCTUPD"
+   ],
+   "tables": {
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_ACCOUNT": "CRU",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "GENAPP.CUSTOMER": "R",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "RU",
+    "BILDB.BIL_ACCOUNT_CONTACT": "CRU",
+    "BILDB.BIL_INVOICE_STREAM": "CRU",
+    "BILDB.BIL_DELINQ_PROCESS": "R",
+    "BILDB.BIL_DISBURSEMENT": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_PAYMENT_RECEIPT": "R"
+   },
+   "rules": [
+    "BR-BIL-ACT-001",
+    "BR-BIL-ACT-002",
+    "BR-BIL-ACT-003",
+    "BR-BIL-ACT-004",
+    "BR-BIL-ACT-005",
+    "BR-BIL-ACT-006",
+    "BR-BIL-ACT-007",
+    "BR-BIL-ACT-008",
+    "BR-BIL-ACT-009",
+    "BR-BIL-ACT-010",
+    "BR-BIL-ACT-011",
+    "BR-BIL-ACT-012",
+    "BR-BIL-ACT-013",
+    "BR-BIL-ACT-014",
+    "BR-BIL-ACT-015",
+    "BR-BIL-ACT-016",
+    "BR-BIL-ACT-017",
+    "BR-BIL-ACT-018",
+    "BR-BIL-ACT-019",
+    "BR-BIL-ACT-020"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILCOMSV",
+   "path": "billing/src/online/BILCOMSV.cbl",
+   "style": "A",
+   "code_lines": 742,
+   "calls": [
+    "BILERRLG",
+    "BILGLPST",
+    "BILMONEY",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "MNA": [
+     "MNRATE"
+    ],
+    "GLA": [
+     "GLPOST"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "MNA": "BILMONEY",
+    "GLA": "BILGLPST",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "CMSERN",
+    "CMSINQ",
+    "CMSRSV",
+    "CMSRVS"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_CHARGE": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_PRODUCER": "RU",
+    "BILDB.BIL_COMMISSION_PLAN": "R",
+    "BILDB.BIL_COMMISSION_RATE": "R",
+    "BILDB.BIL_COMMISSION_ITEM": "CRU",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-CMS-001",
+    "BR-BIL-CMS-002",
+    "BR-BIL-CMS-003",
+    "BR-BIL-CMS-004",
+    "BR-BIL-CMS-005",
+    "BR-BIL-CMS-006",
+    "BR-BIL-CMS-007",
+    "BR-BIL-CMS-008",
+    "BR-BIL-CMS-009",
+    "BR-BIL-CMS-010",
+    "BR-BIL-CMS-011",
+    "BR-BIL-CMS-012",
+    "BR-BIL-CMS-013",
+    "BR-BIL-CMS-014"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDISB0",
+   "path": "billing/src/online/BILDISB0.cbl",
+   "style": "A",
+   "code_lines": 1124,
+   "calls": [
+    "BILAUDIT",
+    "BILAUTHZ",
+    "BILDATES",
+    "BILERRLG",
+    "BILGLPST",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTVALD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HLA": [
+     "HLDCHK"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "GLA": [
+     "GLPOST",
+     "GLREVS"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG",
+    "SQA": "BILSEQGN",
+    "ATA": "BILAUTHZ",
+    "HLA": "BILHOLD0",
+    "GLA": "BILGLPST",
+    "AUA": "BILAUDIT",
+    "DTA": "BILDATES"
+   },
+   "serves": [
+    "DSBAPR",
+    "DSBCRT",
+    "DSBINQ",
+    "DSBVOID"
+   ],
+   "tables": {
+    "BILDB.BIL_PAYMENT_RECEIPT": "RU",
+    "BILDB.BIL_DISBURSEMENT": "CRU",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "R",
+    "BILDB.BIL_ACCOUNT": "RU",
+    "BILDB.BIL_TRANSACTION": "R",
+    "BILDB.BIL_PRODUCER_PAYMENT": "RU",
+    "BILDB.BIL_COMMISSION_ITEM": "U",
+    "BILDB.BIL_PRODUCER": "U",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-DSB-001",
+    "BR-BIL-DSB-002",
+    "BR-BIL-DSB-003",
+    "BR-BIL-DSB-004",
+    "BR-BIL-DSB-005",
+    "BR-BIL-DSB-006",
+    "BR-BIL-DSB-007",
+    "BR-BIL-DSB-008",
+    "BR-BIL-DSB-009",
+    "BR-BIL-DSB-010",
+    "BR-BIL-DSB-011",
+    "BR-BIL-DSB-012",
+    "BR-BIL-DSB-013",
+    "BR-BIL-DSB-014",
+    "BR-BIL-DSB-015",
+    "BR-BIL-DSB-016",
+    "BR-BIL-DSB-017"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILWOFF0",
+   "path": "billing/src/online/BILWOFF0.cbl",
+   "style": "A",
+   "code_lines": 903,
+   "calls": [
+    "BILACCT0",
+    "BILAUDIT",
+    "BILAUTHZ",
+    "BILCODVL",
+    "BILERRLG",
+    "BILGLPST",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "GLA": [
+     "GLPOST",
+     "GLREVS"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ACA": [
+     "ACCTBAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "CDA": "BILCODVL",
+    "ATA": "BILAUTHZ",
+    "GLA": "BILGLPST",
+    "AUA": "BILAUDIT",
+    "ACA": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "WOFCRT"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_WRITEOFF": "CRU",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "BILDB.BIL_TRANSACTION": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-WOF-001",
+    "BR-BIL-WOF-002",
+    "BR-BIL-WOF-003",
+    "BR-BIL-WOF-004",
+    "BR-BIL-WOF-005",
+    "BR-BIL-WOF-006",
+    "BR-BIL-WOF-007",
+    "BR-BIL-WOF-008",
+    "BR-BIL-WOF-009",
+    "BR-BIL-WOF-010",
+    "BR-BIL-WOF-011",
+    "BR-BIL-WOF-012",
+    "BR-BIL-WOF-013",
+    "BR-BIL-WOF-014"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILINVSV",
+   "path": "billing/src/online/BILINVSV.cbl",
+   "style": "A",
+   "code_lines": 841,
+   "calls": [
+    "BILACCT0",
+    "BILDATES",
+    "BILERRLG",
+    "BILGLPST",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTC": [
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "HLC": [
+     "HLDCHK"
+    ],
+    "GLC": [
+     "GLPOST"
+    ],
+    "ACC": [
+     "ACCTBAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "DTC": "BILDATES",
+    "HLC": "BILHOLD0",
+    "GLC": "BILGLPST",
+    "ACC": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [
+    "INVADH",
+    "INVINQ",
+    "INVLST",
+    "INVRSN"
+   ],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_CHARGE": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_INVOICE": "CRU",
+    "BILDB.BIL_DOCUMENT_REQUEST": "CR",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-INV-001",
+    "BR-BIL-INV-002",
+    "BR-BIL-INV-003",
+    "BR-BIL-INV-004",
+    "BR-BIL-INV-005",
+    "BR-BIL-INV-006",
+    "BR-BIL-INV-007",
+    "BR-BIL-INV-008",
+    "BR-BIL-INV-009",
+    "BR-BIL-INV-010",
+    "BR-BIL-INV-011",
+    "BR-BIL-INV-012",
+    "BR-BIL-INV-013",
+    "BR-BIL-INV-014",
+    "BR-BIL-INV-015"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILGAPIN",
+   "path": "billing/src/batch/BILGAPIN.cbl",
+   "style": "C",
+   "code_lines": 965,
+   "calls": [
+    "BILACCT0",
+    "BILDATES",
+    "BILERRLG",
+    "BILEVTQ",
+    "BILMONEY",
+    "BILPPER0",
+    "BILPROD0"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDM"
+    ],
+    "PPA": [
+     "PPCHG",
+     "PPNEW"
+    ],
+    "MNA": [
+     "MNRATE"
+    ],
+    "ACA": [
+     "ACCTADD",
+     "ACCTFND"
+    ],
+    "PRA": [
+     "PRDFND"
+    ],
+    "EVA": [
+     "EVPUT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ACA": "BILACCT0",
+    "PRA": "BILPROD0",
+    "PPA": "BILPPER0",
+    "MNA": "BILMONEY",
+    "DTA": "BILDATES",
+    "EVA": "BILEVTQ",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "GENAPP.POLICY": "R",
+    "BILDB.BIL_CONTROL": "CRU",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "GENAPP.MOTOR": "R",
+    "GENAPP.HOUSE": "R",
+    "GENAPP.COMMERCIAL": "R",
+    "GENAPP.CUSTOMER": "R"
+   },
+   "rules": [
+    "BR-BIL-GAP-001",
+    "BR-BIL-GAP-002",
+    "BR-BIL-GAP-003",
+    "BR-BIL-GAP-004",
+    "BR-BIL-GAP-005",
+    "BR-BIL-GAP-006",
+    "BR-BIL-GAP-007",
+    "BR-BIL-GAP-008",
+    "BR-BIL-GAP-009"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILACHDR",
+   "path": "billing/src/batch/BILACHDR.cbl",
+   "style": "C",
+   "code_lines": 718,
+   "calls": [
+    "BILDATES",
+    "BILERRLG",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTBUSD",
+     "DTVALD"
+    ],
+    "HLA": [
+     "HLDCHK"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "HLA": "BILHOLD0",
+    "SQA": "BILSEQGN",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE": "R",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "R",
+    "BILDB.BIL_PAYMENT_REQUEST": "CRU",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-ACD-001",
+    "BR-BIL-ACD-002",
+    "BR-BIL-ACD-003",
+    "BR-BIL-ACD-004",
+    "BR-BIL-ACD-005",
+    "BR-BIL-ACD-006",
+    "BR-BIL-ACD-007",
+    "BR-BIL-ACD-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILACHRT",
+   "path": "billing/src/batch/BILACHRT.cbl",
+   "style": "C",
+   "code_lines": 883,
+   "calls": [
+    "BILDATES",
+    "BILERRLG",
+    "BILINSTR",
+    "BILPAYRC"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTBUSD",
+     "DTVALD"
+    ],
+    "PYA": [
+     "PAYRCV",
+     "PAYREV"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "PYA": "BILPAYRC",
+    "PIA": "BILINSTR",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_PAYMENT_REQUEST": "RU",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-ACR-001",
+    "BR-BIL-ACR-002",
+    "BR-BIL-ACR-003",
+    "BR-BIL-ACR-004",
+    "BR-BIL-ACR-005",
+    "BR-BIL-ACR-006",
+    "BR-BIL-ACR-007",
+    "BR-BIL-ACR-008",
+    "BR-BIL-ACR-009"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILINVDU",
+   "path": "billing/src/batch/BILINVDU.cbl",
+   "style": "C",
+   "code_lines": 871,
+   "calls": [
+    "BILACCT0",
+    "BILDATES",
+    "BILDLQSV",
+    "BILERRLG",
+    "BILGLPST"
+   ],
+   "sends": {
+    "DTC": [
+     "DTADDD",
+     "DTVALD"
+    ],
+    "DQC": [
+     "DLQSTRT"
+    ],
+    "GLC": [
+     "GLPOST"
+    ],
+    "ACC": [
+     "ACCTBAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTC": "BILDATES",
+    "GLC": "BILGLPST",
+    "ACC": "BILACCT0",
+    "DQC": "BILDLQSV",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_INVOICE": "RU",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_DELINQ_PROCESS": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-IDU-001",
+    "BR-BIL-IDU-002",
+    "BR-BIL-IDU-003",
+    "BR-BIL-IDU-004",
+    "BR-BIL-IDU-005",
+    "BR-BIL-IDU-006",
+    "BR-BIL-IDU-007",
+    "BR-BIL-IDU-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDLQEV",
+   "path": "billing/src/batch/BILDLQEV.cbl",
+   "style": "C",
+   "code_lines": 946,
+   "calls": [
+    "BILDATES",
+    "BILDLQSV",
+    "BILERRLG",
+    "BILEVTQ",
+    "BILGLPST",
+    "BILISCHD",
+    "BILSEQGN",
+    "BILWOFF0"
+   ],
+   "sends": {
+    "DTC": [
+     "DTVALD"
+    ],
+    "EVC": [
+     "EVPUT"
+    ],
+    "WOC": [
+     "WOFCRT"
+    ],
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "SCC": [
+     "SCHCHG"
+    ],
+    "GLC": [
+     "GLPOST"
+    ],
+    "DQC": [
+     "DLQEXIT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "DTC": "BILDATES",
+    "SCC": "BILISCHD",
+    "GLC": "BILGLPST",
+    "EVC": "BILEVTQ",
+    "WOC": "BILWOFF0",
+    "DQC": "BILDLQSV",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_DELINQ_EVENT": "RU",
+    "BILDB.BIL_DELINQ_PROCESS": "RU",
+    "BILDB.BIL_DELINQ_STEP": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_DOCUMENT_REQUEST": "C",
+    "BILDB.BIL_CHARGE": "C",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_DELINQ_PLAN": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R"
+   },
+   "rules": [
+    "BR-BIL-DEV-001",
+    "BR-BIL-DEV-002",
+    "BR-BIL-DEV-003",
+    "BR-BIL-DEV-004",
+    "BR-BIL-DEV-005",
+    "BR-BIL-DEV-006",
+    "BR-BIL-DEV-007",
+    "BR-BIL-DEV-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDSBSN",
+   "path": "billing/src/batch/BILDSBSN.cbl",
+   "style": "C",
+   "code_lines": 728,
+   "calls": [
+    "BILERRLG",
+    "BILEVTQ",
+    "BILGLPST",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "HLA": [
+     "HLDCHK"
+    ],
+    "GLA": [
+     "GLPOST"
+    ],
+    "EVA": [
+     "EVPUT"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "HLA": "BILHOLD0",
+    "GLA": "BILGLPST",
+    "EVA": "BILEVTQ",
+    "SQA": "BILSEQGN",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_DISBURSEMENT": "RU",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_PAYMENT_INSTRUMENT": "R"
+   },
+   "rules": [
+    "BR-BIL-DSN-001",
+    "BR-BIL-DSN-002",
+    "BR-BIL-DSN-003",
+    "BR-BIL-DSN-004",
+    "BR-BIL-DSN-005",
+    "BR-BIL-DSN-006",
+    "BR-BIL-DSN-007"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILGLEXT",
+   "path": "billing/src/batch/BILGLEXT.cbl",
+   "style": "C",
+   "code_lines": 501,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_LEDGER_LINE": "R",
+    "BILDB.BIL_TRANSACTION": "R",
+    "BILDB.BIL_DISTRIBUTION": "R",
+    "BILDB.BIL_WRITEOFF": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_CHARGE": "R",
+    "BILDB.BIL_COMMISSION_ITEM": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-GLX-001",
+    "BR-BIL-GLX-002",
+    "BR-BIL-GLX-003",
+    "BR-BIL-GLX-004",
+    "BR-BIL-GLX-005",
+    "BR-BIL-GLX-006",
+    "BR-BIL-GLX-007"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILEODDR",
+   "path": "billing/src/batch/BILEODDR.cbl",
+   "style": "C",
+   "code_lines": 528,
+   "calls": [
+    "BILAUDIT",
+    "BILDATES",
+    "BILERRLG"
+   ],
+   "sends": {
+    "DTA": [
+     "DTBUSD"
+    ],
+    "AUA": [
+     "AUDADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTA": "BILDATES",
+    "AUA": "BILAUDIT",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_CONTROL": "RU"
+   },
+   "rules": [
+    "BR-BIL-EOD-001",
+    "BR-BIL-EOD-002",
+    "BR-BIL-EOD-003",
+    "BR-BIL-EOD-004",
+    "BR-BIL-EOD-005",
+    "BR-BIL-EOD-006",
+    "BR-BIL-EOD-007"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDSBOV",
+   "path": "billing/src/batch/BILDSBOV.cbl",
+   "style": "C",
+   "code_lines": 578,
+   "calls": [
+    "BILDATES",
+    "BILDISB0",
+    "BILERRLG"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTVALD"
+    ],
+    "DBA": [
+     "DSBCRT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DBA": "BILDISB0",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_PAYMENT_RECEIPT": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_ACCOUNT_CONTACT": "R"
+   },
+   "rules": [
+    "BR-BIL-DOV-001",
+    "BR-BIL-DOV-002",
+    "BR-BIL-DOV-003",
+    "BR-BIL-DOV-004",
+    "BR-BIL-DOV-005",
+    "BR-BIL-DOV-006",
+    "BR-BIL-DOV-007"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILAGERP",
+   "path": "billing/src/batch/BILAGERP.cbl",
+   "style": "C",
+   "code_lines": 755,
+   "calls": [
+    "BILDATES",
+    "BILERRLG"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTDIFF"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_PRODUCER": "R"
+   },
+   "rules": [
+    "BR-BIL-AGE-001",
+    "BR-BIL-AGE-002",
+    "BR-BIL-AGE-003",
+    "BR-BIL-AGE-004",
+    "BR-BIL-AGE-005",
+    "BR-BIL-AGE-006",
+    "BR-BIL-AGE-007",
+    "BR-BIL-AGE-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILINVB0",
+   "path": "billing/src/batch/BILINVB0.cbl",
+   "style": "C",
+   "code_lines": 896,
+   "calls": [
+    "BILACCT0",
+    "BILDATES",
+    "BILERRLG",
+    "BILGLPST",
+    "BILHOLD0",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTC": [
+     "DTVALD"
+    ],
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "HLC": [
+     "HLDCHK"
+    ],
+    "GLC": [
+     "GLPOST"
+    ],
+    "ACC": [
+     "ACCTBAL"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "BILSEQGN",
+    "DTC": "BILDATES",
+    "HLC": "BILHOLD0",
+    "GLC": "BILGLPST",
+    "ACC": "BILACCT0",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_INVOICE_ITEM": "RU",
+    "BILDB.BIL_INVOICE_STREAM": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE": "CU",
+    "BILDB.BIL_DOCUMENT_REQUEST": "C"
+   },
+   "rules": [
+    "BR-BIL-IVB-001",
+    "BR-BIL-IVB-002",
+    "BR-BIL-IVB-003",
+    "BR-BIL-IVB-004",
+    "BR-BIL-IVB-005",
+    "BR-BIL-IVB-006",
+    "BR-BIL-IVB-007",
+    "BR-BIL-IVB-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILRECON",
+   "path": "billing/src/batch/BILRECON.cbl",
+   "style": "C",
+   "code_lines": 791,
+   "calls": [
+    "BILERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_LEDGER_LINE": "R",
+    "BILDB.BIL_TRANSACTION": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_PRODUCER": "R",
+    "BILDB.BIL_SUSPENSE": "R"
+   },
+   "rules": [
+    "BR-BIL-REC-001",
+    "BR-BIL-REC-002",
+    "BR-BIL-REC-003",
+    "BR-BIL-REC-004",
+    "BR-BIL-REC-005",
+    "BR-BIL-REC-006",
+    "BR-BIL-REC-007",
+    "BR-BIL-REC-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILDOCGN",
+   "path": "billing/src/batch/BILDOCGN.cbl",
+   "style": "C",
+   "code_lines": 699,
+   "calls": [
+    "BILDATES",
+    "BILERRLG"
+   ],
+   "sends": {
+    "DTC": [
+     "DTVALD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTC": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_DOCUMENT_REQUEST": "RU",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_ACCOUNT_CONTACT": "R",
+    "BILDB.BIL_INVOICE": "R",
+    "BILDB.BIL_DELINQ_PROCESS": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R"
+   },
+   "rules": [
+    "BR-BIL-DOC-001",
+    "BR-BIL-DOC-002",
+    "BR-BIL-DOC-003",
+    "BR-BIL-DOC-004",
+    "BR-BIL-DOC-005",
+    "BR-BIL-DOC-006",
+    "BR-BIL-DOC-007"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILLKBX0",
+   "path": "billing/src/batch/BILLKBX0.cbl",
+   "style": "C",
+   "code_lines": 661,
+   "calls": [
+    "BILDATES",
+    "BILERRLG",
+    "BILPAYRC"
+   ],
+   "sends": {
+    "DTA": [
+     "DTVALD"
+    ],
+    "PYA": [
+     "PAYRCV"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "PYA": "BILPAYRC",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_PAYMENT_RECEIPT": "R",
+    "BILDB.BIL_CONTROL": "R"
+   },
+   "rules": [
+    "BR-BIL-LKB-001",
+    "BR-BIL-LKB-002",
+    "BR-BIL-LKB-003",
+    "BR-BIL-LKB-004",
+    "BR-BIL-LKB-005",
+    "BR-BIL-LKB-006",
+    "BR-BIL-LKB-007",
+    "BR-BIL-LKB-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILCOMPY",
+   "path": "billing/src/batch/BILCOMPY.cbl",
+   "style": "C",
+   "code_lines": 604,
+   "calls": [
+    "BILDATES",
+    "BILDISB0",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTEOM"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "DBA": [
+     "DSBCRT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DBA": "BILDISB0",
+    "SQA": "BILSEQGN",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_PRODUCER": "RU",
+    "BILDB.BIL_COMMISSION_PLAN": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_COMMISSION_ITEM": "RU",
+    "BILDB.BIL_PRODUCER_PAYMENT": "CU"
+   },
+   "rules": [
+    "BR-BIL-CPY-001",
+    "BR-BIL-CPY-002",
+    "BR-BIL-CPY-003",
+    "BR-BIL-CPY-004",
+    "BR-BIL-CPY-005",
+    "BR-BIL-CPY-006",
+    "BR-BIL-CPY-007",
+    "BR-BIL-CPY-008"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILEVTDR",
+   "path": "billing/src/batch/BILEVTDR.cbl",
+   "style": "C",
+   "code_lines": 970,
+   "calls": [
+    "BILACCT0",
+    "BILDISB0",
+    "BILERRLG",
+    "BILEVTQ",
+    "BILGLPST",
+    "BILISCHD",
+    "BILPPER0",
+    "BILSEQGN",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "DBA": [
+     "DSBCRT"
+    ],
+    "ACA": [
+     "ACCTBAL",
+     "ACCTFND"
+    ],
+    "PPA": [
+     "PPCAN",
+     "PPCHG",
+     "PPNEW"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "EVA": [
+     "EVDONE",
+     "EVFAIL",
+     "EVGET"
+    ],
+    "SCA": [
+     "SCHCHG"
+    ],
+    "GLA": [
+     "GLPOST"
+    ],
+    "CSA": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "EVA": "BILEVTQ",
+    "DBA": "BILDISB0",
+    "PPA": "BILPPER0",
+    "ACA": "BILACCT0",
+    "SCA": "BILISCHD",
+    "GLA": "BILGLPST",
+    "SQA": "BILSEQGN",
+    "CSA": "CLMSEQGN",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_EVENT_QUEUE": "CR",
+    "BILDB.BIL_CHARGE": "CR",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R"
+   },
+   "rules": [
+    "BR-BIL-EVD-001",
+    "BR-BIL-EVD-002",
+    "BR-BIL-EVD-003",
+    "BR-BIL-EVD-004",
+    "BR-BIL-EVD-005",
+    "BR-BIL-EVD-006",
+    "BR-BIL-EVD-007",
+    "BR-BIL-EVD-008",
+    "BR-BIL-EVD-009"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "BILAGSTM",
+   "path": "billing/src/batch/BILAGSTM.cbl",
+   "style": "C",
+   "code_lines": 570,
+   "calls": [
+    "BILDATES",
+    "BILERRLG",
+    "BILSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "BILSEQGN",
+    "DTA": "BILDATES",
+    "ERC": "BILERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_PRODUCER": "R",
+    "BILDB.BIL_POLICY_PERIOD": "R",
+    "BILDB.BIL_INVOICE_ITEM": "R",
+    "BILDB.BIL_ACCOUNT": "R",
+    "BILDB.BIL_CONTROL": "R",
+    "BILDB.BIL_AGENCY_STATEMENT": "CR"
+   },
+   "rules": [
+    "BR-BIL-AGS-001",
+    "BR-BIL-AGS-002",
+    "BR-BIL-AGS-003",
+    "BR-BIL-AGS-004",
+    "BR-BIL-AGS-005",
+    "BR-BIL-AGS-006"
+   ],
+   "app": "billing"
+  },
+  {
+   "program": "CLMEVTQ",
+   "path": "claims/src/common/CLMEVTQ.cbl",
+   "style": "A",
+   "code_lines": 639,
+   "calls": [
+    "CLMERRLG",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "CLMSEQGN",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "EVDONE",
+    "EVFAIL",
+    "EVGET",
+    "EVPUT"
+   ],
+   "tables": {
+    "CLMDB.CLM_EVENT_QUEUE": "CRU"
+   },
+   "rules": [
+    "BR-CLM-EVQ-001",
+    "BR-CLM-EVQ-002",
+    "BR-CLM-EVQ-003",
+    "BR-CLM-EVQ-004",
+    "BR-CLM-EVQ-005",
+    "BR-CLM-EVQ-006",
+    "BR-CLM-EVQ-007",
+    "BR-CLM-EVQ-008",
+    "BR-CLM-EVQ-009",
+    "BR-CLM-EVQ-010",
+    "BR-CLM-EVQ-011",
+    "BR-CLM-EVQ-012"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMMONEY",
+   "path": "claims/src/common/CLMMONEY.cbl",
+   "style": "A",
+   "code_lines": 177,
+   "calls": [],
+   "sends": {},
+   "tag_target": {},
+   "serves": [
+    "MNPRORA",
+    "MNRATE",
+    "MNSPLIT"
+   ],
+   "tables": {},
+   "rules": [
+    "BR-CLM-MNY-001",
+    "BR-CLM-MNY-002",
+    "BR-CLM-MNY-003",
+    "BR-CLM-MNY-004",
+    "BR-CLM-MNY-005",
+    "BR-CLM-MNY-006",
+    "BR-CLM-MNY-007",
+    "BR-CLM-MNY-008",
+    "BR-CLM-MNY-009"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMDATES",
+   "path": "claims/src/common/CLMDATES.cbl",
+   "style": "A",
+   "code_lines": 463,
+   "calls": [
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "DTADDD",
+    "DTADDM",
+    "DTBUSD",
+    "DTDIFF",
+    "DTDOW",
+    "DTEOM",
+    "DTVALD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CODE_TABLE": "R",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-DTE-001",
+    "BR-CLM-DTE-002",
+    "BR-CLM-DTE-003",
+    "BR-CLM-DTE-004",
+    "BR-CLM-DTE-005",
+    "BR-CLM-DTE-006",
+    "BR-CLM-DTE-007",
+    "BR-CLM-DTE-008",
+    "BR-CLM-DTE-009",
+    "BR-CLM-DTE-010",
+    "BR-CLM-DTE-011",
+    "BR-CLM-DTE-012",
+    "BR-CLM-DTE-013",
+    "BR-CLM-DTE-014"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMSEQGN",
+   "path": "claims/src/common/CLMSEQGN.cbl",
+   "style": "A",
+   "code_lines": 207,
+   "calls": [
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "SEQNEXT"
+   ],
+   "tables": {
+    "CLMDB.CLM_SEQUENCE": "RU"
+   },
+   "rules": [
+    "BR-CLM-SEQ-001",
+    "BR-CLM-SEQ-002",
+    "BR-CLM-SEQ-003",
+    "BR-CLM-SEQ-004",
+    "BR-CLM-SEQ-005",
+    "BR-CLM-SEQ-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMHIST0",
+   "path": "claims/src/common/CLMHIST0.cbl",
+   "style": "A",
+   "code_lines": 295,
+   "calls": [
+    "CLMERRLG",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "CLMSEQGN",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "HISADD",
+    "HISLST"
+   ],
+   "tables": {
+    "CLMDB.CLM_HISTORY": "CR",
+    "CLMDB.CLM_CLAIM": "R"
+   },
+   "rules": [
+    "BR-CLM-HIS-001",
+    "BR-CLM-HIS-002",
+    "BR-CLM-HIS-003",
+    "BR-CLM-HIS-004",
+    "BR-CLM-HIS-005",
+    "BR-CLM-HIS-006",
+    "BR-CLM-HIS-007"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMAUDCH",
+   "path": "claims/src/common/CLMAUDCH.cbl",
+   "style": "A",
+   "code_lines": 608,
+   "calls": [
+    "CLMERRLG",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQC": "CLMSEQGN",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "AUCADD",
+    "AUCVFY"
+   ],
+   "tables": {
+    "CLMDB.CLM_AUDIT_CHAIN": "CRU",
+    "CLMDB.CLM_SEQUENCE": "U"
+   },
+   "rules": [
+    "BR-CLM-AUC-001",
+    "BR-CLM-AUC-002",
+    "BR-CLM-AUC-003",
+    "BR-CLM-AUC-004",
+    "BR-CLM-AUC-005",
+    "BR-CLM-AUC-006",
+    "BR-CLM-AUC-007",
+    "BR-CLM-AUC-008",
+    "BR-CLM-AUC-009",
+    "BR-CLM-AUC-010",
+    "BR-CLM-AUC-011",
+    "BR-CLM-AUC-012"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMERRLG",
+   "path": "claims/src/common/CLMERRLG.cbl",
+   "style": "A",
+   "code_lines": 130,
+   "calls": [
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ]
+   },
+   "tag_target": {
+    "SQC": "CLMSEQGN"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_ERROR_LOG": "C"
+   },
+   "rules": [
+    "BR-CLM-ERR-001",
+    "BR-CLM-ERR-002",
+    "BR-CLM-ERR-003",
+    "BR-CLM-ERR-004",
+    "BR-CLM-ERR-005"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMCODVL",
+   "path": "claims/src/common/CLMCODVL.cbl",
+   "style": "A",
+   "code_lines": 172,
+   "calls": [
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "CODCHD",
+    "CODVAL"
+   ],
+   "tables": {
+    "CLMDB.CLM_CODE_TABLE": "R"
+   },
+   "rules": [
+    "BR-CLM-COD-001",
+    "BR-CLM-COD-002",
+    "BR-CLM-COD-003",
+    "BR-CLM-COD-004",
+    "BR-CLM-COD-005"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMTOTLS",
+   "path": "claims/src/online/CLMTOTLS.cbl",
+   "style": "A",
+   "code_lines": 525,
+   "calls": [
+    "CLMAUDCH",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMMONEY",
+    "CLMSEGMT"
+   ],
+   "sends": {
+    "HIA": [
+     "HISADD"
+    ],
+    "AUA": [
+     "AUCADD"
+    ],
+    "MNA": [
+     "MNRATE"
+    ],
+    "SGA": [
+     "SEGCLM"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "HIA": "CLMHIST0",
+    "AUA": "CLMAUDCH",
+    "SGA": "CLMSEGMT",
+    "MNA": "CLMMONEY"
+   },
+   "serves": [
+    "TLSEVL"
+   ],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_INCIDENT": "RU",
+    "CLMDB.CLM_RISK_UNIT": "R"
+   },
+   "rules": [
+    "BR-CLM-TLS-001",
+    "BR-CLM-TLS-002",
+    "BR-CLM-TLS-003",
+    "BR-CLM-TLS-004",
+    "BR-CLM-TLS-005",
+    "BR-CLM-TLS-006",
+    "BR-CLM-TLS-007",
+    "BR-CLM-TLS-008",
+    "BR-CLM-TLS-009",
+    "BR-CLM-TLS-010"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMMNUP",
+   "path": "claims/src/online/CLMMNUP.cbl",
+   "style": "B",
+   "code_lines": 285,
+   "calls": [],
+   "sends": {},
+   "tag_target": {},
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-CLM-SMN-001",
+    "BR-CLM-SMN-002",
+    "BR-CLM-SMN-003",
+    "BR-CLM-SMN-004",
+    "BR-CLM-SMN-005"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMCONTC",
+   "path": "claims/src/online/CLMCONTC.cbl",
+   "style": "A",
+   "code_lines": 989,
+   "calls": [
+    "CLMCODVL",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "DTC": [
+     "DTVALD"
+    ],
+    "CDC": [
+     "CODVAL"
+    ],
+    "HSC": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "SQC": "CLMSEQGN",
+    "DTC": "CLMDATES",
+    "CDC": "CLMCODVL",
+    "HSC": "CLMHIST0"
+   },
+   "serves": [
+    "CONINQ",
+    "CONLNK",
+    "CONNEW",
+    "CONSAN",
+    "CONUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CODE_TABLE": "R",
+    "CLMDB.CLM_CLAIM_CONTACT": "CR",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_CONTACT": "CRU",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_EXPOSURE": "R"
+   },
+   "rules": [
+    "BR-CLM-CON-001",
+    "BR-CLM-CON-002",
+    "BR-CLM-CON-003",
+    "BR-CLM-CON-004",
+    "BR-CLM-CON-005",
+    "BR-CLM-CON-006",
+    "BR-CLM-CON-007",
+    "BR-CLM-CON-008",
+    "BR-CLM-CON-009",
+    "BR-CLM-CON-010",
+    "BR-CLM-CON-011",
+    "BR-CLM-CON-012",
+    "BR-CLM-CON-013",
+    "BR-CLM-CON-014",
+    "BR-CLM-CON-015"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMINCDT",
+   "path": "claims/src/online/CLMINCDT.cbl",
+   "style": "A",
+   "code_lines": 812,
+   "calls": [
+    "CLMAUDCH",
+    "CLMCODVL",
+    "CLMCONTC",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEGMT",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "AUA": [
+     "AUCADD"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "COA": [
+     "CONLNK"
+    ],
+    "SGA": [
+     "SEGCLM"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERC": "CLMERRLG",
+    "HIA": "CLMHIST0",
+    "AUA": "CLMAUDCH",
+    "COA": "CLMCONTC",
+    "SGA": "CLMSEGMT",
+    "CDA": "CLMCODVL"
+   },
+   "serves": [
+    "INCINQ",
+    "INCNEW",
+    "INCUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_INCIDENT": "CRU",
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_RISK_UNIT": "R"
+   },
+   "rules": [
+    "BR-CLM-INC-001",
+    "BR-CLM-INC-002",
+    "BR-CLM-INC-003",
+    "BR-CLM-INC-004",
+    "BR-CLM-INC-005",
+    "BR-CLM-INC-006",
+    "BR-CLM-INC-007",
+    "BR-CLM-INC-008",
+    "BR-CLM-INC-009",
+    "BR-CLM-INC-010",
+    "BR-CLM-INC-011"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMFINTX",
+   "path": "claims/src/online/CLMFINTX.cbl",
+   "style": "A",
+   "code_lines": 2084,
+   "calls": [
+    "CLMACTV0",
+    "CLMAUDCH",
+    "CLMAUTHZ",
+    "CLMCODVL",
+    "CLMCONTC",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTBUSD",
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "AUA": [
+     "AUCADD"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "COA": [
+     "CONSAN"
+    ],
+    "AVA": [
+     "ACTCMP",
+     "ACTNEW"
+    ],
+    "ATA": [
+     "AUTCHK"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERC": "CLMERRLG",
+    "HIA": "CLMHIST0",
+    "AUA": "CLMAUDCH",
+    "AVA": "CLMACTV0",
+    "COA": "CLMCONTC",
+    "ATA": "CLMAUTHZ",
+    "CDA": "CLMCODVL",
+    "DTA": "CLMDATES"
+   },
+   "serves": [
+    "PAYCRT",
+    "RCVCRT",
+    "RCVRSV",
+    "RSVSET",
+    "TXNAPR",
+    "TXNINQ",
+    "TXNREJ",
+    "TXNVOD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_EXPOSURE": "RU",
+    "CLMDB.CLM_POLICY_COVERAGE": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_RESERVE_LINE": "CRU",
+    "CLMDB.CLM_TRANSACTION": "CRU",
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_CHECK": "CRU",
+    "CLMDB.CLM_ACTIVITY": "R"
+   },
+   "rules": [
+    "BR-CLM-FIN-001",
+    "BR-CLM-FIN-002",
+    "BR-CLM-FIN-003",
+    "BR-CLM-FIN-004",
+    "BR-CLM-FIN-005",
+    "BR-CLM-FIN-006",
+    "BR-CLM-FIN-007",
+    "BR-CLM-FIN-008",
+    "BR-CLM-FIN-009",
+    "BR-CLM-FIN-010",
+    "BR-CLM-FIN-011",
+    "BR-CLM-FIN-012",
+    "BR-CLM-FIN-013",
+    "BR-CLM-FIN-014",
+    "BR-CLM-FIN-015",
+    "BR-CLM-FIN-016",
+    "BR-CLM-FIN-017",
+    "BR-CLM-FIN-018",
+    "BR-CLM-FIN-019",
+    "BR-CLM-FIN-020",
+    "BR-CLM-FIN-021",
+    "BR-CLM-FIN-022",
+    "BR-CLM-FIN-023"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMINQP",
+   "path": "claims/src/online/CLMINQP.cbl",
+   "style": "B",
+   "code_lines": 647,
+   "calls": [
+    "CLMCLAIM",
+    "CLMERRLG",
+    "CLMNOTE0"
+   ],
+   "sends": {
+    "CLA": [
+     "CLMINQ"
+    ],
+    "NTA": [
+     "NTELST"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "CLA": "CLMCLAIM",
+    "NTA": "CLMNOTE0",
+    "ERA": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-CLM-SIQ-001",
+    "BR-CLM-SIQ-002",
+    "BR-CLM-SIQ-003",
+    "BR-CLM-SIQ-004",
+    "BR-CLM-SIQ-005",
+    "BR-CLM-SIQ-006",
+    "BR-CLM-SIQ-007",
+    "BR-CLM-SIQ-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMACTP",
+   "path": "claims/src/online/CLMACTP.cbl",
+   "style": "B",
+   "code_lines": 582,
+   "calls": [
+    "CLMACTV0",
+    "CLMERRLG"
+   ],
+   "sends": {
+    "AVA": [
+     "ACTCMP",
+     "ACTLST",
+     "ACTSKP"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "AVA": "CLMACTV0",
+    "ERA": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-CLM-SAC-001",
+    "BR-CLM-SAC-002",
+    "BR-CLM-SAC-003",
+    "BR-CLM-SAC-004",
+    "BR-CLM-SAC-005",
+    "BR-CLM-SAC-006",
+    "BR-CLM-SAC-007",
+    "BR-CLM-SAC-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMDOCRQ",
+   "path": "claims/src/online/CLMDOCRQ.cbl",
+   "style": "A",
+   "code_lines": 556,
+   "calls": [
+    "CLMCODVL",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "CDA": [
+     "CODVAL"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERA": "CLMERRLG",
+    "CDA": "CLMCODVL",
+    "HIA": "CLMHIST0"
+   },
+   "serves": [
+    "DOCLST",
+    "DOCRCV",
+    "DOCREQ"
+   ],
+   "tables": {
+    "CLMDB.CLM_DOCUMENT": "CRU",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_SIU_SCORE": "DR",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_CLAIM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-DOC-001",
+    "BR-CLM-DOC-002",
+    "BR-CLM-DOC-003",
+    "BR-CLM-DOC-004",
+    "BR-CLM-DOC-005",
+    "BR-CLM-DOC-006",
+    "BR-CLM-DOC-007",
+    "BR-CLM-DOC-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMSIUSC",
+   "path": "claims/src/online/CLMSIUSC.cbl",
+   "style": "A",
+   "code_lines": 532,
+   "calls": [
+    "CLMACTV0",
+    "CLMAUDCH",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0"
+   ],
+   "sends": {
+    "AVA": [
+     "ACTGEN"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ADA": [
+     "AUCADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERA": "CLMERRLG",
+    "DTA": "CLMDATES",
+    "AVA": "CLMACTV0",
+    "HIA": "CLMHIST0",
+    "ADA": "CLMAUDCH"
+   },
+   "serves": [
+    "SIUSCR"
+   ],
+   "tables": {
+    "CLMDB.CLM_SIU_RULE": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_SIU_SCORE": "CD",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_POLICY_SNAPSHOT": "R",
+    "CLMDB.CLM_INCIDENT": "R",
+    "CLMDB.CLM_DOCUMENT": "R"
+   },
+   "rules": [
+    "BR-CLM-SIU-001",
+    "BR-CLM-SIU-002",
+    "BR-CLM-SIU-003",
+    "BR-CLM-SIU-004",
+    "BR-CLM-SIU-005",
+    "BR-CLM-SIU-006",
+    "BR-CLM-SIU-007",
+    "BR-CLM-SIU-008",
+    "BR-CLM-SIU-009",
+    "BR-CLM-SIU-010"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMEXPOS",
+   "path": "claims/src/online/CLMEXPOS.cbl",
+   "style": "A",
+   "code_lines": 1162,
+   "calls": [
+    "CLMACTV0",
+    "CLMASSGN",
+    "CLMAUDCH",
+    "CLMCODVL",
+    "CLMCONTC",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "AUA": [
+     "AUCADD"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "COA": [
+     "CONLNK"
+    ],
+    "ASA": [
+     "ASGEXP"
+    ],
+    "AVA": [
+     "ACTGEN"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERC": "CLMERRLG",
+    "HIA": "CLMHIST0",
+    "AUA": "CLMAUDCH",
+    "AVA": "CLMACTV0",
+    "COA": "CLMCONTC",
+    "ASA": "CLMASSGN",
+    "CDA": "CLMCODVL"
+   },
+   "serves": [
+    "EXPCLS",
+    "EXPINQ",
+    "EXPNEW",
+    "EXPROP",
+    "EXPUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_EXPOSURE": "CRU",
+    "CLMDB.CLM_RESERVE_LINE": "CR",
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_POLICY_COVERAGE": "R",
+    "CLMDB.CLM_INCIDENT": "R",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-EXP-001",
+    "BR-CLM-EXP-002",
+    "BR-CLM-EXP-003",
+    "BR-CLM-EXP-004",
+    "BR-CLM-EXP-005",
+    "BR-CLM-EXP-006",
+    "BR-CLM-EXP-007",
+    "BR-CLM-EXP-008",
+    "BR-CLM-EXP-009",
+    "BR-CLM-EXP-010",
+    "BR-CLM-EXP-011",
+    "BR-CLM-EXP-012",
+    "BR-CLM-EXP-013",
+    "BR-CLM-EXP-014",
+    "BR-CLM-EXP-015"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMACTV0",
+   "path": "claims/src/online/CLMACTV0.cbl",
+   "style": "A",
+   "code_lines": 838,
+   "calls": [
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERA": "CLMERRLG",
+    "DTA": "CLMDATES",
+    "HIA": "CLMHIST0"
+   },
+   "serves": [
+    "ACTCMP",
+    "ACTGEN",
+    "ACTLST",
+    "ACTNEW",
+    "ACTSKP"
+   ],
+   "tables": {
+    "CLMDB.CLM_ACTIVITY_PATTERN": "R",
+    "CLMDB.CLM_ACTIVITY": "CRU",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_USER": "R"
+   },
+   "rules": [
+    "BR-CLM-ACT-001",
+    "BR-CLM-ACT-002",
+    "BR-CLM-ACT-003",
+    "BR-CLM-ACT-004",
+    "BR-CLM-ACT-005",
+    "BR-CLM-ACT-006",
+    "BR-CLM-ACT-007",
+    "BR-CLM-ACT-008",
+    "BR-CLM-ACT-009",
+    "BR-CLM-ACT-010",
+    "BR-CLM-ACT-011",
+    "BR-CLM-ACT-012",
+    "BR-CLM-ACT-013"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMNOTE0",
+   "path": "claims/src/online/CLMNOTE0.cbl",
+   "style": "A",
+   "code_lines": 455,
+   "calls": [
+    "CLMAUDCH",
+    "CLMCODVL",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ADA": [
+     "AUCADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERA": "CLMERRLG",
+    "CDA": "CLMCODVL",
+    "HIA": "CLMHIST0",
+    "ADA": "CLMAUDCH"
+   },
+   "serves": [
+    "NTEADD",
+    "NTELST"
+   ],
+   "tables": {
+    "CLMDB.CLM_NOTE": "CR",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_USER": "R",
+    "CLMDB.CLM_CLAIM": "R"
+   },
+   "rules": [
+    "BR-CLM-NTE-001",
+    "BR-CLM-NTE-002",
+    "BR-CLM-NTE-003",
+    "BR-CLM-NTE-004",
+    "BR-CLM-NTE-005",
+    "BR-CLM-NTE-006",
+    "BR-CLM-NTE-007",
+    "BR-CLM-NTE-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMRECOV",
+   "path": "claims/src/online/CLMRECOV.cbl",
+   "style": "A",
+   "code_lines": 1069,
+   "calls": [
+    "CLMAUDCH",
+    "CLMCONTC",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMEVTQ",
+    "CLMFINTX",
+    "CLMHIST0",
+    "CLMMONEY"
+   ],
+   "sends": {
+    "MNA": [
+     "MNRATE"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ADA": [
+     "AUCADD"
+    ],
+    "COA": [
+     "CONLNK"
+    ],
+    "EVA": [
+     "EVPUT"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERA": "CLMERRLG",
+    "FTA": "CLMFINTX",
+    "COA": "CLMCONTC",
+    "EVA": "CLMEVTQ",
+    "HIA": "CLMHIST0",
+    "ADA": "CLMAUDCH",
+    "MNA": "CLMMONEY",
+    "DTA": "CLMDATES"
+   },
+   "serves": [
+    "DEDRCV",
+    "SALASG",
+    "SALSLD",
+    "SUBCLS",
+    "SUBOPN",
+    "SUBUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_SUBROGATION": "CRU",
+    "CLMDB.CLM_SALVAGE": "CRU",
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_INCIDENT": "R",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_POLICY_COVERAGE": "R",
+    "CLMDB.CLM_RESERVE_LINE": "R",
+    "CLMDB.CLM_CLAIM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-REC-001",
+    "BR-CLM-REC-002",
+    "BR-CLM-REC-003",
+    "BR-CLM-REC-004",
+    "BR-CLM-REC-005",
+    "BR-CLM-REC-006",
+    "BR-CLM-REC-007",
+    "BR-CLM-REC-008",
+    "BR-CLM-REC-009",
+    "BR-CLM-REC-010",
+    "BR-CLM-REC-011",
+    "BR-CLM-REC-012",
+    "BR-CLM-REC-013",
+    "BR-CLM-REC-014"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMAUTHZ",
+   "path": "claims/src/online/CLMAUTHZ.cbl",
+   "style": "A",
+   "code_lines": 275,
+   "calls": [
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG"
+   },
+   "serves": [
+    "AUTCHK"
+   ],
+   "tables": {
+    "CLMDB.CLM_USER": "R",
+    "CLMDB.CLM_AUTHORITY_LIMIT": "R"
+   },
+   "rules": [
+    "BR-CLM-AUT-001",
+    "BR-CLM-AUT-002",
+    "BR-CLM-AUT-003",
+    "BR-CLM-AUT-004",
+    "BR-CLM-AUT-005",
+    "BR-CLM-AUT-006",
+    "BR-CLM-AUT-007",
+    "BR-CLM-AUT-008",
+    "BR-CLM-AUT-009",
+    "BR-CLM-AUT-010"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMSEGMT",
+   "path": "claims/src/online/CLMSEGMT.cbl",
+   "style": "A",
+   "code_lines": 411,
+   "calls": [
+    "CLMACTV0",
+    "CLMERRLG",
+    "CLMHIST0"
+   ],
+   "sends": {
+    "HSC": [
+     "HISADD"
+    ],
+    "AVC": [
+     "ACTGEN"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "HSC": "CLMHIST0",
+    "AVC": "CLMACTV0"
+   },
+   "serves": [
+    "SEGCLM"
+   ],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_INCIDENT": "R",
+    "CLMDB.CLM_LITIGATION": "R",
+    "CLMDB.CLM_EXPOSURE": "U"
+   },
+   "rules": [
+    "BR-CLM-SEG-001",
+    "BR-CLM-SEG-002",
+    "BR-CLM-SEG-003",
+    "BR-CLM-SEG-004",
+    "BR-CLM-SEG-005",
+    "BR-CLM-SEG-006",
+    "BR-CLM-SEG-007",
+    "BR-CLM-SEG-008",
+    "BR-CLM-SEG-009",
+    "BR-CLM-SEG-010",
+    "BR-CLM-SEG-011",
+    "BR-CLM-SEG-012"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMFNLP",
+   "path": "claims/src/online/CLMFNLP.cbl",
+   "style": "B",
+   "code_lines": 1078,
+   "calls": [
+    "CLMCLAIM",
+    "CLMCODVL",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMPOLVR"
+   ],
+   "sends": {
+    "DTA": [
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "PVA": [
+     "POLVRF"
+    ],
+    "CLA": [
+     "CLMNEW"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "PVA": "CLMPOLVR",
+    "CLA": "CLMCLAIM",
+    "CDA": "CLMCODVL",
+    "DTA": "CLMDATES",
+    "ERA": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-CLM-SFN-001",
+    "BR-CLM-SFN-002",
+    "BR-CLM-SFN-003",
+    "BR-CLM-SFN-004",
+    "BR-CLM-SFN-005",
+    "BR-CLM-SFN-006",
+    "BR-CLM-SFN-007",
+    "BR-CLM-SFN-008",
+    "BR-CLM-SFN-009",
+    "BR-CLM-SFN-010",
+    "BR-CLM-SFN-011",
+    "BR-CLM-SFN-012",
+    "BR-CLM-SFN-013",
+    "BR-CLM-SFN-014",
+    "BR-CLM-SFN-015",
+    "BR-CLM-SFN-016",
+    "BR-CLM-SFN-017"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMLITIG",
+   "path": "claims/src/online/CLMLITIG.cbl",
+   "style": "A",
+   "code_lines": 860,
+   "calls": [
+    "CLMACTV0",
+    "CLMASSGN",
+    "CLMAUDCH",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEGMT",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "ASA": [
+     "ASGXFR"
+    ],
+    "AVA": [
+     "ACTGEN"
+    ],
+    "SGA": [
+     "SEGCLM"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ADA": [
+     "AUCADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERA": "CLMERRLG",
+    "DTA": "CLMDATES",
+    "ASA": "CLMASSGN",
+    "AVA": "CLMACTV0",
+    "SGA": "CLMSEGMT",
+    "HIA": "CLMHIST0",
+    "ADA": "CLMAUDCH"
+   },
+   "serves": [
+    "LITCLS",
+    "LITINQ",
+    "LITNEW",
+    "LITUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_LITIGATION": "CRU",
+    "CLMDB.CLM_CLAIM_CONTACT": "R",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_GROUP": "R"
+   },
+   "rules": [
+    "BR-CLM-LIT-001",
+    "BR-CLM-LIT-002",
+    "BR-CLM-LIT-003",
+    "BR-CLM-LIT-004",
+    "BR-CLM-LIT-005",
+    "BR-CLM-LIT-006",
+    "BR-CLM-LIT-007",
+    "BR-CLM-LIT-008",
+    "BR-CLM-LIT-009",
+    "BR-CLM-LIT-010",
+    "BR-CLM-LIT-011",
+    "BR-CLM-LIT-012",
+    "BR-CLM-LIT-013"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMFINP",
+   "path": "claims/src/online/CLMFINP.cbl",
+   "style": "B",
+   "code_lines": 979,
+   "calls": [
+    "CLMCLAIM",
+    "CLMCODVL",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMFINTX",
+    "CLMMNUP"
+   ],
+   "sends": {
+    "DTA": [
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "CLA": [
+     "CLMINQ"
+    ],
+    "FTA": [
+     "TXNINQ"
+    ],
+    "CDA": [
+     "CODVAL"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "CLA": "CLMCLAIM",
+    "FTA": "CLMFINTX",
+    "CDA": "CLMCODVL",
+    "DTA": "CLMDATES",
+    "ERA": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {},
+   "rules": [
+    "BR-CLM-SFI-001",
+    "BR-CLM-SFI-002",
+    "BR-CLM-SFI-003",
+    "BR-CLM-SFI-004",
+    "BR-CLM-SFI-005",
+    "BR-CLM-SFI-006",
+    "BR-CLM-SFI-007",
+    "BR-CLM-SFI-008",
+    "BR-CLM-SFI-009",
+    "BR-CLM-SFI-010",
+    "BR-CLM-SFI-011",
+    "BR-CLM-SFI-012",
+    "BR-CLM-SFI-013",
+    "BR-CLM-SFI-014",
+    "BR-CLM-SFI-015"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMPOLVR",
+   "path": "claims/src/online/CLMPOLVR.cbl",
+   "style": "A",
+   "code_lines": 720,
+   "calls": [
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMMONEY"
+   ],
+   "sends": {
+    "DTC": [
+     "DTVALD"
+    ],
+    "MNC": [
+     "MNRATE"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "DTC": "CLMDATES",
+    "MNC": "CLMMONEY"
+   },
+   "serves": [
+    "POLVRF"
+   ],
+   "tables": {
+    "GENAPP.POLICY": "R",
+    "GENAPP.CUSTOMER": "R",
+    "GENAPP.MOTOR": "R",
+    "GENAPP.HOUSE": "R",
+    "GENAPP.COMMERCIAL": "R",
+    "CLMDB.CLM_EVENT_QUEUE": "R"
+   },
+   "rules": [
+    "BR-CLM-POL-001",
+    "BR-CLM-POL-002",
+    "BR-CLM-POL-003",
+    "BR-CLM-POL-004",
+    "BR-CLM-POL-005",
+    "BR-CLM-POL-006",
+    "BR-CLM-POL-007",
+    "BR-CLM-POL-008",
+    "BR-CLM-POL-009",
+    "BR-CLM-POL-010",
+    "BR-CLM-POL-011",
+    "BR-CLM-POL-012",
+    "BR-CLM-POL-013",
+    "BR-CLM-POL-014",
+    "BR-CLM-POL-015"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMASSGN",
+   "path": "claims/src/online/CLMASSGN.cbl",
+   "style": "A",
+   "code_lines": 700,
+   "calls": [
+    "CLMERRLG",
+    "CLMHIST0"
+   ],
+   "sends": {
+    "HSC": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "HSC": "CLMHIST0"
+   },
+   "serves": [
+    "ASGCLM",
+    "ASGEXP",
+    "ASGXFR"
+   ],
+   "tables": {
+    "CLMDB.CLM_ASSIGN_RULE": "R",
+    "CLMDB.CLM_USER": "RU",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_EXPOSURE": "RU",
+    "CLMDB.CLM_GROUP": "R",
+    "CLMDB.CLM_CODE_TABLE": "R",
+    "CLMDB.CLM_ACTIVITY": "U"
+   },
+   "rules": [
+    "BR-CLM-ASG-001",
+    "BR-CLM-ASG-002",
+    "BR-CLM-ASG-003",
+    "BR-CLM-ASG-004",
+    "BR-CLM-ASG-005",
+    "BR-CLM-ASG-006",
+    "BR-CLM-ASG-007",
+    "BR-CLM-ASG-008",
+    "BR-CLM-ASG-009",
+    "BR-CLM-ASG-010",
+    "BR-CLM-ASG-011",
+    "BR-CLM-ASG-012",
+    "BR-CLM-ASG-013"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMSRVRQ",
+   "path": "claims/src/online/CLMSRVRQ.cbl",
+   "style": "A",
+   "code_lines": 641,
+   "calls": [
+    "CLMCONTC",
+    "CLMERRLG",
+    "CLMFINTX",
+    "CLMHIST0",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "COA": [
+     "CONLNK"
+    ],
+    "FTA": [
+     "PAYCRT"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERA": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "ERA": "CLMERRLG",
+    "COA": "CLMCONTC",
+    "FTA": "CLMFINTX",
+    "HIA": "CLMHIST0"
+   },
+   "serves": [
+    "SRQCAN",
+    "SRQCMP",
+    "SRQNEW",
+    "SRQQTE"
+   ],
+   "tables": {
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_SERVICE_REQUEST": "CRU",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_CLAIM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-SRQ-001",
+    "BR-CLM-SRQ-002",
+    "BR-CLM-SRQ-003",
+    "BR-CLM-SRQ-004",
+    "BR-CLM-SRQ-005",
+    "BR-CLM-SRQ-006",
+    "BR-CLM-SRQ-007",
+    "BR-CLM-SRQ-008",
+    "BR-CLM-SRQ-009"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMCLAIM",
+   "path": "claims/src/online/CLMCLAIM.cbl",
+   "style": "A",
+   "code_lines": 2083,
+   "calls": [
+    "CLMACTV0",
+    "CLMASSGN",
+    "CLMAUDCH",
+    "CLMCODVL",
+    "CLMCONTC",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMPOLVR",
+    "CLMSEGMT",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "COC": [
+     "CONLNK",
+     "CONNEW"
+    ],
+    "DTC": [
+     "DTADDD",
+     "DTVALD"
+    ],
+    "SQC": [
+     "SEQNEXT"
+    ],
+    "CDC": [
+     "CODCHD",
+     "CODVAL"
+    ],
+    "POC": [
+     "POLVRF"
+    ],
+    "HSC": [
+     "HISADD"
+    ],
+    "ACC": [
+     "AUCADD"
+    ],
+    "SGC": [
+     "SEGCLM"
+    ],
+    "ASC": [
+     "ASGCLM"
+    ],
+    "AVC": [
+     "ACTGEN"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG",
+    "SQC": "CLMSEQGN",
+    "DTC": "CLMDATES",
+    "CDC": "CLMCODVL",
+    "HSC": "CLMHIST0",
+    "ACC": "CLMAUDCH",
+    "AVC": "CLMACTV0",
+    "POC": "CLMPOLVR",
+    "COC": "CLMCONTC",
+    "SGC": "CLMSEGMT",
+    "ASC": "CLMASSGN"
+   },
+   "serves": [
+    "CLMCLS",
+    "CLMINQ",
+    "CLMNEW",
+    "CLMROP",
+    "CLMUPD"
+   ],
+   "tables": {
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_CLAIM": "CRU",
+    "CLMDB.CLM_POLICY_SNAPSHOT": "CRU",
+    "CLMDB.CLM_POLICY_COVERAGE": "C",
+    "CLMDB.CLM_RISK_UNIT": "C",
+    "CLMDB.CLM_CATASTROPHE": "R",
+    "GENAPP.CUSTOMER": "R",
+    "CLMDB.CLM_RESERVE_LINE": "R",
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_CHECK": "R",
+    "CLMDB.CLM_ACTIVITY": "RU",
+    "CLMDB.CLM_ACTIVITY_PATTERN": "R",
+    "CLMDB.CLM_LITIGATION": "R",
+    "CLMDB.CLM_USER": "RU",
+    "CLMDB.CLM_CLAIM_CONTACT": "R",
+    "CLMDB.CLM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-CLM-001",
+    "BR-CLM-CLM-002",
+    "BR-CLM-CLM-003",
+    "BR-CLM-CLM-004",
+    "BR-CLM-CLM-005",
+    "BR-CLM-CLM-006",
+    "BR-CLM-CLM-007",
+    "BR-CLM-CLM-008",
+    "BR-CLM-CLM-009",
+    "BR-CLM-CLM-010",
+    "BR-CLM-CLM-011",
+    "BR-CLM-CLM-012",
+    "BR-CLM-CLM-013",
+    "BR-CLM-CLM-014",
+    "BR-CLM-CLM-015",
+    "BR-CLM-CLM-016",
+    "BR-CLM-CLM-017",
+    "BR-CLM-CLM-018",
+    "BR-CLM-CLM-019",
+    "BR-CLM-CLM-020",
+    "BR-CLM-CLM-021",
+    "BR-CLM-CLM-022"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMCHKIS",
+   "path": "claims/src/batch/CLMCHKIS.cbl",
+   "style": "C",
+   "code_lines": 620,
+   "calls": [
+    "CLMERRLG",
+    "CLMEVTQ",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "EVA": [
+     "EVPUT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "EVA": "CLMEVTQ",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CHECK": "RU",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-CKI-001",
+    "BR-CLM-CKI-002",
+    "BR-CLM-CKI-003",
+    "BR-CLM-CKI-004",
+    "BR-CLM-CKI-005",
+    "BR-CLM-CKI-006",
+    "BR-CLM-CKI-007",
+    "BR-CLM-CKI-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMEVTDR",
+   "path": "claims/src/batch/CLMEVTDR.cbl",
+   "style": "C",
+   "code_lines": 1071,
+   "calls": [
+    "BILSEQGN",
+    "CLMACTV0",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMEVTQ",
+    "CLMHIST0"
+   ],
+   "sends": {
+    "EVA": [
+     "EVDONE",
+     "EVFAIL"
+    ],
+    "DTA": [
+     "DTVALD"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "AVA": [
+     "ACTNEW"
+    ],
+    "BSQ": [
+     "SEQNEXT"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "EVA": "CLMEVTQ",
+    "HIA": "CLMHIST0",
+    "AVA": "CLMACTV0",
+    "DTA": "CLMDATES",
+    "BSQ": "BILSEQGN",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "BILDB.BIL_EVENT_QUEUE": "CR",
+    "CLMDB.CLM_EVENT_QUEUE": "RU",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_ACTIVITY": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_ACTIVITY_PATTERN": "R",
+    "CLMDB.CLM_POLICY_SNAPSHOT": "U",
+    "CLMDB.CLM_CHECK": "RU"
+   },
+   "rules": [
+    "BR-CLM-EVD-001",
+    "BR-CLM-EVD-002",
+    "BR-CLM-EVD-003",
+    "BR-CLM-EVD-004",
+    "BR-CLM-EVD-005",
+    "BR-CLM-EVD-006",
+    "BR-CLM-EVD-007",
+    "BR-CLM-EVD-008",
+    "BR-CLM-EVD-009",
+    "BR-CLM-EVD-010"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMDUPCK",
+   "path": "claims/src/batch/CLMDUPCK.cbl",
+   "style": "C",
+   "code_lines": 606,
+   "calls": [
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSIUSC"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD"
+    ],
+    "SIA": [
+     "SIUSCR"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SIA": "CLMSIUSC",
+    "HIA": "CLMHIST0",
+    "DTA": "CLMDATES",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_INCIDENT": "R",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-DUP-001",
+    "BR-CLM-DUP-002",
+    "BR-CLM-DUP-003",
+    "BR-CLM-DUP-004",
+    "BR-CLM-DUP-005",
+    "BR-CLM-DUP-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMRSVRP",
+   "path": "claims/src/batch/CLMRSVRP.cbl",
+   "style": "C",
+   "code_lines": 568,
+   "calls": [
+    "CLMACTV0",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMMONEY"
+   ],
+   "sends": {
+    "DTA": [
+     "DTDIFF"
+    ],
+    "AVA": [
+     "ACTNEW"
+    ],
+    "MNA": [
+     "MNPRORA"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "AVA": "CLMACTV0",
+    "DTA": "CLMDATES",
+    "MNA": "CLMMONEY",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_EXPOSURE": "R",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_ACTIVITY": "R"
+   },
+   "rules": [
+    "BR-CLM-RSV-001",
+    "BR-CLM-RSV-002",
+    "BR-CLM-RSV-003",
+    "BR-CLM-RSV-004",
+    "BR-CLM-RSV-005",
+    "BR-CLM-RSV-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMISOSN",
+   "path": "claims/src/batch/CLMISOSN.cbl",
+   "style": "C",
+   "code_lines": 1019,
+   "calls": [
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEQGN",
+    "CLMSIUSC"
+   ],
+   "sends": {
+    "HIA": [
+     "HISADD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "SIA": [
+     "SIUSCR"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "SIA": "CLMSIUSC",
+    "HIA": "CLMHIST0",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_ISO_REQUEST": "CRU",
+    "CLMDB.CLM_CLAIM_CONTACT": "R",
+    "CLMDB.CLM_CONTACT": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_POLICY_SNAPSHOT": "R",
+    "GENAPP.CUSTOMER": "R",
+    "CLMDB.CLM_RISK_UNIT": "R"
+   },
+   "rules": [
+    "BR-CLM-ISO-001",
+    "BR-CLM-ISO-002",
+    "BR-CLM-ISO-003",
+    "BR-CLM-ISO-004",
+    "BR-CLM-ISO-005",
+    "BR-CLM-ISO-006",
+    "BR-CLM-ISO-007",
+    "BR-CLM-ISO-008"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMGLEXT",
+   "path": "claims/src/batch/CLMGLEXT.cbl",
+   "style": "C",
+   "code_lines": 594,
+   "calls": [
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_RESERVE_LINE": "R",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_CONTROL": "CRU"
+   },
+   "rules": [
+    "BR-CLM-GLX-001",
+    "BR-CLM-GLX-002",
+    "BR-CLM-GLX-003",
+    "BR-CLM-GLX-004",
+    "BR-CLM-GLX-005",
+    "BR-CLM-GLX-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMEODDR",
+   "path": "claims/src/batch/CLMEODDR.cbl",
+   "style": "C",
+   "code_lines": 478,
+   "calls": [
+    "CLMDATES",
+    "CLMERRLG"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD",
+     "DTBUSD",
+     "DTVALD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTA": "CLMDATES",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CONTROL": "RU",
+    "CLMDB.CLM_EVENT_QUEUE": "R",
+    "CLMDB.CLM_CHECK": "R",
+    "CLMDB.CLM_AUDIT_CHAIN": "R",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_ACTIVITY": "R",
+    "CLMDB.CLM_TRANSACTION": "R"
+   },
+   "rules": [
+    "BR-CLM-EOD-001",
+    "BR-CLM-EOD-002",
+    "BR-CLM-EOD-003",
+    "BR-CLM-EOD-004",
+    "BR-CLM-EOD-005",
+    "BR-CLM-EOD-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMCATAS",
+   "path": "claims/src/batch/CLMCATAS.cbl",
+   "style": "C",
+   "code_lines": 546,
+   "calls": [
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMSEGMT"
+   ],
+   "sends": {
+    "SGA": [
+     "SEGCLM"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SGA": "CLMSEGMT",
+    "HIA": "CLMHIST0",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CATASTROPHE": "R",
+    "CLMDB.CLM_CLAIM": "RU",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-CAT-001",
+    "BR-CLM-CAT-002",
+    "BR-CLM-CAT-003",
+    "BR-CLM-CAT-004",
+    "BR-CLM-CAT-005",
+    "BR-CLM-CAT-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMFNLBT",
+   "path": "claims/src/batch/CLMFNLBT.cbl",
+   "style": "C",
+   "code_lines": 1290,
+   "calls": [
+    "CLMCLAIM",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMEXPOS",
+    "CLMFINTX",
+    "CLMINCDT",
+    "CLMSEQGN"
+   ],
+   "sends": {
+    "DTA": [
+     "DTDIFF",
+     "DTVALD"
+    ],
+    "SQA": [
+     "SEQNEXT"
+    ],
+    "CLA": [
+     "CLMNEW"
+    ],
+    "INA": [
+     "INCNEW"
+    ],
+    "EXA": [
+     "EXPNEW"
+    ],
+    "FTA": [
+     "RSVSET"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "SQA": "CLMSEQGN",
+    "CLA": "CLMCLAIM",
+    "INA": "CLMINCDT",
+    "EXA": "CLMEXPOS",
+    "FTA": "CLMFINTX",
+    "DTA": "CLMDATES",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_FNOL_INTAKE": "CRU",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_CODE_TABLE": "R",
+    "CLMDB.CLM_RISK_UNIT": "R",
+    "CLMDB.CLM_POLICY_COVERAGE": "R",
+    "CLMDB.CLM_CLAIM_CONTACT": "R"
+   },
+   "rules": [
+    "BR-CLM-FNB-001",
+    "BR-CLM-FNB-002",
+    "BR-CLM-FNB-003",
+    "BR-CLM-FNB-004",
+    "BR-CLM-FNB-005",
+    "BR-CLM-FNB-006",
+    "BR-CLM-FNB-007",
+    "BR-CLM-FNB-008",
+    "BR-CLM-FNB-009",
+    "BR-CLM-FNB-010"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMESCAL",
+   "path": "claims/src/batch/CLMESCAL.cbl",
+   "style": "C",
+   "code_lines": 684,
+   "calls": [
+    "CLMACTV0",
+    "CLMDATES",
+    "CLMERRLG",
+    "CLMHIST0"
+   ],
+   "sends": {
+    "DTA": [
+     "DTADDD"
+    ],
+    "AVA": [
+     "ACTNEW"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "AVA": "CLMACTV0",
+    "HIA": "CLMHIST0",
+    "DTA": "CLMDATES",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_ACTIVITY": "RU",
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_USER": "R",
+    "CLMDB.CLM_GROUP": "R"
+   },
+   "rules": [
+    "BR-CLM-ESC-001",
+    "BR-CLM-ESC-002",
+    "BR-CLM-ESC-003",
+    "BR-CLM-ESC-004",
+    "BR-CLM-ESC-005",
+    "BR-CLM-ESC-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMLAGRP",
+   "path": "claims/src/batch/CLMLAGRP.cbl",
+   "style": "C",
+   "code_lines": 679,
+   "calls": [
+    "CLMDATES",
+    "CLMERRLG"
+   ],
+   "sends": {
+    "DTA": [
+     "DTDIFF"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "DTA": "CLMDATES",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_USER": "R",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-LAG-001",
+    "BR-CLM-LAG-002",
+    "BR-CLM-LAG-003",
+    "BR-CLM-LAG-004",
+    "BR-CLM-LAG-005",
+    "BR-CLM-LAG-006",
+    "BR-CLM-LAG-007"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMSEALR",
+   "path": "claims/src/batch/CLMSEALR.cbl",
+   "style": "C",
+   "code_lines": 519,
+   "calls": [
+    "CLMAUDCH",
+    "CLMERRLG"
+   ],
+   "sends": {
+    "ACA": [
+     "AUCVFY"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "ACA": "CLMAUDCH",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_AUDIT_CHAIN": "RU",
+    "CLMDB.CLM_CONTROL": "R"
+   },
+   "rules": [
+    "BR-CLM-SEA-001",
+    "BR-CLM-SEA-002",
+    "BR-CLM-SEA-003",
+    "BR-CLM-SEA-004",
+    "BR-CLM-SEA-005",
+    "BR-CLM-SEA-006"
+   ],
+   "app": "claims"
+  },
+  {
+   "program": "CLMRIRE0",
+   "path": "claims/src/batch/CLMRIRE0.cbl",
+   "style": "C",
+   "code_lines": 678,
+   "calls": [
+    "CLMERRLG",
+    "CLMHIST0",
+    "CLMMONEY"
+   ],
+   "sends": {
+    "MNA": [
+     "MNRATE"
+    ],
+    "HIA": [
+     "HISADD"
+    ],
+    "ERC": [
+     "ERRLOG"
+    ]
+   },
+   "tag_target": {
+    "MNA": "CLMMONEY",
+    "HIA": "CLMHIST0",
+    "ERC": "CLMERRLG"
+   },
+   "serves": [],
+   "tables": {
+    "CLMDB.CLM_CLAIM": "R",
+    "CLMDB.CLM_TRANSACTION": "R",
+    "CLMDB.CLM_RI_TREATY": "R",
+    "CLMDB.CLM_CONTROL": "R",
+    "CLMDB.CLM_RI_CESSION": "CRU"
+   },
+   "rules": [
+    "BR-CLM-RIC-001",
+    "BR-CLM-RIC-002",
+    "BR-CLM-RIC-003",
+    "BR-CLM-RIC-004",
+    "BR-CLM-RIC-005",
+    "BR-CLM-RIC-006",
+    "BR-CLM-RIC-007",
+    "BR-CLM-RIC-008"
+   ],
+   "app": "claims"
+  }
+ ],
+ "breaks": []
+}

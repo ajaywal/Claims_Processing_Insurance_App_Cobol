@@ -14,11 +14,11 @@
            , EVENT_TS             TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-HISTORY.
-           10 HIS-HISTORY-ID                 PIC S9(9) USAGE COMP.
-           10 HIS-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 HIS-HISTORY-ID                 PIC S9(9) COMP.
+           10 HIS-CLAIM-ID                   PIC S9(9) COMP.
            10 HIS-EVENT-TYPE                 PIC X(8).
            10 HIS-DESCRIPTION.
-              49 HIS-DESCRIPTION-LEN          PIC S9(4) USAGE COMP.
+              49 HIS-DESCRIPTION-LEN          PIC S9(4) COMP.
               49 HIS-DESCRIPTION-TEXT         PIC X(120).
            10 HIS-USER-ID                    PIC X(8).
            10 HIS-PROGRAM-ID                 PIC X(8).

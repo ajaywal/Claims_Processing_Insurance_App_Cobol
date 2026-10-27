@@ -14,13 +14,13 @@
            , RESULT_REF           CHAR(20)       NOT NULL
            ) END-EXEC.
        01  DCLBIL-DELINQ-EVENT.
-           10 DEV-DP-ID                      PIC S9(9) USAGE COMP.
-           10 DEV-STEP-SEQ                   PIC S9(4) USAGE COMP.
+           10 DEV-DP-ID                      PIC S9(9) COMP.
+           10 DEV-STEP-SEQ                   PIC S9(4) COMP.
            10 DEV-EVENT-CODE                 PIC X(8).
            10 DEV-TARGET-DATE                PIC X(10).
            10 DEV-COMPLETED-DATE             PIC X(10).
            10 DEV-EVENT-STATUS               PIC X(4).
            10 DEV-RESULT-REF                 PIC X(20).
        01  INDBIL-DELINQ-EVENT.
-           10 DEV-COMPLETED-DATE-IND         PIC S9(4) USAGE COMP.
+           10 DEV-COMPLETED-DATE-IND         PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7

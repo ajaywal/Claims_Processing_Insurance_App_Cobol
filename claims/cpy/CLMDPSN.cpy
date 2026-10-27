@@ -18,16 +18,16 @@
            , SNAPSHOT_TS          TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-POLICY-SNAPSHOT.
-           10 PSN-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 PSN-POLICY-NUMBER              PIC S9(9) USAGE COMP.
+           10 PSN-CLAIM-ID                   PIC S9(9) COMP.
+           10 PSN-POLICY-NUMBER              PIC S9(9) COMP.
            10 PSN-POLICY-TYPE                PIC X(1).
            10 PSN-EFF-DATE                   PIC X(10).
            10 PSN-EXP-DATE                   PIC X(10).
            10 PSN-VERIFIED-FLAG              PIC X(1).
            10 PSN-INSURED-NAME.
-              49 PSN-INSURED-NAME-LEN         PIC S9(4) USAGE COMP.
+              49 PSN-INSURED-NAME-LEN         PIC S9(4) COMP.
               49 PSN-INSURED-NAME-TEXT        PIC X(60).
-           10 PSN-PRODUCER-CODE              PIC S9(9) USAGE COMP.
+           10 PSN-PRODUCER-CODE              PIC S9(9) COMP.
            10 PSN-STATUS-AT-LOSS             PIC X(4).
            10 PSN-BILLING-STATUS             PIC X(4).
            10 PSN-SNAPSHOT-TS                PIC X(26).

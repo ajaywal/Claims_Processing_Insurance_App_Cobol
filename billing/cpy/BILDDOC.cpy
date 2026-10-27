@@ -16,15 +16,15 @@
            , SENT_TS              TIMESTAMP     
            ) END-EXEC.
        01  DCLBIL-DOCUMENT-REQUEST.
-           10 DOC-DOC-ID                     PIC S9(9) USAGE COMP.
-           10 DOC-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 DOC-DOC-ID                     PIC S9(9) COMP.
+           10 DOC-ACCOUNT-ID                 PIC S9(9) COMP.
            10 DOC-DOC-TYPE                   PIC X(8).
            10 DOC-REF-TYPE                   PIC X(4).
-           10 DOC-REF-ID                     PIC S9(9) USAGE COMP.
+           10 DOC-REF-ID                     PIC S9(9) COMP.
            10 DOC-DELIVERY-METHOD            PIC X(4).
            10 DOC-DOC-STATUS                 PIC X(4).
            10 DOC-REQUEST-DATE               PIC X(10).
            10 DOC-SENT-TS                    PIC X(26).
        01  INDBIL-DOCUMENT-REQUEST.
-           10 DOC-SENT-TS-IND                PIC S9(4) USAGE COMP.
+           10 DOC-SENT-TS-IND                PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

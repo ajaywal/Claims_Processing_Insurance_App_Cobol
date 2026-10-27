@@ -18,10 +18,10 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-WRITEOFF.
-           10 WOF-WO-ID                      PIC S9(9) USAGE COMP.
-           10 WOF-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 WOF-ITEM-ID                    PIC S9(9) USAGE COMP.
-           10 WOF-WO-AMOUNT                  PIC S9(11)V9(2) USAGE COMP-3.
+           10 WOF-WO-ID                      PIC S9(9) COMP.
+           10 WOF-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 WOF-ITEM-ID                    PIC S9(9) COMP.
+           10 WOF-WO-AMOUNT                  PIC S9(11)V9(2) COMP-3.
            10 WOF-WO-REASON                  PIC X(8).
            10 WOF-WO-STATUS                  PIC X(4).
            10 WOF-REQUEST-USER               PIC X(8).

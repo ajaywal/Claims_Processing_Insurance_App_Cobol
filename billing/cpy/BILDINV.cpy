@@ -22,19 +22,19 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-INVOICE.
-           10 INV-INVOICE-ID                 PIC S9(9) USAGE COMP.
+           10 INV-INVOICE-ID                 PIC S9(9) COMP.
            10 INV-INVOICE-NUMBER             PIC X(12).
-           10 INV-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 INV-STREAM-ID                  PIC S9(9) USAGE COMP.
+           10 INV-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 INV-STREAM-ID                  PIC S9(9) COMP.
            10 INV-BILL-DATE                  PIC X(10).
            10 INV-DUE-DATE                   PIC X(10).
-           10 INV-INVOICE-AMOUNT             PIC S9(11)V9(2) USAGE COMP-3.
-           10 INV-AMOUNT-DUE                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 INV-PRIOR-BALANCE              PIC S9(11)V9(2) USAGE COMP-3.
+           10 INV-INVOICE-AMOUNT             PIC S9(11)V9(2) COMP-3.
+           10 INV-AMOUNT-DUE                 PIC S9(11)V9(2) COMP-3.
+           10 INV-PRIOR-BALANCE              PIC S9(11)V9(2) COMP-3.
            10 INV-INVOICE-STATUS             PIC X(4).
            10 INV-ADHOC-FLAG                 PIC X(1).
-           10 INV-ITEM-COUNT                 PIC S9(4) USAGE COMP.
-           10 INV-DOC-ID                     PIC S9(9) USAGE COMP.
+           10 INV-ITEM-COUNT                 PIC S9(4) COMP.
+           10 INV-DOC-ID                     PIC S9(9) COMP.
            10 INV-CREATE-TS                  PIC X(26).
            10 INV-UPDATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 15

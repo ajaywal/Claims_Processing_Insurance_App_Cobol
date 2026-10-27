@@ -15,10 +15,10 @@
        01  DCLBIL-COMMISSION-PLAN.
            10 CPL-PLAN-CODE                  PIC X(8).
            10 CPL-PLAN-NAME.
-              49 CPL-PLAN-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 CPL-PLAN-NAME-LEN            PIC S9(4) COMP.
               49 CPL-PLAN-NAME-TEXT           PIC X(40).
-           10 CPL-DEFAULT-RATE-BPS           PIC S9(4) USAGE COMP.
+           10 CPL-DEFAULT-RATE-BPS           PIC S9(4) COMP.
            10 CPL-EARN-BASIS                 PIC X(1).
-           10 CPL-PAY-THRESHOLD              PIC S9(7)V9(2) USAGE COMP-3.
+           10 CPL-PAY-THRESHOLD              PIC S9(7)V9(2) COMP-3.
            10 CPL-ACTIVE-FLAG                PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 6

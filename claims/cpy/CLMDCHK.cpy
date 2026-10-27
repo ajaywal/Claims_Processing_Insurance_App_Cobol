@@ -23,18 +23,18 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-CHECK.
-           10 CHK-CHECK-ID                   PIC S9(9) USAGE COMP.
-           10 CHK-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 CHK-CHECK-ID                   PIC S9(9) COMP.
+           10 CHK-CLAIM-ID                   PIC S9(9) COMP.
            10 CHK-CHECK-NUMBER               PIC X(10).
-           10 CHK-PAYEE-CONTACT-ID           PIC S9(9) USAGE COMP.
+           10 CHK-PAYEE-CONTACT-ID           PIC S9(9) COMP.
            10 CHK-PAYEE-NAME.
-              49 CHK-PAYEE-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 CHK-PAYEE-NAME-LEN           PIC S9(4) COMP.
               49 CHK-PAYEE-NAME-TEXT          PIC X(60).
            10 CHK-PAYEE-ADDR1.
-              49 CHK-PAYEE-ADDR1-LEN          PIC S9(4) USAGE COMP.
+              49 CHK-PAYEE-ADDR1-LEN          PIC S9(4) COMP.
               49 CHK-PAYEE-ADDR1-TEXT         PIC X(60).
            10 CHK-PAYEE-POSTCODE             PIC X(8).
-           10 CHK-CHECK-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
+           10 CHK-CHECK-AMOUNT               PIC S9(11)V9(2) COMP-3.
            10 CHK-PAY-METHOD                 PIC X(4).
            10 CHK-SCHEDULED-DATE             PIC X(10).
            10 CHK-ISSUE-DATE                 PIC X(10).
@@ -44,7 +44,7 @@
            10 CHK-CREATE-TS                  PIC X(26).
            10 CHK-UPDATE-TS                  PIC X(26).
        01  INDCLM-CHECK.
-           10 CHK-PAYEE-ADDR1-IND            PIC S9(4) USAGE COMP.
-           10 CHK-PAYEE-POSTCODE-IND         PIC S9(4) USAGE COMP.
-           10 CHK-ISSUE-DATE-IND             PIC S9(4) USAGE COMP.
+           10 CHK-PAYEE-ADDR1-IND            PIC S9(4) COMP.
+           10 CHK-PAYEE-POSTCODE-IND         PIC S9(4) COMP.
+           10 CHK-ISSUE-DATE-IND             PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 16

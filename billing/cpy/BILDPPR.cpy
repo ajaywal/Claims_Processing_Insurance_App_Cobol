@@ -26,26 +26,26 @@
            , VERSION_NO           INTEGER        NOT NULL
            ) END-EXEC.
        01  DCLBIL-POLICY-PERIOD.
-           10 PPR-PP-ID                      PIC S9(9) USAGE COMP.
-           10 PPR-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 PPR-GENAPP-POL-NUM             PIC S9(9) USAGE COMP.
-           10 PPR-TERM-NUMBER                PIC S9(4) USAGE COMP.
+           10 PPR-PP-ID                      PIC S9(9) COMP.
+           10 PPR-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 PPR-GENAPP-POL-NUM             PIC S9(9) COMP.
+           10 PPR-TERM-NUMBER                PIC S9(4) COMP.
            10 PPR-PRODUCT-CODE               PIC X(1).
            10 PPR-EFF-DATE                   PIC X(10).
            10 PPR-EXP-DATE                   PIC X(10).
            10 PPR-PAYMENT-PLAN-CODE          PIC X(8).
            10 PPR-BILLING-METHOD             PIC X(2).
-           10 PPR-PRODUCER-ID                PIC S9(9) USAGE COMP.
-           10 PPR-STREAM-ID                  PIC S9(9) USAGE COMP.
-           10 PPR-TOTAL-PREMIUM              PIC S9(11)V9(2) USAGE COMP-3.
+           10 PPR-PRODUCER-ID                PIC S9(9) COMP.
+           10 PPR-STREAM-ID                  PIC S9(9) COMP.
+           10 PPR-TOTAL-PREMIUM              PIC S9(11)V9(2) COMP-3.
            10 PPR-PP-STATUS                  PIC X(4).
            10 PPR-CANCEL-DATE                PIC X(10).
            10 PPR-CANCEL-REASON              PIC X(8).
            10 PPR-CLOSURE-STATUS             PIC X(4).
            10 PPR-CREATE-TS                  PIC X(26).
            10 PPR-UPDATE-TS                  PIC X(26).
-           10 PPR-VERSION-NO                 PIC S9(9) USAGE COMP.
+           10 PPR-VERSION-NO                 PIC S9(9) COMP.
        01  INDBIL-POLICY-PERIOD.
-           10 PPR-CANCEL-DATE-IND            PIC S9(4) USAGE COMP.
-           10 PPR-CANCEL-REASON-IND          PIC S9(4) USAGE COMP.
+           10 PPR-CANCEL-DATE-IND            PIC S9(4) COMP.
+           10 PPR-CANCEL-REASON-IND          PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 19

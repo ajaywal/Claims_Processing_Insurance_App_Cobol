@@ -17,16 +17,16 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-PRODUCER.
-           10 PRD-PRODUCER-ID                PIC S9(9) USAGE COMP.
-           10 PRD-PRODUCER-CODE              PIC S9(9) USAGE COMP.
+           10 PRD-PRODUCER-ID                PIC S9(9) COMP.
+           10 PRD-PRODUCER-CODE              PIC S9(9) COMP.
            10 PRD-PRODUCER-NAME.
-              49 PRD-PRODUCER-NAME-LEN        PIC S9(4) USAGE COMP.
+              49 PRD-PRODUCER-NAME-LEN        PIC S9(4) COMP.
               49 PRD-PRODUCER-NAME-TEXT       PIC X(60).
            10 PRD-PRODUCER-TIER              PIC X(4).
            10 PRD-COMM-PLAN-CODE             PIC X(8).
            10 PRD-PAY-CYCLE                  PIC X(1).
            10 PRD-AGENCY-BILL-FLAG           PIC X(1).
-           10 PRD-PAYABLE-BALANCE            PIC S9(11)V9(2) USAGE COMP-3.
+           10 PRD-PAYABLE-BALANCE            PIC S9(11)V9(2) COMP-3.
            10 PRD-PRODUCER-STATUS            PIC X(4).
            10 PRD-UPDATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

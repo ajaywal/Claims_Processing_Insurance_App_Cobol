@@ -18,19 +18,19 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-PAYMENT-INSTRUMENT.
-           10 PIN-INSTR-ID                   PIC S9(9) USAGE COMP.
-           10 PIN-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 PIN-INSTR-ID                   PIC S9(9) COMP.
+           10 PIN-ACCOUNT-ID                 PIC S9(9) COMP.
            10 PIN-INSTR-TYPE                 PIC X(4).
            10 PIN-TOKEN-REF                  PIC X(32).
            10 PIN-LAST-FOUR                  PIC X(4).
            10 PIN-EXPIRY-MMYY                PIC X(4).
            10 PIN-SORT-CODE                  PIC X(6).
            10 PIN-HOLDER-NAME.
-              49 PIN-HOLDER-NAME-LEN          PIC S9(4) USAGE COMP.
+              49 PIN-HOLDER-NAME-LEN          PIC S9(4) COMP.
               49 PIN-HOLDER-NAME-TEXT         PIC X(60).
            10 PIN-INSTR-STATUS               PIC X(4).
-           10 PIN-FAIL-COUNT                 PIC S9(4) USAGE COMP.
+           10 PIN-FAIL-COUNT                 PIC S9(4) COMP.
            10 PIN-CREATE-TS                  PIC X(26).
        01  INDBIL-PAYMENT-INSTRUMENT.
-           10 PIN-HOLDER-NAME-IND            PIC S9(4) USAGE COMP.
+           10 PIN-HOLDER-NAME-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

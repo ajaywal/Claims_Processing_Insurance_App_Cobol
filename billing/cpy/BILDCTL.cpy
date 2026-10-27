@@ -22,5 +22,5 @@
            10 CTL-CURRENCY-CODE              PIC X(3).
            10 CTL-UPDATE-TS                  PIC X(26).
        01  INDBIL-CONTROL.
-           10 CTL-LAST-EOD-TS-IND            PIC S9(4) USAGE COMP.
+           10 CTL-LAST-EOD-TS-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7

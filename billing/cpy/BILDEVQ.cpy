@@ -19,23 +19,23 @@
            , PROCESSED_TS         TIMESTAMP     
            ) END-EXEC.
        01  DCLBIL-EVENT-QUEUE.
-           10 EVQ-EVENT-ID                   PIC S9(9) USAGE COMP.
+           10 EVQ-EVENT-ID                   PIC S9(9) COMP.
            10 EVQ-EVENT-TYPE                 PIC X(8).
            10 EVQ-DIRECTION                  PIC X(1).
            10 EVQ-SOURCE-SYSTEM              PIC X(4).
            10 EVQ-TARGET-SYSTEM              PIC X(4).
            10 EVQ-EVENT-KEY                  PIC X(20).
            10 EVQ-PAYLOAD.
-              49 EVQ-PAYLOAD-LEN              PIC S9(4) USAGE COMP.
+              49 EVQ-PAYLOAD-LEN              PIC S9(4) COMP.
               49 EVQ-PAYLOAD-TEXT             PIC X(1000).
            10 EVQ-EVENT-STATUS               PIC X(4).
-           10 EVQ-RETRY-COUNT                PIC S9(4) USAGE COMP.
+           10 EVQ-RETRY-COUNT                PIC S9(4) COMP.
            10 EVQ-ERROR-TEXT.
-              49 EVQ-ERROR-TEXT-LEN           PIC S9(4) USAGE COMP.
+              49 EVQ-ERROR-TEXT-LEN           PIC S9(4) COMP.
               49 EVQ-ERROR-TEXT-TEXT          PIC X(80).
            10 EVQ-CREATE-TS                  PIC X(26).
            10 EVQ-PROCESSED-TS               PIC X(26).
        01  INDBIL-EVENT-QUEUE.
-           10 EVQ-ERROR-TEXT-IND             PIC S9(4) USAGE COMP.
-           10 EVQ-PROCESSED-TS-IND           PIC S9(4) USAGE COMP.
+           10 EVQ-ERROR-TEXT-IND             PIC S9(4) COMP.
+           10 EVQ-PROCESSED-TS-IND           PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 12

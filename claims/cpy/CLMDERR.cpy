@@ -17,13 +17,13 @@
            , ERROR_TS             TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-ERROR-LOG.
-           10 ERR-ERROR-ID                   PIC S9(9) USAGE COMP.
+           10 ERR-ERROR-ID                   PIC S9(9) COMP.
            10 ERR-PROGRAM-ID                 PIC X(8).
            10 ERR-PARAGRAPH-NAME             PIC X(30).
-           10 ERR-SQLCODE-VALUE              PIC S9(9) USAGE COMP.
-           10 ERR-CICS-RESP                  PIC S9(9) USAGE COMP.
+           10 ERR-SQLCODE-VALUE              PIC S9(9) COMP.
+           10 ERR-CICS-RESP                  PIC S9(9) COMP.
            10 ERR-ERROR-TEXT.
-              49 ERR-ERROR-TEXT-LEN           PIC S9(4) USAGE COMP.
+              49 ERR-ERROR-TEXT-LEN           PIC S9(4) COMP.
               49 ERR-ERROR-TEXT-TEXT          PIC X(120).
            10 ERR-ENTITY-KEY                 PIC X(20).
            10 ERR-USER-ID                    PIC X(8).

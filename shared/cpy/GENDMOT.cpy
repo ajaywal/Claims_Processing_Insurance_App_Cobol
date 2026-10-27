@@ -17,24 +17,24 @@
            , ACCIDENTS            INTEGER       
            ) END-EXEC.
        01  DCLMOTOR.
-           10 GMO-POLICYNUMBER               PIC S9(9) USAGE COMP.
+           10 GMO-POLICYNUMBER               PIC S9(9) COMP.
            10 GMO-MAKE                       PIC X(15).
            10 GMO-MODEL                      PIC X(15).
-           10 GMO-VALUE                      PIC S9(9) USAGE COMP.
+           10 GMO-VALUE                      PIC S9(9) COMP.
            10 GMO-REGNUMBER                  PIC X(7).
            10 GMO-COLOUR                     PIC X(8).
-           10 GMO-CC                         PIC S9(4) USAGE COMP.
+           10 GMO-CC                         PIC S9(4) COMP.
            10 GMO-YEAROFMANUFACTURE          PIC X(10).
-           10 GMO-PREMIUM                    PIC S9(9) USAGE COMP.
-           10 GMO-ACCIDENTS                  PIC S9(9) USAGE COMP.
+           10 GMO-PREMIUM                    PIC S9(9) COMP.
+           10 GMO-ACCIDENTS                  PIC S9(9) COMP.
        01  INDMOTOR.
-           10 GMO-MAKE-IND                   PIC S9(4) USAGE COMP.
-           10 GMO-MODEL-IND                  PIC S9(4) USAGE COMP.
-           10 GMO-VALUE-IND                  PIC S9(4) USAGE COMP.
-           10 GMO-REGNUMBER-IND              PIC S9(4) USAGE COMP.
-           10 GMO-COLOUR-IND                 PIC S9(4) USAGE COMP.
-           10 GMO-CC-IND                     PIC S9(4) USAGE COMP.
-           10 GMO-YEAROFMANUFACTURE-IND      PIC S9(4) USAGE COMP.
-           10 GMO-PREMIUM-IND                PIC S9(4) USAGE COMP.
-           10 GMO-ACCIDENTS-IND              PIC S9(4) USAGE COMP.
+           10 GMO-MAKE-IND                   PIC S9(4) COMP.
+           10 GMO-MODEL-IND                  PIC S9(4) COMP.
+           10 GMO-VALUE-IND                  PIC S9(4) COMP.
+           10 GMO-REGNUMBER-IND              PIC S9(4) COMP.
+           10 GMO-COLOUR-IND                 PIC S9(4) COMP.
+           10 GMO-CC-IND                     PIC S9(4) COMP.
+           10 GMO-YEAROFMANUFACTURE-IND      PIC S9(4) COMP.
+           10 GMO-PREMIUM-IND                PIC S9(4) COMP.
+           10 GMO-ACCIDENTS-IND              PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

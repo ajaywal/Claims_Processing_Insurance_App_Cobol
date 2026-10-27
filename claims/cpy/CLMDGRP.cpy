@@ -16,7 +16,7 @@
        01  DCLCLM-GROUP.
            10 GRP-GROUP-CODE                 PIC X(8).
            10 GRP-GROUP-NAME.
-              49 GRP-GROUP-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 GRP-GROUP-NAME-LEN           PIC S9(4) COMP.
               49 GRP-GROUP-NAME-TEXT          PIC X(40).
            10 GRP-PARENT-GROUP               PIC X(8).
            10 GRP-GROUP-TYPE                 PIC X(4).

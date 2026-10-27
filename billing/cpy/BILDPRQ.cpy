@@ -19,14 +19,14 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-PAYMENT-REQUEST.
-           10 PRQ-REQUEST-ID                 PIC S9(9) USAGE COMP.
-           10 PRQ-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 PRQ-INSTR-ID                   PIC S9(9) USAGE COMP.
-           10 PRQ-INVOICE-ID                 PIC S9(9) USAGE COMP.
-           10 PRQ-REQUEST-AMOUNT             PIC S9(11)V9(2) USAGE COMP-3.
+           10 PRQ-REQUEST-ID                 PIC S9(9) COMP.
+           10 PRQ-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 PRQ-INSTR-ID                   PIC S9(9) COMP.
+           10 PRQ-INVOICE-ID                 PIC S9(9) COMP.
+           10 PRQ-REQUEST-AMOUNT             PIC S9(11)V9(2) COMP-3.
            10 PRQ-DRAFT-DATE                 PIC X(10).
            10 PRQ-REQUEST-STATUS             PIC X(4).
-           10 PRQ-MONEY-ID                   PIC S9(9) USAGE COMP.
+           10 PRQ-MONEY-ID                   PIC S9(9) COMP.
            10 PRQ-RETURN-CODE                PIC X(4).
            10 PRQ-FILE-REF                   PIC X(12).
            10 PRQ-CREATE-TS                  PIC X(26).

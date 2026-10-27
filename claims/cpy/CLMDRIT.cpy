@@ -18,9 +18,9 @@
            10 RIT-TREATY-CODE                PIC X(8).
            10 RIT-TREATY-TYPE                PIC X(4).
            10 RIT-POLICY-TYPE                PIC X(1).
-           10 RIT-RETENTION-AMOUNT           PIC S9(11)V9(2) USAGE COMP-3.
-           10 RIT-LIMIT-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
-           10 RIT-CEDED-PCT                  PIC S9(3)V9(2) USAGE COMP-3.
+           10 RIT-RETENTION-AMOUNT           PIC S9(11)V9(2) COMP-3.
+           10 RIT-LIMIT-AMOUNT               PIC S9(11)V9(2) COMP-3.
+           10 RIT-CEDED-PCT                  PIC S9(3)V9(2) COMP-3.
            10 RIT-EFF-DATE                   PIC X(10).
            10 RIT-EXP-DATE                   PIC X(10).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 8

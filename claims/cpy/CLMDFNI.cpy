@@ -16,20 +16,20 @@
            , PROCESSED_TS         TIMESTAMP     
            ) END-EXEC.
        01  DCLCLM-FNOL-INTAKE.
-           10 FNI-INTAKE-ID                  PIC S9(9) USAGE COMP.
+           10 FNI-INTAKE-ID                  PIC S9(9) COMP.
            10 FNI-INTAKE-SOURCE              PIC X(4).
            10 FNI-RAW-RECORD.
-              49 FNI-RAW-RECORD-LEN           PIC S9(4) USAGE COMP.
+              49 FNI-RAW-RECORD-LEN           PIC S9(4) COMP.
               49 FNI-RAW-RECORD-TEXT          PIC X(600).
            10 FNI-INTAKE-STATUS              PIC X(4).
-           10 FNI-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 FNI-CLAIM-ID                   PIC S9(9) COMP.
            10 FNI-ERROR-CODE                 PIC X(8).
            10 FNI-ERROR-TEXT.
-              49 FNI-ERROR-TEXT-LEN           PIC S9(4) USAGE COMP.
+              49 FNI-ERROR-TEXT-LEN           PIC S9(4) COMP.
               49 FNI-ERROR-TEXT-TEXT          PIC X(80).
            10 FNI-RECEIVED-TS                PIC X(26).
            10 FNI-PROCESSED-TS               PIC X(26).
        01  INDCLM-FNOL-INTAKE.
-           10 FNI-ERROR-TEXT-IND             PIC S9(4) USAGE COMP.
-           10 FNI-PROCESSED-TS-IND           PIC S9(4) USAGE COMP.
+           10 FNI-ERROR-TEXT-IND             PIC S9(4) COMP.
+           10 FNI-PROCESSED-TS-IND           PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

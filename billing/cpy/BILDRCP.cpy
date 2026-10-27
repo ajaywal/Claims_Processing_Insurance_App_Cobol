@@ -23,12 +23,12 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-PAYMENT-RECEIPT.
-           10 RCP-MONEY-ID                   PIC S9(9) USAGE COMP.
-           10 RCP-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 RCP-MONEY-ID                   PIC S9(9) COMP.
+           10 RCP-ACCOUNT-ID                 PIC S9(9) COMP.
            10 RCP-RECEIVED-DATE              PIC X(10).
-           10 RCP-RECEIPT-AMOUNT             PIC S9(11)V9(2) USAGE COMP-3.
-           10 RCP-UNAPPLIED-AMOUNT           PIC S9(11)V9(2) USAGE COMP-3.
-           10 RCP-INSTR-ID                   PIC S9(9) USAGE COMP.
+           10 RCP-RECEIPT-AMOUNT             PIC S9(11)V9(2) COMP-3.
+           10 RCP-UNAPPLIED-AMOUNT           PIC S9(11)V9(2) COMP-3.
+           10 RCP-INSTR-ID                   PIC S9(9) COMP.
            10 RCP-PAYMENT-METHOD             PIC X(4).
            10 RCP-REF-NUMBER                 PIC X(20).
            10 RCP-INVOICE-NUMBER             PIC X(12).

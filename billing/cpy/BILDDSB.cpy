@@ -26,19 +26,19 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-DISBURSEMENT.
-           10 DSB-DISB-ID                    PIC S9(9) USAGE COMP.
-           10 DSB-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 DSB-DISB-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
+           10 DSB-DISB-ID                    PIC S9(9) COMP.
+           10 DSB-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 DSB-DISB-AMOUNT                PIC S9(11)V9(2) COMP-3.
            10 DSB-DISB-REASON                PIC X(8).
            10 DSB-PAYEE-NAME.
-              49 DSB-PAYEE-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 DSB-PAYEE-NAME-LEN           PIC S9(4) COMP.
               49 DSB-PAYEE-NAME-TEXT          PIC X(60).
            10 DSB-PAYEE-ADDR1.
-              49 DSB-PAYEE-ADDR1-LEN          PIC S9(4) USAGE COMP.
+              49 DSB-PAYEE-ADDR1-LEN          PIC S9(4) COMP.
               49 DSB-PAYEE-ADDR1-TEXT         PIC X(60).
            10 DSB-PAYEE-POSTCODE             PIC X(8).
            10 DSB-PAY-METHOD                 PIC X(4).
-           10 DSB-INSTR-ID                   PIC S9(9) USAGE COMP.
+           10 DSB-INSTR-ID                   PIC S9(9) COMP.
            10 DSB-DUE-DATE                   PIC X(10).
            10 DSB-DISB-STATUS                PIC X(4).
            10 DSB-SOURCE-SYSTEM              PIC X(4).
@@ -50,7 +50,7 @@
            10 DSB-CREATE-TS                  PIC X(26).
            10 DSB-UPDATE-TS                  PIC X(26).
        01  INDBIL-DISBURSEMENT.
-           10 DSB-PAYEE-ADDR1-IND            PIC S9(4) USAGE COMP.
-           10 DSB-PAYEE-POSTCODE-IND         PIC S9(4) USAGE COMP.
-           10 DSB-SENT-DATE-IND              PIC S9(4) USAGE COMP.
+           10 DSB-PAYEE-ADDR1-IND            PIC S9(4) COMP.
+           10 DSB-PAYEE-POSTCODE-IND         PIC S9(4) COMP.
+           10 DSB-SENT-DATE-IND              PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 19

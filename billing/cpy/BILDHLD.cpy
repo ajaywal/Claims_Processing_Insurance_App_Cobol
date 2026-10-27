@@ -16,17 +16,17 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-HOLD.
-           10 HLD-HOLD-ID                    PIC S9(9) USAGE COMP.
-           10 HLD-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 HLD-HOLD-ID                    PIC S9(9) COMP.
+           10 HLD-ACCOUNT-ID                 PIC S9(9) COMP.
            10 HLD-HOLD-TYPE                  PIC X(4).
            10 HLD-START-DATE                 PIC X(10).
            10 HLD-END-DATE                   PIC X(10).
            10 HLD-HOLD-REASON.
-              49 HLD-HOLD-REASON-LEN          PIC S9(4) USAGE COMP.
+              49 HLD-HOLD-REASON-LEN          PIC S9(4) COMP.
               49 HLD-HOLD-REASON-TEXT         PIC X(80).
            10 HLD-HOLD-STATUS                PIC X(4).
            10 HLD-CREATE-USER                PIC X(8).
            10 HLD-CREATE-TS                  PIC X(26).
        01  INDBIL-HOLD.
-           10 HLD-END-DATE-IND               PIC S9(4) USAGE COMP.
+           10 HLD-END-DATE-IND               PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

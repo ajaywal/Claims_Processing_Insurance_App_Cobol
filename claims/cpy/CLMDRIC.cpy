@@ -14,11 +14,11 @@
            , CALC_DATE            DATE           NOT NULL
            ) END-EXEC.
        01  DCLCLM-RI-CESSION.
-           10 RIC-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 RIC-CLAIM-ID                   PIC S9(9) COMP.
            10 RIC-TREATY-CODE                PIC X(8).
-           10 RIC-GROSS-INCURRED             PIC S9(11)V9(2) USAGE COMP-3.
-           10 RIC-RETAINED-AMOUNT            PIC S9(11)V9(2) USAGE COMP-3.
-           10 RIC-CEDED-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
+           10 RIC-GROSS-INCURRED             PIC S9(11)V9(2) COMP-3.
+           10 RIC-RETAINED-AMOUNT            PIC S9(11)V9(2) COMP-3.
+           10 RIC-CEDED-AMOUNT               PIC S9(11)V9(2) COMP-3.
            10 RIC-NOTIFIED-FLAG              PIC X(1).
            10 RIC-CALC-DATE                  PIC X(10).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7

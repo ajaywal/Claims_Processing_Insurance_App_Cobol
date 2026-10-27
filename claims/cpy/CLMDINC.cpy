@@ -20,19 +20,19 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-INCIDENT.
-           10 INC-INCIDENT-ID                PIC S9(9) USAGE COMP.
-           10 INC-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 INC-INCIDENT-ID                PIC S9(9) COMP.
+           10 INC-CLAIM-ID                   PIC S9(9) COMP.
            10 INC-INCIDENT-TYPE              PIC X(4).
-           10 INC-RISK-UNIT-SEQ              PIC S9(4) USAGE COMP.
+           10 INC-RISK-UNIT-SEQ              PIC S9(4) COMP.
            10 INC-DESCRIPTION.
-              49 INC-DESCRIPTION-LEN          PIC S9(4) USAGE COMP.
+              49 INC-DESCRIPTION-LEN          PIC S9(4) COMP.
               49 INC-DESCRIPTION-TEXT         PIC X(200).
-           10 INC-SEVERITY                   PIC S9(4) USAGE COMP.
+           10 INC-SEVERITY                   PIC S9(4) COMP.
            10 INC-VEHICLE-REG                PIC X(8).
            10 INC-DRIVEABLE-FLAG             PIC X(1).
-           10 INC-ESTIMATED-DAMAGE           PIC S9(11)V9(2) USAGE COMP-3.
+           10 INC-ESTIMATED-DAMAGE           PIC S9(11)V9(2) COMP-3.
            10 INC-TOTAL-LOSS-FLAG            PIC X(1).
            10 INC-INJURY-TYPE                PIC X(8).
-           10 INC-INJURED-CONTACT-ID         PIC S9(9) USAGE COMP.
+           10 INC-INJURED-CONTACT-ID         PIC S9(9) COMP.
            10 INC-CREATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 13

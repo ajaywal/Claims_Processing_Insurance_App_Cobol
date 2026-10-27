@@ -23,42 +23,42 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-ACCOUNT-CONTACT.
-           10 ACN-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 ACN-CONTACT-SEQ                PIC S9(4) USAGE COMP.
+           10 ACN-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 ACN-CONTACT-SEQ                PIC S9(4) COMP.
            10 ACN-CONTACT-ROLE               PIC X(4).
            10 ACN-CONTACT-TYPE               PIC X(1).
            10 ACN-FIRST-NAME.
-              49 ACN-FIRST-NAME-LEN           PIC S9(4) USAGE COMP.
+              49 ACN-FIRST-NAME-LEN           PIC S9(4) COMP.
               49 ACN-FIRST-NAME-TEXT          PIC X(30).
            10 ACN-LAST-NAME.
-              49 ACN-LAST-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 ACN-LAST-NAME-LEN            PIC S9(4) COMP.
               49 ACN-LAST-NAME-TEXT           PIC X(40).
            10 ACN-COMPANY-NAME.
-              49 ACN-COMPANY-NAME-LEN         PIC S9(4) USAGE COMP.
+              49 ACN-COMPANY-NAME-LEN         PIC S9(4) COMP.
               49 ACN-COMPANY-NAME-TEXT        PIC X(60).
            10 ACN-ADDRESS-LINE1.
-              49 ACN-ADDRESS-LINE1-LEN        PIC S9(4) USAGE COMP.
+              49 ACN-ADDRESS-LINE1-LEN        PIC S9(4) COMP.
               49 ACN-ADDRESS-LINE1-TEXT       PIC X(60).
            10 ACN-ADDRESS-LINE2.
-              49 ACN-ADDRESS-LINE2-LEN        PIC S9(4) USAGE COMP.
+              49 ACN-ADDRESS-LINE2-LEN        PIC S9(4) COMP.
               49 ACN-ADDRESS-LINE2-TEXT       PIC X(60).
            10 ACN-CITY.
-              49 ACN-CITY-LEN                 PIC S9(4) USAGE COMP.
+              49 ACN-CITY-LEN                 PIC S9(4) COMP.
               49 ACN-CITY-TEXT                PIC X(40).
            10 ACN-POSTCODE                   PIC X(8).
            10 ACN-COUNTRY-CODE               PIC X(2).
            10 ACN-EMAIL-ADDRESS.
-              49 ACN-EMAIL-ADDRESS-LEN        PIC S9(4) USAGE COMP.
+              49 ACN-EMAIL-ADDRESS-LEN        PIC S9(4) COMP.
               49 ACN-EMAIL-ADDRESS-TEXT       PIC X(100).
            10 ACN-PHONE-NUMBER               PIC X(20).
            10 ACN-PRIMARY-FLAG               PIC X(1).
            10 ACN-UPDATE-TS                  PIC X(26).
        01  INDBIL-ACCOUNT-CONTACT.
-           10 ACN-FIRST-NAME-IND             PIC S9(4) USAGE COMP.
-           10 ACN-LAST-NAME-IND              PIC S9(4) USAGE COMP.
-           10 ACN-COMPANY-NAME-IND           PIC S9(4) USAGE COMP.
-           10 ACN-ADDRESS-LINE2-IND          PIC S9(4) USAGE COMP.
-           10 ACN-CITY-IND                   PIC S9(4) USAGE COMP.
-           10 ACN-EMAIL-ADDRESS-IND          PIC S9(4) USAGE COMP.
-           10 ACN-PHONE-NUMBER-IND           PIC S9(4) USAGE COMP.
+           10 ACN-FIRST-NAME-IND             PIC S9(4) COMP.
+           10 ACN-LAST-NAME-IND              PIC S9(4) COMP.
+           10 ACN-COMPANY-NAME-IND           PIC S9(4) COMP.
+           10 ACN-ADDRESS-LINE2-IND          PIC S9(4) COMP.
+           10 ACN-CITY-IND                   PIC S9(4) COMP.
+           10 ACN-EMAIL-ADDRESS-IND          PIC S9(4) COMP.
+           10 ACN-PHONE-NUMBER-IND           PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 16

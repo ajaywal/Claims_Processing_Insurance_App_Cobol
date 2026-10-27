@@ -31,32 +31,32 @@
            , VERSION_NO           INTEGER        NOT NULL
            ) END-EXEC.
        01  DCLBIL-ACCOUNT.
-           10 ACT-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 ACT-ACCOUNT-ID                 PIC S9(9) COMP.
            10 ACT-ACCOUNT-NUMBER             PIC X(10).
-           10 ACT-GENAPP-CUST-NUM            PIC S9(9) USAGE COMP.
+           10 ACT-GENAPP-CUST-NUM            PIC S9(9) COMP.
            10 ACT-ACCOUNT-NAME.
-              49 ACT-ACCOUNT-NAME-LEN         PIC S9(4) USAGE COMP.
+              49 ACT-ACCOUNT-NAME-LEN         PIC S9(4) COMP.
               49 ACT-ACCOUNT-NAME-TEXT        PIC X(60).
            10 ACT-ACCOUNT-TYPE               PIC X(4).
            10 ACT-BILLING-LEVEL              PIC X(4).
-           10 ACT-INVOICE-DAY                PIC S9(4) USAGE COMP.
+           10 ACT-INVOICE-DAY                PIC S9(4) COMP.
            10 ACT-DELIVERY-METHOD            PIC X(4).
            10 ACT-DELINQ-PLAN-CODE           PIC X(8).
            10 ACT-AUTOPAY-FLAG               PIC X(1).
-           10 ACT-AUTOPAY-INSTR-ID           PIC S9(9) USAGE COMP.
+           10 ACT-AUTOPAY-INSTR-ID           PIC S9(9) COMP.
            10 ACT-ACCOUNT-STATUS             PIC X(4).
            10 ACT-COLLECTION-STATUS          PIC X(4).
-           10 ACT-UNAPPLIED-AMT              PIC S9(11)V9(2) USAGE COMP-3.
-           10 ACT-BILLED-AMT                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 ACT-DUE-AMT                    PIC S9(11)V9(2) USAGE COMP-3.
-           10 ACT-UNBILLED-AMT               PIC S9(11)V9(2) USAGE COMP-3.
+           10 ACT-UNAPPLIED-AMT              PIC S9(11)V9(2) COMP-3.
+           10 ACT-BILLED-AMT                 PIC S9(11)V9(2) COMP-3.
+           10 ACT-DUE-AMT                    PIC S9(11)V9(2) COMP-3.
+           10 ACT-UNBILLED-AMT               PIC S9(11)V9(2) COMP-3.
            10 ACT-CURRENCY-CODE              PIC X(3).
            10 ACT-OPEN-DATE                  PIC X(10).
            10 ACT-CLOSE-DATE                 PIC X(10).
            10 ACT-CREATE-USER                PIC X(8).
            10 ACT-CREATE-TS                  PIC X(26).
            10 ACT-UPDATE-TS                  PIC X(26).
-           10 ACT-VERSION-NO                 PIC S9(9) USAGE COMP.
+           10 ACT-VERSION-NO                 PIC S9(9) COMP.
        01  INDBIL-ACCOUNT.
-           10 ACT-CLOSE-DATE-IND             PIC S9(4) USAGE COMP.
+           10 ACT-CLOSE-DATE-IND             PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 24

@@ -12,9 +12,9 @@
            , STREAM_STATUS        CHAR(4)        NOT NULL
            ) END-EXEC.
        01  DCLBIL-INVOICE-STREAM.
-           10 IST-STREAM-ID                  PIC S9(9) USAGE COMP.
-           10 IST-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 IST-STREAM-ID                  PIC S9(9) COMP.
+           10 IST-ACCOUNT-ID                 PIC S9(9) COMP.
            10 IST-PERIODICITY                PIC X(1).
-           10 IST-ANCHOR-DAY                 PIC S9(4) USAGE COMP.
+           10 IST-ANCHOR-DAY                 PIC S9(4) COMP.
            10 IST-STREAM-STATUS              PIC X(4).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5

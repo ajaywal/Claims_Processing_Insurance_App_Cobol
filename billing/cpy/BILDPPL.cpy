@@ -19,14 +19,14 @@
        01  DCLBIL-PAYMENT-PLAN.
            10 PPL-PLAN-CODE                  PIC X(8).
            10 PPL-PLAN-NAME.
-              49 PPL-PLAN-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 PPL-PLAN-NAME-LEN            PIC S9(4) COMP.
               49 PPL-PLAN-NAME-TEXT           PIC X(40).
-           10 PPL-DOWNPAY-PCT                PIC S9(3)V9(2) USAGE COMP-3.
-           10 PPL-NUM-INSTALLMENTS           PIC S9(4) USAGE COMP.
+           10 PPL-DOWNPAY-PCT                PIC S9(3)V9(2) COMP-3.
+           10 PPL-NUM-INSTALLMENTS           PIC S9(4) COMP.
            10 PPL-FREQUENCY                  PIC X(1).
-           10 PPL-INSTALL-FEE                PIC S9(7)V9(2) USAGE COMP-3.
-           10 PPL-DAYS-BILL-BEFORE           PIC S9(4) USAGE COMP.
-           10 PPL-FIRST-INST-MONTHS          PIC S9(4) USAGE COMP.
-           10 PPL-MIN-INST-AMOUNT            PIC S9(7)V9(2) USAGE COMP-3.
+           10 PPL-INSTALL-FEE                PIC S9(7)V9(2) COMP-3.
+           10 PPL-DAYS-BILL-BEFORE           PIC S9(4) COMP.
+           10 PPL-FIRST-INST-MONTHS          PIC S9(4) COMP.
+           10 PPL-MIN-INST-AMOUNT            PIC S9(7)V9(2) COMP-3.
            10 PPL-ACTIVE-FLAG                PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

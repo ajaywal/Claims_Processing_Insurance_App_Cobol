@@ -13,8 +13,8 @@
            ) END-EXEC.
        01  DCLBIL-DELINQ-STEP.
            10 DST-PLAN-CODE                  PIC X(8).
-           10 DST-STEP-SEQ                   PIC S9(4) USAGE COMP.
+           10 DST-STEP-SEQ                   PIC S9(4) COMP.
            10 DST-EVENT-CODE                 PIC X(8).
-           10 DST-DAYS-AFTER-START           PIC S9(4) USAGE COMP.
+           10 DST-DAYS-AFTER-START           PIC S9(4) COMP.
            10 DST-DOC-TYPE                   PIC X(8).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5

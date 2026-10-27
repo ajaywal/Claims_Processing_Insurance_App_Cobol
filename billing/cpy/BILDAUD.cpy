@@ -17,21 +17,21 @@
            , AUDIT_TS             TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-AUDIT.
-           10 AUD-AUDIT-ID                   PIC S9(9) USAGE COMP.
+           10 AUD-AUDIT-ID                   PIC S9(9) COMP.
            10 AUD-ENTITY-NAME                PIC X(8).
            10 AUD-ENTITY-KEY                 PIC X(20).
            10 AUD-ACTION-CODE                PIC X(4).
            10 AUD-FIELD-NAME                 PIC X(18).
            10 AUD-BEFORE-VALUE.
-              49 AUD-BEFORE-VALUE-LEN         PIC S9(4) USAGE COMP.
+              49 AUD-BEFORE-VALUE-LEN         PIC S9(4) COMP.
               49 AUD-BEFORE-VALUE-TEXT        PIC X(100).
            10 AUD-AFTER-VALUE.
-              49 AUD-AFTER-VALUE-LEN          PIC S9(4) USAGE COMP.
+              49 AUD-AFTER-VALUE-LEN          PIC S9(4) COMP.
               49 AUD-AFTER-VALUE-TEXT         PIC X(100).
            10 AUD-USER-ID                    PIC X(8).
            10 AUD-PROGRAM-ID                 PIC X(8).
            10 AUD-AUDIT-TS                   PIC X(26).
        01  INDBIL-AUDIT.
-           10 AUD-BEFORE-VALUE-IND           PIC S9(4) USAGE COMP.
-           10 AUD-AFTER-VALUE-IND            PIC S9(4) USAGE COMP.
+           10 AUD-BEFORE-VALUE-IND           PIC S9(4) COMP.
+           10 AUD-AFTER-VALUE-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

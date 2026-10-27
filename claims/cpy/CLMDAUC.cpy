@@ -17,8 +17,8 @@
            , SEALED_FLAG          CHAR(1)        NOT NULL
            ) END-EXEC.
        01  DCLCLM-AUDIT-CHAIN.
-           10 AUC-CHAIN-SEQ                  PIC S9(9) USAGE COMP.
-           10 AUC-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 AUC-CHAIN-SEQ                  PIC S9(9) COMP.
+           10 AUC-CLAIM-ID                   PIC S9(9) COMP.
            10 AUC-EVENT-CODE                 PIC X(8).
            10 AUC-PAYLOAD-DIGEST             PIC X(16).
            10 AUC-PREV-HASH                  PIC X(16).

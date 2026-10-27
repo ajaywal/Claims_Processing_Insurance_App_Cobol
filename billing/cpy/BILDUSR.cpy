@@ -14,7 +14,7 @@
        01  DCLBIL-USER.
            10 USR-USER-ID                    PIC X(8).
            10 USR-USER-NAME.
-              49 USR-USER-NAME-LEN            PIC S9(4) USAGE COMP.
+              49 USR-USER-NAME-LEN            PIC S9(4) COMP.
               49 USR-USER-NAME-TEXT           PIC X(40).
            10 USR-USER-ROLE                  PIC X(8).
            10 USR-SUPERVISOR-ID              PIC X(8).

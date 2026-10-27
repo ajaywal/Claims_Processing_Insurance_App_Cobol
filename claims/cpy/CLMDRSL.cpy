@@ -18,15 +18,15 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-RESERVE-LINE.
-           10 RSL-RL-ID                      PIC S9(9) USAGE COMP.
-           10 RSL-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 RSL-EXPOSURE-ID                PIC S9(9) USAGE COMP.
+           10 RSL-RL-ID                      PIC S9(9) COMP.
+           10 RSL-CLAIM-ID                   PIC S9(9) COMP.
+           10 RSL-EXPOSURE-ID                PIC S9(9) COMP.
            10 RSL-COST-TYPE                  PIC X(4).
            10 RSL-COST-CATEGORY              PIC X(8).
-           10 RSL-OPEN-RESERVE               PIC S9(11)V9(2) USAGE COMP-3.
-           10 RSL-PENDING-APPROVAL           PIC S9(11)V9(2) USAGE COMP-3.
-           10 RSL-TOTAL-PAID                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 RSL-RECOVERY-RESERVE           PIC S9(11)V9(2) USAGE COMP-3.
-           10 RSL-TOTAL-RECOVERED            PIC S9(11)V9(2) USAGE COMP-3.
+           10 RSL-OPEN-RESERVE               PIC S9(11)V9(2) COMP-3.
+           10 RSL-PENDING-APPROVAL           PIC S9(11)V9(2) COMP-3.
+           10 RSL-TOTAL-PAID                 PIC S9(11)V9(2) COMP-3.
+           10 RSL-RECOVERY-RESERVE           PIC S9(11)V9(2) COMP-3.
+           10 RSL-TOTAL-RECOVERED            PIC S9(11)V9(2) COMP-3.
            10 RSL-UPDATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

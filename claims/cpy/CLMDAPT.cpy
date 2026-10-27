@@ -18,13 +18,13 @@
        01  DCLCLM-ACTIVITY-PATTERN.
            10 APT-PATTERN-CODE               PIC X(8).
            10 APT-SUBJECT.
-              49 APT-SUBJECT-LEN              PIC S9(4) USAGE COMP.
+              49 APT-SUBJECT-LEN              PIC S9(4) COMP.
               49 APT-SUBJECT-TEXT             PIC X(60).
            10 APT-CATEGORY                   PIC X(8).
            10 APT-TRIGGER-EVENT              PIC X(8).
            10 APT-LOSS-TYPE                  PIC X(4).
-           10 APT-TARGET-DAYS                PIC S9(4) USAGE COMP.
-           10 APT-ESCALATION-DAYS            PIC S9(4) USAGE COMP.
+           10 APT-TARGET-DAYS                PIC S9(4) COMP.
+           10 APT-ESCALATION-DAYS            PIC S9(4) COMP.
            10 APT-PRIORITY                   PIC X(1).
            10 APT-MANDATORY-FLAG             PIC X(1).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

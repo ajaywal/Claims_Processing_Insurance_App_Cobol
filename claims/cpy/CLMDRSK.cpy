@@ -16,15 +16,15 @@
            , INSURED_VALUE        DECIMAL(13,2)  NOT NULL
            ) END-EXEC.
        01  DCLCLM-RISK-UNIT.
-           10 RSK-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 RSK-RISK-UNIT-SEQ              PIC S9(4) USAGE COMP.
+           10 RSK-CLAIM-ID                   PIC S9(9) COMP.
+           10 RSK-RISK-UNIT-SEQ              PIC S9(4) COMP.
            10 RSK-RISK-UNIT-TYPE             PIC X(4).
            10 RSK-DESCRIPTION.
-              49 RSK-DESCRIPTION-LEN          PIC S9(4) USAGE COMP.
+              49 RSK-DESCRIPTION-LEN          PIC S9(4) COMP.
               49 RSK-DESCRIPTION-TEXT         PIC X(60).
            10 RSK-VEHICLE-REG                PIC X(8).
            10 RSK-VEHICLE-MAKE               PIC X(15).
            10 RSK-VEHICLE-MODEL              PIC X(15).
            10 RSK-PROPERTY-POSTCODE          PIC X(8).
-           10 RSK-INSURED-VALUE              PIC S9(11)V9(2) USAGE COMP-3.
+           10 RSK-INSURED-VALUE              PIC S9(11)V9(2) COMP-3.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 9

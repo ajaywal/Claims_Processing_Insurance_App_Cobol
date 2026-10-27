@@ -18,19 +18,19 @@
            , CLOSE_TS             TIMESTAMP     
            ) END-EXEC.
        01  DCLBIL-TROUBLE-TICKET.
-           10 TTK-TICKET-ID                  PIC S9(9) USAGE COMP.
-           10 TTK-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 TTK-TICKET-ID                  PIC S9(9) COMP.
+           10 TTK-ACCOUNT-ID                 PIC S9(9) COMP.
            10 TTK-TICKET-TYPE                PIC X(8).
            10 TTK-PRIORITY                   PIC X(1).
            10 TTK-SUBJECT.
-              49 TTK-SUBJECT-LEN              PIC S9(4) USAGE COMP.
+              49 TTK-SUBJECT-LEN              PIC S9(4) COMP.
               49 TTK-SUBJECT-TEXT             PIC X(80).
            10 TTK-TICKET-STATUS              PIC X(4).
            10 TTK-ASSIGNED-USER              PIC X(8).
-           10 TTK-HOLD-ID                    PIC S9(9) USAGE COMP.
+           10 TTK-HOLD-ID                    PIC S9(9) COMP.
            10 TTK-DUE-DATE                   PIC X(10).
            10 TTK-CREATE-TS                  PIC X(26).
            10 TTK-CLOSE-TS                   PIC X(26).
        01  INDBIL-TROUBLE-TICKET.
-           10 TTK-CLOSE-TS-IND               PIC S9(4) USAGE COMP.
+           10 TTK-CLOSE-TS-IND               PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

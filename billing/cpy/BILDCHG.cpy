@@ -19,12 +19,12 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-CHARGE.
-           10 CHG-CHARGE-ID                  PIC S9(9) USAGE COMP.
-           10 CHG-PP-ID                      PIC S9(9) USAGE COMP.
-           10 CHG-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
+           10 CHG-CHARGE-ID                  PIC S9(9) COMP.
+           10 CHG-PP-ID                      PIC S9(9) COMP.
+           10 CHG-ACCOUNT-ID                 PIC S9(9) COMP.
            10 CHG-CHARGE-PATTERN             PIC X(8).
            10 CHG-BILLING-INSTR              PIC X(8).
-           10 CHG-CHARGE-AMOUNT              PIC S9(11)V9(2) USAGE COMP-3.
+           10 CHG-CHARGE-AMOUNT              PIC S9(11)V9(2) COMP-3.
            10 CHG-CHARGE-DATE                PIC X(10).
            10 CHG-EFF-DATE                   PIC X(10).
            10 CHG-CHARGE-STATUS              PIC X(4).

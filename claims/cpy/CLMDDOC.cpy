@@ -17,18 +17,18 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-DOCUMENT.
-           10 DOC-DOC-ID                     PIC S9(9) USAGE COMP.
-           10 DOC-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 DOC-DOC-ID                     PIC S9(9) COMP.
+           10 DOC-CLAIM-ID                   PIC S9(9) COMP.
            10 DOC-DOC-TYPE                   PIC X(8).
            10 DOC-DOC-NAME.
-              49 DOC-DOC-NAME-LEN             PIC S9(4) USAGE COMP.
+              49 DOC-DOC-NAME-LEN             PIC S9(4) COMP.
               49 DOC-DOC-NAME-TEXT            PIC X(60).
            10 DOC-DOC-STATUS                 PIC X(4).
-           10 DOC-RECIPIENT-ID               PIC S9(9) USAGE COMP.
+           10 DOC-RECIPIENT-ID               PIC S9(9) COMP.
            10 DOC-DMS-REF                    PIC X(32).
            10 DOC-REQUEST-DATE               PIC X(10).
            10 DOC-RECEIVED-DATE              PIC X(10).
            10 DOC-CREATE-TS                  PIC X(26).
        01  INDCLM-DOCUMENT.
-           10 DOC-RECEIVED-DATE-IND          PIC S9(4) USAGE COMP.
+           10 DOC-RECEIVED-DATE-IND          PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

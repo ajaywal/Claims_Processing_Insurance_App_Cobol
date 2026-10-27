@@ -28,27 +28,27 @@
            , VERSION_NO           INTEGER        NOT NULL
            ) END-EXEC.
        01  DCLCLM-EXPOSURE.
-           10 EXP-EXPOSURE-ID                PIC S9(9) USAGE COMP.
-           10 EXP-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 EXP-EXPOSURE-SEQ               PIC S9(4) USAGE COMP.
+           10 EXP-EXPOSURE-ID                PIC S9(9) COMP.
+           10 EXP-CLAIM-ID                   PIC S9(9) COMP.
+           10 EXP-EXPOSURE-SEQ               PIC S9(4) COMP.
            10 EXP-EXPOSURE-TYPE              PIC X(8).
            10 EXP-COVERAGE-TYPE              PIC X(8).
-           10 EXP-COV-SEQ                    PIC S9(4) USAGE COMP.
-           10 EXP-CLAIMANT-ID                PIC S9(9) USAGE COMP.
-           10 EXP-INCIDENT-ID                PIC S9(9) USAGE COMP.
+           10 EXP-COV-SEQ                    PIC S9(4) COMP.
+           10 EXP-CLAIMANT-ID                PIC S9(9) COMP.
+           10 EXP-INCIDENT-ID                PIC S9(9) COMP.
            10 EXP-EXPOSURE-STATE             PIC X(4).
            10 EXP-VALIDATION-LEVEL           PIC X(4).
            10 EXP-SEGMENT-CODE               PIC X(8).
            10 EXP-ASSIGNED-USER              PIC X(8).
-           10 EXP-OPEN-RESERVE               PIC S9(11)V9(2) USAGE COMP-3.
-           10 EXP-TOTAL-PAID                 PIC S9(11)V9(2) USAGE COMP-3.
-           10 EXP-TOTAL-RECOVERED            PIC S9(11)V9(2) USAGE COMP-3.
-           10 EXP-DEDUCTIBLE-APPLIED         PIC S9(11)V9(2) USAGE COMP-3.
+           10 EXP-OPEN-RESERVE               PIC S9(11)V9(2) COMP-3.
+           10 EXP-TOTAL-PAID                 PIC S9(11)V9(2) COMP-3.
+           10 EXP-TOTAL-RECOVERED            PIC S9(11)V9(2) COMP-3.
+           10 EXP-DEDUCTIBLE-APPLIED         PIC S9(11)V9(2) COMP-3.
            10 EXP-CREATE-DATE                PIC X(10).
            10 EXP-CLOSE-DATE                 PIC X(10).
            10 EXP-CLOSE-REASON               PIC X(8).
            10 EXP-UPDATE-TS                  PIC X(26).
-           10 EXP-VERSION-NO                 PIC S9(9) USAGE COMP.
+           10 EXP-VERSION-NO                 PIC S9(9) COMP.
        01  INDCLM-EXPOSURE.
-           10 EXP-CLOSE-DATE-IND             PIC S9(4) USAGE COMP.
+           10 EXP-CLOSE-DATE-IND             PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 21

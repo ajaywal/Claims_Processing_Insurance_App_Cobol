@@ -13,10 +13,10 @@
            , DEDUCTIBLE_AMOUNT    DECIMAL(13,2)  NOT NULL
            ) END-EXEC.
        01  DCLCLM-POLICY-COVERAGE.
-           10 PCV-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 PCV-COV-SEQ                    PIC S9(4) USAGE COMP.
+           10 PCV-CLAIM-ID                   PIC S9(9) COMP.
+           10 PCV-COV-SEQ                    PIC S9(4) COMP.
            10 PCV-COVERAGE-TYPE              PIC X(8).
-           10 PCV-RISK-UNIT-SEQ              PIC S9(4) USAGE COMP.
-           10 PCV-LIMIT-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
-           10 PCV-DEDUCTIBLE-AMOUNT          PIC S9(11)V9(2) USAGE COMP-3.
+           10 PCV-RISK-UNIT-SEQ              PIC S9(4) COMP.
+           10 PCV-LIMIT-AMOUNT               PIC S9(11)V9(2) COMP-3.
+           10 PCV-DEDUCTIBLE-AMOUNT          PIC S9(11)V9(2) COMP-3.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 6

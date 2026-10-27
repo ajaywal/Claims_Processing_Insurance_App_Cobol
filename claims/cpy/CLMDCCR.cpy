@@ -12,9 +12,9 @@
            , ADDED_TS             TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-CLAIM-CONTACT.
-           10 CCR-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 CCR-CONTACT-ID                 PIC S9(9) USAGE COMP.
+           10 CCR-CLAIM-ID                   PIC S9(9) COMP.
+           10 CCR-CONTACT-ID                 PIC S9(9) COMP.
            10 CCR-CONTACT-ROLE               PIC X(8).
-           10 CCR-EXPOSURE-ID                PIC S9(9) USAGE COMP.
+           10 CCR-EXPOSURE-ID                PIC S9(9) COMP.
            10 CCR-ADDED-TS                   PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5

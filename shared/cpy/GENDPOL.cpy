@@ -17,22 +17,22 @@
            , COMMISSION           SMALLINT      
            ) END-EXEC.
        01  DCLPOLICY.
-           10 GPO-POLICYNUMBER               PIC S9(9) USAGE COMP.
-           10 GPO-CUSTOMERNUMBER             PIC S9(9) USAGE COMP.
+           10 GPO-POLICYNUMBER               PIC S9(9) COMP.
+           10 GPO-CUSTOMERNUMBER             PIC S9(9) COMP.
            10 GPO-ISSUEDATE                  PIC X(10).
            10 GPO-EXPIRYDATE                 PIC X(10).
            10 GPO-POLICYTYPE                 PIC X(1).
            10 GPO-LASTCHANGED                PIC X(26).
-           10 GPO-BROKERID                   PIC S9(9) USAGE COMP.
+           10 GPO-BROKERID                   PIC S9(9) COMP.
            10 GPO-BROKERSREFERENCE           PIC X(10).
-           10 GPO-PAYMENT                    PIC S9(9) USAGE COMP.
-           10 GPO-COMMISSION                 PIC S9(4) USAGE COMP.
+           10 GPO-PAYMENT                    PIC S9(9) COMP.
+           10 GPO-COMMISSION                 PIC S9(4) COMP.
        01  INDPOLICY.
-           10 GPO-ISSUEDATE-IND              PIC S9(4) USAGE COMP.
-           10 GPO-EXPIRYDATE-IND             PIC S9(4) USAGE COMP.
-           10 GPO-POLICYTYPE-IND             PIC S9(4) USAGE COMP.
-           10 GPO-BROKERID-IND               PIC S9(4) USAGE COMP.
-           10 GPO-BROKERSREFERENCE-IND       PIC S9(4) USAGE COMP.
-           10 GPO-PAYMENT-IND                PIC S9(4) USAGE COMP.
-           10 GPO-COMMISSION-IND             PIC S9(4) USAGE COMP.
+           10 GPO-ISSUEDATE-IND              PIC S9(4) COMP.
+           10 GPO-EXPIRYDATE-IND             PIC S9(4) COMP.
+           10 GPO-POLICYTYPE-IND             PIC S9(4) COMP.
+           10 GPO-BROKERID-IND               PIC S9(4) COMP.
+           10 GPO-BROKERSREFERENCE-IND       PIC S9(4) COMP.
+           10 GPO-PAYMENT-IND                PIC S9(4) COMP.
+           10 GPO-COMMISSION-IND             PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

@@ -12,13 +12,13 @@
            , EVAL_TS              TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLCLM-SIU-SCORE.
-           10 SSC-CLAIM-ID                   PIC S9(9) USAGE COMP.
+           10 SSC-CLAIM-ID                   PIC S9(9) COMP.
            10 SSC-RULE-CODE                  PIC X(8).
-           10 SSC-POINTS                     PIC S9(4) USAGE COMP.
+           10 SSC-POINTS                     PIC S9(4) COMP.
            10 SSC-EVIDENCE-TEXT.
-              49 SSC-EVIDENCE-TEXT-LEN        PIC S9(4) USAGE COMP.
+              49 SSC-EVIDENCE-TEXT-LEN        PIC S9(4) COMP.
               49 SSC-EVIDENCE-TEXT-TEXT       PIC X(80).
            10 SSC-EVAL-TS                    PIC X(26).
        01  INDCLM-SIU-SCORE.
-           10 SSC-EVIDENCE-TEXT-IND          PIC S9(4) USAGE COMP.
+           10 SSC-EVIDENCE-TEXT-IND          PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5

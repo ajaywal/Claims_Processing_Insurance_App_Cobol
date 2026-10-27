@@ -14,18 +14,18 @@
            , POSTCODE             CHAR(8)       
            ) END-EXEC.
        01  DCLHOUSE.
-           10 GHO-POLICYNUMBER               PIC S9(9) USAGE COMP.
+           10 GHO-POLICYNUMBER               PIC S9(9) COMP.
            10 GHO-PROPERTYTYPE               PIC X(15).
-           10 GHO-BEDROOMS                   PIC S9(4) USAGE COMP.
-           10 GHO-VALUE                      PIC S9(9) USAGE COMP.
+           10 GHO-BEDROOMS                   PIC S9(4) COMP.
+           10 GHO-VALUE                      PIC S9(9) COMP.
            10 GHO-HOUSENAME                  PIC X(20).
            10 GHO-HOUSENUMBER                PIC X(4).
            10 GHO-POSTCODE                   PIC X(8).
        01  INDHOUSE.
-           10 GHO-PROPERTYTYPE-IND           PIC S9(4) USAGE COMP.
-           10 GHO-BEDROOMS-IND               PIC S9(4) USAGE COMP.
-           10 GHO-VALUE-IND                  PIC S9(4) USAGE COMP.
-           10 GHO-HOUSENAME-IND              PIC S9(4) USAGE COMP.
-           10 GHO-HOUSENUMBER-IND            PIC S9(4) USAGE COMP.
-           10 GHO-POSTCODE-IND               PIC S9(4) USAGE COMP.
+           10 GHO-PROPERTYTYPE-IND           PIC S9(4) COMP.
+           10 GHO-BEDROOMS-IND               PIC S9(4) COMP.
+           10 GHO-VALUE-IND                  PIC S9(4) COMP.
+           10 GHO-HOUSENAME-IND              PIC S9(4) COMP.
+           10 GHO-HOUSENUMBER-IND            PIC S9(4) COMP.
+           10 GHO-POSTCODE-IND               PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7

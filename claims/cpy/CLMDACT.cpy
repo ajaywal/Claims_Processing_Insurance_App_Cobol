@@ -22,12 +22,12 @@
            , COMPLETE_USER        CHAR(8)        NOT NULL
            ) END-EXEC.
        01  DCLCLM-ACTIVITY.
-           10 ACT-ACTIVITY-ID                PIC S9(9) USAGE COMP.
-           10 ACT-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 ACT-EXPOSURE-ID                PIC S9(9) USAGE COMP.
+           10 ACT-ACTIVITY-ID                PIC S9(9) COMP.
+           10 ACT-CLAIM-ID                   PIC S9(9) COMP.
+           10 ACT-EXPOSURE-ID                PIC S9(9) COMP.
            10 ACT-PATTERN-CODE               PIC X(8).
            10 ACT-SUBJECT.
-              49 ACT-SUBJECT-LEN              PIC S9(4) USAGE COMP.
+              49 ACT-SUBJECT-LEN              PIC S9(4) COMP.
               49 ACT-SUBJECT-TEXT             PIC X(60).
            10 ACT-PRIORITY                   PIC X(1).
            10 ACT-ACTIVITY-STATUS            PIC X(4).
@@ -35,10 +35,10 @@
            10 ACT-DUE-DATE                   PIC X(10).
            10 ACT-ESCALATION-DATE            PIC X(10).
            10 ACT-ESCALATED-FLAG             PIC X(1).
-           10 ACT-APPROVAL-TXN-ID            PIC S9(9) USAGE COMP.
+           10 ACT-APPROVAL-TXN-ID            PIC S9(9) COMP.
            10 ACT-CREATE-TS                  PIC X(26).
            10 ACT-COMPLETE-TS                PIC X(26).
            10 ACT-COMPLETE-USER              PIC X(8).
        01  INDCLM-ACTIVITY.
-           10 ACT-COMPLETE-TS-IND            PIC S9(4) USAGE COMP.
+           10 ACT-COMPLETE-TS-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 15

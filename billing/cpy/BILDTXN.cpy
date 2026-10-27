@@ -18,15 +18,15 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-TRANSACTION.
-           10 TXN-TXN-ID                     PIC S9(9) USAGE COMP.
-           10 TXN-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 TXN-PRODUCER-ID                PIC S9(9) USAGE COMP.
+           10 TXN-TXN-ID                     PIC S9(9) COMP.
+           10 TXN-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 TXN-PRODUCER-ID                PIC S9(9) COMP.
            10 TXN-TXN-TYPE                   PIC X(8).
-           10 TXN-TXN-AMOUNT                 PIC S9(11)V9(2) USAGE COMP-3.
+           10 TXN-TXN-AMOUNT                 PIC S9(11)V9(2) COMP-3.
            10 TXN-REF-TYPE                   PIC X(4).
-           10 TXN-REF-ID                     PIC S9(9) USAGE COMP.
+           10 TXN-REF-ID                     PIC S9(9) COMP.
            10 TXN-BUSINESS-DATE              PIC X(10).
-           10 TXN-REVERSAL-OF-TXN            PIC S9(9) USAGE COMP.
+           10 TXN-REVERSAL-OF-TXN            PIC S9(9) COMP.
            10 TXN-CREATE-USER                PIC X(8).
            10 TXN-CREATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

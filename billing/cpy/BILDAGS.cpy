@@ -18,15 +18,15 @@
            , CREATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-AGENCY-STATEMENT.
-           10 AGS-STMT-ID                    PIC S9(9) USAGE COMP.
-           10 AGS-PRODUCER-ID                PIC S9(9) USAGE COMP.
+           10 AGS-STMT-ID                    PIC S9(9) COMP.
+           10 AGS-PRODUCER-ID                PIC S9(9) COMP.
            10 AGS-STMT-DATE                  PIC X(10).
            10 AGS-DUE-DATE                   PIC X(10).
-           10 AGS-GROSS-AMOUNT               PIC S9(11)V9(2) USAGE COMP-3.
-           10 AGS-COMMISSION-AMOUNT          PIC S9(11)V9(2) USAGE COMP-3.
-           10 AGS-NET-DUE                    PIC S9(11)V9(2) USAGE COMP-3.
-           10 AGS-PAID-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
+           10 AGS-GROSS-AMOUNT               PIC S9(11)V9(2) COMP-3.
+           10 AGS-COMMISSION-AMOUNT          PIC S9(11)V9(2) COMP-3.
+           10 AGS-NET-DUE                    PIC S9(11)V9(2) COMP-3.
+           10 AGS-PAID-AMOUNT                PIC S9(11)V9(2) COMP-3.
            10 AGS-STMT-STATUS                PIC X(4).
-           10 AGS-ITEM-COUNT                 PIC S9(9) USAGE COMP.
+           10 AGS-ITEM-COUNT                 PIC S9(9) COMP.
            10 AGS-CREATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 11

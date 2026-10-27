@@ -17,18 +17,18 @@
            , RESOLVED_USER        CHAR(8)        NOT NULL
            ) END-EXEC.
        01  DCLBIL-SUSPENSE.
-           10 SUS-SUSP-ID                    PIC S9(9) USAGE COMP.
-           10 SUS-MONEY-ID                   PIC S9(9) USAGE COMP.
-           10 SUS-SUSP-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
+           10 SUS-SUSP-ID                    PIC S9(9) COMP.
+           10 SUS-MONEY-ID                   PIC S9(9) COMP.
+           10 SUS-SUSP-AMOUNT                PIC S9(11)V9(2) COMP-3.
            10 SUS-REF-TEXT.
-              49 SUS-REF-TEXT-LEN             PIC S9(4) USAGE COMP.
+              49 SUS-REF-TEXT-LEN             PIC S9(4) COMP.
               49 SUS-REF-TEXT-TEXT            PIC X(80).
            10 SUS-SUSP-REASON                PIC X(8).
            10 SUS-SUSP-STATUS                PIC X(4).
-           10 SUS-MATCHED-ACCOUNT-ID         PIC S9(9) USAGE COMP.
+           10 SUS-MATCHED-ACCOUNT-ID         PIC S9(9) COMP.
            10 SUS-CREATE-DATE                PIC X(10).
            10 SUS-RESOLVED-DATE              PIC X(10).
            10 SUS-RESOLVED-USER              PIC X(8).
        01  INDBIL-SUSPENSE.
-           10 SUS-RESOLVED-DATE-IND          PIC S9(4) USAGE COMP.
+           10 SUS-RESOLVED-DATE-IND          PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 10

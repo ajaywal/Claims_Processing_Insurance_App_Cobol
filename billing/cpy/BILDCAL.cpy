@@ -12,11 +12,11 @@
            ) END-EXEC.
        01  DCLBIL-CALENDAR.
            10 CAL-CAL-DATE                   PIC X(10).
-           10 CAL-DAY-OF-WEEK                PIC S9(4) USAGE COMP.
+           10 CAL-DAY-OF-WEEK                PIC S9(4) COMP.
            10 CAL-HOLIDAY-FLAG               PIC X(1).
            10 CAL-HOLIDAY-NAME.
-              49 CAL-HOLIDAY-NAME-LEN         PIC S9(4) USAGE COMP.
+              49 CAL-HOLIDAY-NAME-LEN         PIC S9(4) COMP.
               49 CAL-HOLIDAY-NAME-TEXT        PIC X(40).
        01  INDBIL-CALENDAR.
-           10 CAL-HOLIDAY-NAME-IND           PIC S9(4) USAGE COMP.
+           10 CAL-HOLIDAY-NAME-IND           PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4

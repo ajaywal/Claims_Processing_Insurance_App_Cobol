@@ -25,24 +25,24 @@
            , APPROVED_TS          TIMESTAMP     
            ) END-EXEC.
        01  DCLCLM-TRANSACTION.
-           10 TXN-TXN-ID                     PIC S9(9) USAGE COMP.
-           10 TXN-CLAIM-ID                   PIC S9(9) USAGE COMP.
-           10 TXN-EXPOSURE-ID                PIC S9(9) USAGE COMP.
-           10 TXN-RL-ID                      PIC S9(9) USAGE COMP.
+           10 TXN-TXN-ID                     PIC S9(9) COMP.
+           10 TXN-CLAIM-ID                   PIC S9(9) COMP.
+           10 TXN-EXPOSURE-ID                PIC S9(9) COMP.
+           10 TXN-RL-ID                      PIC S9(9) COMP.
            10 TXN-TXN-TYPE                   PIC X(4).
            10 TXN-TXN-STATUS                 PIC X(4).
-           10 TXN-TXN-AMOUNT                 PIC S9(11)V9(2) USAGE COMP-3.
+           10 TXN-TXN-AMOUNT                 PIC S9(11)V9(2) COMP-3.
            10 TXN-ERODES-RESERVE             PIC X(1).
            10 TXN-PAYMENT-TYPE               PIC X(4).
            10 TXN-RECOVERY-CATEGORY          PIC X(8).
-           10 TXN-CHECK-ID                   PIC S9(9) USAGE COMP.
+           10 TXN-CHECK-ID                   PIC S9(9) COMP.
            10 TXN-CREATE-USER                PIC X(8).
            10 TXN-APPROVER-USER              PIC X(8).
            10 TXN-REJECT-REASON              PIC X(8).
-           10 TXN-RELATED-TXN-ID             PIC S9(9) USAGE COMP.
+           10 TXN-RELATED-TXN-ID             PIC S9(9) COMP.
            10 TXN-BUSINESS-DATE              PIC X(10).
            10 TXN-CREATE-TS                  PIC X(26).
            10 TXN-APPROVED-TS                PIC X(26).
        01  INDCLM-TRANSACTION.
-           10 TXN-APPROVED-TS-IND            PIC S9(4) USAGE COMP.
+           10 TXN-APPROVED-TS-IND            PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 18

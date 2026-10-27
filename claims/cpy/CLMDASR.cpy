@@ -15,10 +15,10 @@
            , ACTIVE_FLAG          CHAR(1)        NOT NULL
            ) END-EXEC.
        01  DCLCLM-ASSIGN-RULE.
-           10 ASR-RULE-SEQ                   PIC S9(4) USAGE COMP.
+           10 ASR-RULE-SEQ                   PIC S9(4) COMP.
            10 ASR-LOSS-TYPE                  PIC X(4).
            10 ASR-SEGMENT-CODE               PIC X(8).
-           10 ASR-MIN-SEVERITY               PIC S9(4) USAGE COMP.
+           10 ASR-MIN-SEVERITY               PIC S9(4) COMP.
            10 ASR-REGION-CODE                PIC X(4).
            10 ASR-GROUP-CODE                 PIC X(8).
            10 ASR-STRATEGY                   PIC X(4).

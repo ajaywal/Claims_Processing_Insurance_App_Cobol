@@ -24,21 +24,21 @@
            , UPDATE_TS            TIMESTAMP      NOT NULL
            ) END-EXEC.
        01  DCLBIL-INVOICE-ITEM.
-           10 ITM-ITEM-ID                    PIC S9(9) USAGE COMP.
-           10 ITM-CHARGE-ID                  PIC S9(9) USAGE COMP.
-           10 ITM-ACCOUNT-ID                 PIC S9(9) USAGE COMP.
-           10 ITM-PP-ID                      PIC S9(9) USAGE COMP.
-           10 ITM-INVOICE-ID                 PIC S9(9) USAGE COMP.
-           10 ITM-STREAM-ID                  PIC S9(9) USAGE COMP.
+           10 ITM-ITEM-ID                    PIC S9(9) COMP.
+           10 ITM-CHARGE-ID                  PIC S9(9) COMP.
+           10 ITM-ACCOUNT-ID                 PIC S9(9) COMP.
+           10 ITM-PP-ID                      PIC S9(9) COMP.
+           10 ITM-INVOICE-ID                 PIC S9(9) COMP.
+           10 ITM-STREAM-ID                  PIC S9(9) COMP.
            10 ITM-ITEM-TYPE                  PIC X(4).
-           10 ITM-INSTALL-NUMBER             PIC S9(4) USAGE COMP.
+           10 ITM-INSTALL-NUMBER             PIC S9(4) COMP.
            10 ITM-EVENT-DATE                 PIC X(10).
            10 ITM-DUE-DATE                   PIC X(10).
-           10 ITM-ITEM-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
-           10 ITM-PAID-AMOUNT                PIC S9(11)V9(2) USAGE COMP-3.
-           10 ITM-WRITEOFF-AMOUNT            PIC S9(11)V9(2) USAGE COMP-3.
-           10 ITM-COMMISSION-AMOUNT          PIC S9(11)V9(2) USAGE COMP-3.
+           10 ITM-ITEM-AMOUNT                PIC S9(11)V9(2) COMP-3.
+           10 ITM-PAID-AMOUNT                PIC S9(11)V9(2) COMP-3.
+           10 ITM-WRITEOFF-AMOUNT            PIC S9(11)V9(2) COMP-3.
+           10 ITM-COMMISSION-AMOUNT          PIC S9(11)V9(2) COMP-3.
            10 ITM-ITEM-STATUS                PIC X(4).
-           10 ITM-PRIORITY-RANK              PIC S9(4) USAGE COMP.
+           10 ITM-PRIORITY-RANK              PIC S9(4) COMP.
            10 ITM-UPDATE-TS                  PIC X(26).
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 17

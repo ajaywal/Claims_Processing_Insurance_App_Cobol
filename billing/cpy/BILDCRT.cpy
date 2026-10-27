@@ -14,5 +14,5 @@
            10 CRT-PLAN-CODE                  PIC X(8).
            10 CRT-PRODUCT-CODE               PIC X(1).
            10 CRT-CHARGE-PATTERN             PIC X(8).
-           10 CRT-RATE-BPS                   PIC S9(4) USAGE COMP.
+           10 CRT-RATE-BPS                   PIC S9(4) COMP.
       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4

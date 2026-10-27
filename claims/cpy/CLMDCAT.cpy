@@ -16,7 +16,7 @@
        01  DCLCLM-CATASTROPHE.
            10 CAT-CAT-CODE                   PIC X(8).
            10 CAT-CAT-NAME.
-              49 CAT-CAT-NAME-LEN             PIC S9(4) USAGE COMP.
+              49 CAT-CAT-NAME-LEN             PIC S9(4) COMP.
               49 CAT-CAT-NAME-TEXT            PIC X(40).
            10 CAT-CAT-TYPE                   PIC X(8).
            10 CAT-START-DATE                 PIC X(10).
